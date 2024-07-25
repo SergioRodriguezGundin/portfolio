@@ -8,6 +8,7 @@ import Layout from '@layouts/Layout.astro';
 ---
 
 <Layout title="Hi! I'm Sergio. I'm a software developer from Spain." description="This is the mockup of the home page of my portfolio.">
+	<div class="bg-shadow"></div>
 	<div class="layout">
 		<div class="personal-information">
 			<Card>
@@ -50,5 +51,18 @@ import Layout from '@layouts/Layout.astro';
 	}
 	.hobbies {
 		grid-area: 2 / 3 / 3 / 4;
+	}
+	.bg-shadow {
+    position: absolute;
+    top: -620px;
+		background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .75) 100%);
+    border-radius: 1200px;
+    filter: blur(100px);
+    left: calc(50.00000000000002% - 1134px / 2);
+    opacity: .25;
+    overflow: hidden;
+    width: 1134px;
+    height: 751px;
+    z-index: 0;
 	}
 </style>
