@@ -1,0 +1,41 @@
+  :root {
+		--background-black-500: hsl(240, 4%, 10%);
+		
+		--light-grey: hsl(30, 6%, 87%);
+
+		--background-gray-100: hsl(30, 20%, 98%);
+		--background-gray-200: hsl(60, 5%, 96%);
+		--background-gray-300: hsl(60, 2%, 90%);
+		--background-gray-400: hsl(30, 2%, 82%);
+		--background-gray-500: hsl(30, 3%, 69%);
+		--background-gray-600: hsl(60, 3%, 43%);
+		--background-gray-700: hsl(195, 3%, 31%);
+		--background-gray-800: hsl(30, 2%, 24%);
+		--background-gray-900: hsl(60, 2%, 8%);
+
+		--text-black: hsl(60, 2%, 8%);
+		--text-white: hsl(210, 20%, 98%);
+
+		--global-color: hsl(64, 100%, 50%);
+
+		--accent-gradient: linear-gradient(120deg, var(--global-color), var(--background-gray-300) 30%, white 60%);
+
+		.text-gradient {
+			background-image: var(--accent-gradient);
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-size: 400%;
+			background-position: 0%;
+		}
+
+		p {
+			color: var(--text-white);
+			font-family: 'Roboto Mono Variable';
+		}
+
+		h1, h2, h3, h4, h5, h6 {
+			color: var(--background-gray-200);
+			font-family: 'Prompt-400';
+		}
+  }
