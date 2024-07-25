@@ -1,24 +1,31 @@
 ---
-import Experience from '../components/sections/Experience.astro';
-import Hobbies from '../components/sections/Hobbies.astro';
-import PersonalInformation from '../components/sections/PersonalInformation.astro';
-import Projects from '../components/sections/Projects.astro';
-import Layout from '../layouts/Layout.astro';
+import Card from '@components/Card.astro';
+import Experience from '@components/sections/Experience.astro';
+import Hobbies from '@components/sections/Hobbies.astro';
+import PersonalInformation from '@components/sections/PersonalInformation.astro';
+import Projects from '@components/sections/Projects.astro';
+import Layout from '@layouts/Layout.astro';
 ---
 
 <Layout title="Hi! I'm Sergio. I'm a software developer from Spain." description="This is the mockup of the home page of my portfolio.">
 	<div class="layout">
 		<div class="personal-information">
-			<PersonalInformation />
+			<Card>
+				<PersonalInformation />
+			</Card>
 		</div>
 		<div class="proyects">
 			<Projects />
 		</div>
 		<div class="experience">
-			<Experience />
+			<Card>
+				<Experience />
+			</Card>
 		</div>
 		<div class="hobbies">
-			<Hobbies />
+			<Card>
+				<Hobbies />
+			</Card>
 		</div>
 	</div>
 </Layout>
@@ -26,7 +33,7 @@ import Layout from '../layouts/Layout.astro';
 <style>
 	.layout {
 		display: grid;
-		grid-template-columns: 1fr 2fr 1fr;
+		grid-template-columns: 1fr 2.5fr 1fr;
 		grid-template-rows: repeat(2, 1fr);
 		grid-column-gap: 16px;
 		grid-row-gap: 16px;
