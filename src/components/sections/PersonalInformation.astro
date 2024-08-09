@@ -1,5 +1,6 @@
 ---
 import ProfileImage from '@components/ProfileImage.astro';
+import StickyTape from '@components/StickyTape.astro';
 import ThemeToggle from '@components/ThemeToggle.astro';
 ---
 
@@ -15,11 +16,13 @@ import ThemeToggle from '@components/ThemeToggle.astro';
 	<div class="personal-information-card-text-description">
 		<p><span software-developer>Software Developer</span> with <span software-developer-experience>8+ years</span> of experience in multiple projects creating web applications with the last web and mobile technologies.</p>
 	</div>
+	<StickyTape />
 </div>
 
 <style>
 	.personal-information-card {
 		position: relative;
+		overflow: hidden;
 		height: 100%;
 	}
 	.personal-information-card-text {
