@@ -1,7 +1,45 @@
 ---
+import ProfileImage from '@components/ProfileImage.astro';
 ---
 
-<div class="personal-information">
-	<h1>Hi! I'm Sergio. I'm a software developer from Spain.</h1>
-	<p>This is the mockup of the home page of my portfolio.</p>
-</div>s
+<div class="personal-information-card">
+	<div class="personal-information-card-image">
+		<ProfileImage />
+	</div>
+	<div class="personal-information-card-text">
+		<h1>Hello!</h1>
+		<h1>I'm Sergio</h1>
+	</div>
+	<div class="personal-information-card-text-description">
+		<p><span software-developer>Software Developer</span> with <span software-developer-experience>8+ years</span> of experience in multiple projects creating web applications with the last web and mobile technologies.</p>
+	</div>
+</div>
+
+<style>
+	.personal-information-card {
+		position: relative;
+		height: 100%;
+	}
+	.personal-information-card-text {
+		position: absolute;
+    top: calc(50% - var(--space-10));
+		line-height: 4.5rem;
+		> h1 {
+			font-size: var(--font-size-xxxl);
+		}
+	}
+	.personal-information-card-text-description {
+		margin-top: var(--space-5);
+		> p {
+			color: var(--color-dark-900);
+			span[software-developer] {
+				color: var(--color-dark-2000);
+				font-weight: bold;
+			}
+			span[software-developer-experience] {
+				color: var(--global-color);
+				font-weight: bold;
+			}
+		}
+	}
+</style>

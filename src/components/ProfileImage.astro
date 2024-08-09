@@ -1,0 +1,20 @@
+---
+import { Picture } from 'astro:assets';
+import sergioPicture from '@assets/sergio.webp';
+---
+
+<Picture
+  src={sergioPicture}
+  formats={['webp']}
+  width={650}
+  height={400}
+  alt="Imagen de perfil de Sergio Rodriguez Gundin"
+  class="rounded-mask"
+/>
+
+<style>
+  .rounded-mask {
+    filter: drop-shadow(0px 0px 10px var(--color-dark-100));
+    mask-image: linear-gradient(var(--color-dark-100) 60%, transparent);
+  }
+</style>
