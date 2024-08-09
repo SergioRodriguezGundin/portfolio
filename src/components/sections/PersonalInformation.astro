@@ -1,8 +1,10 @@
 ---
 import ProfileImage from '@components/ProfileImage.astro';
+import ThemeToggle from '@components/ThemeToggle.astro';
 ---
 
 <div class="personal-information-card">
+	<ThemeToggle />
 	<div class="personal-information-card-image">
 		<ProfileImage />
 	</div>
@@ -22,23 +24,25 @@ import ProfileImage from '@components/ProfileImage.astro';
 	}
 	.personal-information-card-text {
 		position: absolute;
-    top: calc(50% - var(--space-10));
+    top: calc(50% - var(--space-9));
 		line-height: 4.5rem;
 		> h1 {
 			font-size: var(--font-size-xxxl);
 		}
 	}
 	.personal-information-card-text-description {
-		margin-top: var(--space-5);
 		> p {
-			color: var(--color-dark-900);
+			margin-top: var(--space-2);
 			span[software-developer] {
-				color: var(--color-dark-2000);
+				color: var(--color-100);
+				text-decoration: underline;
 				font-weight: bold;
 			}
 			span[software-developer-experience] {
-				color: var(--global-color);
+				color: var(--black);
+				background: var(--global-color);
 				font-weight: bold;
+				padding: 0 var(--space-1);
 			}
 		}
 	}
