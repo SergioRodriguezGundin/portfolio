@@ -7,62 +7,65 @@ import Projects from '@components/sections/Projects.astro';
 import Layout from '@layouts/Layout.astro';
 ---
 
-<Layout title="Hi! I'm Sergio. I'm a software developer from Spain." description="This is the mockup of the home page of my portfolio.">
-	<div class="bg-shadow"></div>
-	<div class="layout">
-		<div class="personal-information">
-			<Card>
-				<PersonalInformation />
-			</Card>
-		</div>
-		<div class="proyects">
-			<Projects />
-		</div>
-		<div class="experience">
-			<Card>
-				<Experience />
-			</Card>
-		</div>
-		<div class="hobbies">
-			<Card>
-				<Hobbies />
-			</Card>
-		</div>
-	</div>
+<Layout
+  title="Hi! I'm Sergio. I'm a software developer from Spain."
+  description='This is the mockup of the home page of my portfolio.'
+>
+  <div class='bg-shadow'></div>
+  <div class='layout'>
+    <div class='personal-information'>
+      <Card title='About me'>
+        <PersonalInformation />
+      </Card>
+    </div>
+    <div class='proyects'>
+      <Projects />
+    </div>
+    <div class='experience'>
+      <Card title='Experience'>
+        <Experience />
+      </Card>
+    </div>
+    <div class='hobbies'>
+      <Card title='Hobbies'>
+        <Hobbies />
+      </Card>
+    </div>
+  </div>
 </Layout>
 
 <style>
-	.layout {
-		display: grid;
-		grid-template-columns: 1fr 2.5fr 1fr;
-		grid-template-rows: repeat(2, 1fr);
-		grid-column-gap: 16px;
-		grid-row-gap: 16px;
-		height: 100%;
-	}
-	.personal-information {
-		grid-area: 1 / 1 / 3 / 2; 
-	}
-	.proyects {
-		grid-area: 1 / 2 / 3 / 3;
-	}
-	.experience {
-		grid-area: 1 / 3 / 2 / 4;
-	}
-	.hobbies {
-		grid-area: 2 / 3 / 3 / 4;
-	}
-	.bg-shadow {
+  .layout {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    height: 100%;
+  }
+  .personal-information {
+    grid-area: 1 / 1 / 3 / 2;
+  }
+  .proyects {
+    grid-area: 1 / 2 / 3 / 3;
+  }
+  .experience {
+    grid-area: 1 / 3 / 2 / 4;
+  }
+  .hobbies {
+    grid-area: 2 / 3 / 3 / 4;
+  }
+  .bg-shadow {
     position: absolute;
     top: -620px;
-		background: var(--bg-shadow);
+    background: var(--bg-shadow);
     border-radius: 1200px;
     filter: blur(100px);
     left: calc(50.00000000000002% - 1134px / 2);
-    opacity: .25;
+    opacity: 0.25;
     overflow: hidden;
     width: 1134px;
     height: 751px;
     z-index: 0;
-	}
+  }
 </style>
