@@ -1,52 +1,50 @@
 ---
-import ProfileImage from '@components/ProfileImage.astro';
-import StickyTape from '@components/StickyTape.astro';
+import Experience from '@components/profile/Experience.astro';
+import ProfileImage from '@components/profile/ProfileImage.astro';
 import ThemeToggle from '@components/ThemeToggle.astro';
 ---
 
-<div class="personal-information-card">
-	<ThemeToggle />
-	<div class="personal-information-card-image">
-		<ProfileImage />
-	</div>
-	<div class="personal-information-card-text">
-		<h1>Hello!</h1>
-		<h1>I'm Sergio</h1>
-	</div>
-	<div class="personal-information-card-text-description">
-		<p><span software-developer>Software Developer</span> with <span software-developer-experience>8+ years</span> of experience in multiple projects creating web applications with the last web and mobile technologies.</p>
-	</div>
-	<StickyTape />
+<div class='personal-information-card'>
+  <ThemeToggle />
+  <div class='personal-information-card-image'>
+    <ProfileImage />
+  </div>
+  <div class='personal-information-card-text'>
+    <h1>Hello!</h1>
+    <h1>I'm Sergio</h1>
+  </div>
+  <div class='personal-information-card-text-description'>
+    <p>
+      Welcome to my humble home on the web. I want to share with you my journey
+      recap as a <span software-developer>Software Developer</span> and my experiences.
+    </p>
+  </div>
+  <Experience />
+  <span class='divider'></span>
 </div>
 
 <style>
-	.personal-information-card {
-		position: relative;
-		overflow: hidden;
-		height: 100%;
-	}
-	.personal-information-card-text {
-		position: absolute;
-    top: calc(50% - var(--space-9));
-		line-height: 4.5rem;
-		> h1 {
-			font-size: var(--font-size-xxxl);
-		}
-	}
-	.personal-information-card-text-description {
-		> p {
-			margin-top: var(--space-2);
-			span[software-developer] {
-				color: var(--color-100);
-				text-decoration: underline;
-				font-weight: bold;
-			}
-			span[software-developer-experience] {
-				color: var(--black);
-				background: var(--global-color);
-				font-weight: bold;
-				padding: 0 var(--space-1);
-			}
-		}
-	}
+  .personal-information-card {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+  }
+  .personal-information-card-text {
+    position: absolute;
+    top: calc(50% - var(--space-10));
+    line-height: 4.5rem;
+    > h1 {
+      font-size: var(--font-size-xxxl);
+    }
+  }
+  .personal-information-card-text-description {
+    > p {
+      margin-top: var(--space-4);
+      span[software-developer] {
+        color: var(--color-100);
+        text-decoration: underline;
+        font-weight: bold;
+      }
+    }
+  }
 </style>

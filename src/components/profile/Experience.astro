@@ -1,0 +1,66 @@
+---
+
+---
+
+<div class='experience-container flex flex-row flex-space-around gap-2'>
+  <div class='experience flex flex-column flex-start'>
+    <span experience-years><span>+</span>08</span>
+    <span experience-text>Years of experience</span>
+  </div>
+  <div class='experience flex flex-column flex-start'>
+    <span experience-years><span>+</span>09</span>
+    <span experience-text>Projects worked</span>
+    <div class='tech-stack'>
+      <img
+        src='/icons/js.svg'
+        alt='JavaScript'
+        title='JavaScript'
+        width='22'
+        height='22'
+      />
+      <img
+        src='/icons/typescript.svg'
+        alt='TypeScript'
+        title='TypeScript'
+        width='22'
+        height='22'
+      />
+      <img
+        src='/icons/angular.svg'
+        alt='Angular'
+        title='Angular'
+        width='22'
+        height='22'
+      />
+      <img
+        src='/icons/react.svg'
+        alt='React'
+        title='React'
+        width='22'
+        height='22'
+      />
+    </div>
+  </div>
+</div>
+
+<style>
+  .experience-container {
+    padding: var(--space-6) var(--space-4);
+  }
+  .experience {
+    > span[experience-years] {
+      font-size: var(--font-size-xxl);
+      font-weight: bold;
+      > span {
+        font-size: var(--font-size-md);
+        font-weight: 300;
+      }
+    }
+    > span[experience-text] {
+      font-size: var(--font-size-sm);
+    }
+    .tech-stack {
+      margin-top: var(--space-3);
+    }
+  }
+</style>

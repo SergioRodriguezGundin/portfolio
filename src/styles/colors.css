@@ -16,7 +16,8 @@
 		--background-gradient: none;
 		--bg-shadow: linear-gradient(90deg, rgb(0 0 0) 0%, rgb(0 0 0) 100%);
 
-		--global-color: hsl(64, 100%, 50%);
+		/*--global-color: hsl(64, 100%, 50%);*/
+		--global-color: hsl(71.9deg 100% 49.41%);
 		--black: hsl(0, 0%, 0%);
 		--white: hsl(0, 0%, 100%);
 
@@ -33,6 +34,11 @@
 
 		p {
 			color: var(--color-100);
+			font-family: 'Roboto Mono Variable';
+		}
+		
+		span {
+			color: var(--color-500);
 			font-family: 'Roboto Mono Variable';
 		}
 

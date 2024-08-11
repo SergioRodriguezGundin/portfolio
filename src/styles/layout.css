@@ -16,6 +16,15 @@
   --space-9: 72px;
   --space-10: 96px;
 
+  .divider {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-700);
+    margin: var(--space-2) 0;
+    mask-image: radial-gradient(var(--color-700) 25%, transparent 80%);
+  }
+
   /* Flexbox utility classes */
   .flex {
     display: flex;
@@ -34,8 +43,17 @@
     align-items: center;
   }
 
+  .flex-start {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
   .flex-space-between {
     justify-content: space-between;
+  }
+
+  .flex-space-around {
+    justify-content: space-around;
   }
 
   .flex-wrap {
