@@ -1,9 +1,10 @@
 ---
+import Email from '@components/icons/email.astro';
 import Linkedin from '@components/icons/linkedin.astro';
 ---
 
-<div class='contact flex flex-center gap-2'>
-  <button class='button-contact'>
+<div class='contact flex flex-column flex-center gap-3'>
+  <!--<button class='button-contact'>
     <a
       class='flex flex-center gap-2'
       href='mailto:sergio.gundin.rodriguez@gmail.com'
@@ -14,9 +15,12 @@ import Linkedin from '@components/icons/linkedin.astro';
         alt='contact me'
       /><span>Say Hello!</span>
     </a>
-  </button>
+  </button>-->
   <button class='button-linkedin flex'>
     <Linkedin />
+  </button>
+  <button class='button-linkedin flex'>
+    <Email />
   </button>
 </div>
 

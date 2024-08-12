@@ -1,13 +1,13 @@
 /* For browsers that support clamp  */
 @supports (font-size: clamp(1rem, 1vi, 1rem)) {
   :root {
-		--font-size-sm: clamp(0.7rem, 0.05vi + 0.69rem, 0.75rem);
-		--font-size-base: clamp(0.88rem, 0.13vi + 0.84rem, 1rem);
-		--font-size-md: clamp(1.09rem, 0.25vi + 1.03rem, 1.33rem);
-		--font-size-lg: clamp(1.37rem, 0.43vi + 1.26rem, 1.78rem);
-		--font-size-xl: clamp(1.71rem, 0.69vi + 1.54rem, 2.37rem);
-		--font-size-xxl: clamp(2.14rem, 1.07vi + 1.87rem, 3.16rem);
-		--font-size-xxxl: clamp(2.67rem, 1.62vi + 2.27rem, 4.21rem);
+		--font-size-sm: clamp(0.7rem, 0vi + 0.7rem, 0.7rem);
+		--font-size-base: clamp(0.88rem, 0.06vi + 0.86rem, 0.94rem);
+		--font-size-md: clamp(1.09rem, 0.16vi + 1.05rem, 1.25rem);
+		--font-size-lg: clamp(1.37rem, 0.29vi + 1.29rem, 1.66rem);
+		--font-size-xl: clamp(1.71rem, 0.5vi + 1.58rem, 2.21rem);
+		--font-size-xxl: clamp(2.14rem, 0.81vi + 1.93rem, 2.93rem);
+		--font-size-xxxl: clamp(2.67rem, 1.25vi + 2.36rem, 3.9rem);
   }
 }
 /* For browsers that don't support clamp */
@@ -21,15 +21,15 @@
 		--font-size-xxl: 2.14rem;
 		--font-size-xxxl: 2.67rem;
   }
-  @media screen and (min-width: 1920px) {
+  @media screen and (min-width: 1980px) {
     :root {
-			--font-size-sm: 0.75rem;
-			--font-size-base: 1rem;
-			--font-size-md: 1.33rem;
-			--font-size-lg: 1.78rem;
-			--font-size-xl: 2.37rem;
-			--font-size-xxl: 3.16rem;
-			--font-size-xxxl: 4.21rem;
+			--font-size-sm: 0.7rem;
+			--font-size-base: 0.94rem;
+			--font-size-md: 1.25rem;
+			--font-size-lg: 1.66rem;
+			--font-size-xl: 2.21rem;
+			--font-size-xxl: 2.93rem;
+			--font-size-xxxl: 3.9rem;
     }
   }
 }

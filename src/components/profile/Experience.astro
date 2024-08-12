@@ -45,7 +45,13 @@
 
 <style>
   .experience-container {
+    container-type: inline-size;
     padding: var(--space-6) var(--space-4);
+    width: 100%;
+
+    @container (max-width: 375px) {
+      padding: var(--space-4);
+    }
   }
   .experience {
     > span[experience-years] {

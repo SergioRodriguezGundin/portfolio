@@ -22,7 +22,9 @@ import ThemeToggle from '@components/ThemeToggle.astro';
   </div>
   <Experience />
   <span class='divider'></span>
-  <Contact />
+  <div class='personal-information-card-contact'>
+    <Contact />
+  </div>
 </div>
 
 <style>
@@ -51,6 +53,11 @@ import ThemeToggle from '@components/ThemeToggle.astro';
         font-weight: bold;
       }
     }
+  }
+  .personal-information-card-contact {
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   @container personal-information-card (width <= 400px) {
