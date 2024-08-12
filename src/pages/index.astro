@@ -42,6 +42,9 @@ import Layout from '@layouts/Layout.astro';
     grid-column-gap: 16px;
     grid-row-gap: 16px;
     height: 100%;
+    > div {
+      min-width: var(--min-section-size);
+    }
   }
   .personal-information {
     grid-area: 1 / 1 / 3 / 2;

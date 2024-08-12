@@ -16,6 +16,8 @@
   --space-9: 72px;
   --space-10: 96px;
 
+  --min-section-size: 400px;
+
   .divider {
     display: block;
     width: 100%;

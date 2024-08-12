@@ -27,11 +27,14 @@ import ThemeToggle from '@components/ThemeToggle.astro';
 
 <style>
   .personal-information-card {
+    container: personal-information-card / size;
+
     position: relative;
     overflow: hidden;
     height: 100%;
+    width: 100%;
   }
-  .personal-information-card-text {
+  .personal-information-card-text { 
     position: absolute;
     top: calc(50% - var(--space-10));
     line-height: 4.5rem;
@@ -49,4 +52,17 @@ import ThemeToggle from '@components/ThemeToggle.astro';
       }
     }
   }
+
+  @container personal-information-card (width <= 400px) {
+    .personal-information-card-image {
+      height: 360px;
+    }
+  }
+
+  @container personal-information-card (width >= 500px) {
+    .personal-information-card-image {
+      height: 575px;
+    }
+  }
+
 </style>

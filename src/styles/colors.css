@@ -46,6 +46,14 @@
 			color: var(--color-300);
 			font-family: 'Prompt-400';
 		}
+
+		h1 {
+			font-size: var(--font-size-lg);
+		}
+
+		h2 {
+			font-size: var(--font-size-md);
+		}
   }
 
 	[data-theme="dark"] {
