@@ -1,0 +1,25 @@
+---
+interface Props {
+  isRounded: boolean;
+}
+
+const { isRounded = false } = Astro.props as Props;
+---
+
+<button class='outline-button flex flex-center gap-2' class:list={[ isRounded ? 'rounded-full' : 'rounded-md' ]}>
+  <slot />
+</button>
+
+<style>
+  .outline-button {
+    border: 1.5px solid var(--color-100);
+    margin: 0;
+    padding: var(--space-3);
+  }
+  .rounded-full {
+    border-radius: 50%;
+  }
+  .rounded-md {
+    border-radius: var(--border-4);
+  }
+</style>

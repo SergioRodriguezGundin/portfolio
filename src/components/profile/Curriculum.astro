@@ -1,20 +1,26 @@
+---
+import OutlineButton from '@components/OutlineButton.astro';
+import Hand from '../icons/Hand.astro';
+---
+
 <div class="download-container flex flex-center gap-2">
   <div class="qr-code">
     <!--<img src="/images/qr-code.png" alt="QR Code" />-->
   </div>
-  <div class="cv-container">
-    <p class="download-cv-text">Scan your QR code to download my CV or click here</p>
-    <a class="download-cv-button" href="/path/to/your/cv.pdf" download>
-      <span>Download CV</span>
-    </a>
+  <div class="cv-container flex flex-column flex-start gap-3">
+    <p class="download-cv-text">Scan your QR code to download my CV or click below to download it</p>
+    <OutlineButton isRounded={false}>
+      <span>Here to get it! </span>
+      <Hand size={{width: 20, height: 20}} />
+    </OutlineButton>
   </div>
 </div>
 
 <style>
   .download-container {
-    background: var(--global-color);
+    background: var(--bg-color);
     padding: var(--space-4);
-    border-radius: var(--border-2);
+    border-radius: var(--border-3);
 
     width: 100%;
     height: 180px;

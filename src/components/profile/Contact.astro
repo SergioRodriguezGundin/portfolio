@@ -1,25 +1,20 @@
 ---
-import Email from '@components/icons/email.astro';
-import Linkedin from '@components/icons/linkedin.astro';
+import Email from '@components/icons/Email.astro';
+import Linkedin from '@components/icons/Linkedin.astro';
+import OutlineButton from '@components/OutlineButton.astro';
 ---
 
 <div class='contact flex flex-column flex-center gap-3'>
-  <button class='contact-button flex'>
+  <OutlineButton isRounded={true}>
     <Linkedin />
-  </button>
-  <button class='contact-button flex'>
+  </OutlineButton >
+  <OutlineButton isRounded={true}>
     <Email />
-  </button>
+  </OutlineButton>
 </div>
 
 <style>
   .contact {
     padding: var(--space-4);
-  }
-  .contact-button {
-    border: 1.5px solid var(--color-100);
-    border-radius: 50%;
-    padding: var(--space-3);
-    margin: 0;
   }
 </style>
