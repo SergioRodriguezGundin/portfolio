@@ -11,6 +11,9 @@ importers:
       '@astrojs/check':
         specifier: ^0.9.2
         version: 0.9.2(typescript@5.5.3)
+      '@bitjson/qr-code':
+        specifier: ^1.0.2
+        version: 1.0.2
       '@fontsource-variable/roboto-mono':
         specifier: ^5.0.19
         version: 5.0.19
@@ -158,6 +161,9 @@ packages:
   '@babel/types@7.25.2':
     resolution: {integrity: sha512-YTnYtra7W9e6/oAZEHj0bJehPRUlLH9/fbpT5LfB0NhQXyALCRkRs3zH9v07IYhkgpqX6Z78FnuccZr/l4Fs4Q==}
     engines: {node: '>=6.9.0'}
+
+  '@bitjson/qr-code@1.0.2':
+    resolution: {integrity: sha512-oqcTWhzMs8Dt/xrHKDUzYglccgjVX2GleASd4FsE7TGGUkW8n57tBjKmfwkAVWa722+v6ijS81EmWbd07ebsmQ==}
 
   '@emmetio/abbreviation@2.3.3':
     resolution: {integrity: sha512-mgv58UrU3rh4YgbE/TzgLQwJ3pFsHHhCLqY20aJq+9comytTXUDNGG/SMtSeMJdkpxgXSXunBGLD8Boka3JyVA==}
@@ -2054,6 +2060,8 @@ snapshots:
       '@babel/helper-string-parser': 7.24.8
       '@babel/helper-validator-identifier': 7.24.7
       to-fast-properties: 2.0.0
+
+  '@bitjson/qr-code@1.0.2': {}
 
   '@emmetio/abbreviation@2.3.3':
     dependencies:

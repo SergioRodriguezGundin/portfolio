@@ -3,12 +3,20 @@ import OutlineButton from '@components/OutlineButton.astro';
 import Hand from '../icons/Hand.astro';
 ---
 
-<div class="download-container flex flex-center gap-2">
+<div class="download-container flex flex-start gap-4">
   <div class="qr-code">
-    <!--<img src="/images/qr-code.png" alt="QR Code" />-->
+    <qr-code
+      id="qrCV"
+      contents="https://blog.bitjson.com/cashtokens-v2/"
+      module-color="var(--color-700)"
+      position-ring-color="var(--color-500)"
+      position-center-color="var(--global-color)"     
+      >
+      <!--<img src="/icons/angular.svg" slot="icon" />-->
+    </qr-code>
   </div>
-  <div class="cv-container flex flex-column flex-start gap-3">
-    <p class="download-cv-text">Scan your QR code to download my CV or click below to download it</p>
+  <div class="cv-container flex flex-column flex-start gap-4">
+    <p class="download-cv-text">Scan the QR to download my CV or click below to download it.</p>
     <OutlineButton isRounded={false}>
       <span>Here to get it! </span>
       <Hand size={{width: 20, height: 20}} />
@@ -16,13 +24,33 @@ import Hand from '../icons/Hand.astro';
   </div>
 </div>
 
+<script>
+  import * as qr from "@bitjson/qr-code";
+
+  qr.defineCustomElements(window);
+  document.getElementById('qrCV')?.addEventListener('codeRendered', () => {
+    document.getElementById('qrCV')?.animateQRCode('FadeInCenterOut');
+  });
+</script>
+
 <style>
+  #qrCV {
+    display: block;
+    width: 120px;
+    height: 120px;
+    background-color: var(--color-2000);
+    border-radius: var(--border-3);
+    margin-bottom: var(--space-5);
+  }
   .download-container {
     background: var(--bg-color);
-    padding: var(--space-4);
+    padding: var(--space-4) 0;
     border-radius: var(--border-3);
-
+    margin-top: var(--space-6);
     width: 100%;
     height: 180px;
+  }
+  .download-cv-text {
+    font-size: var(--font-size-base);
   }
 </style>

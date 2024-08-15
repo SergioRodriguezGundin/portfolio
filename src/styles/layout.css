@@ -82,6 +82,10 @@
     gap: var(--space-3);
   }
 
+  .gap-4 {
+    gap: var(--space-4);
+  }
+
   /* Grid utility classes */
   .grid {
     display: grid;

@@ -16,7 +16,8 @@
 		--background-gradient: none;
 		--bg-shadow: linear-gradient(90deg, rgb(0 0 0) 0%, rgb(0 0 0) 100%);
 
-		--global-color: hsl(65, 100%, 73%);
+		/*--global-color: hsl(65, 100%, 73%);*/
+		--global-color: hsl(156, 72%, 67%);
 		--black: hsl(0, 0%, 0%);
 		--white: hsl(0, 0%, 100%);
 
