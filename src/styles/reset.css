@@ -7,6 +7,11 @@
   box-sizing: border-box;
 }
 
+*::selection {
+  background-color: var(--global-color) !important;
+  color: var(--black) !important;
+}
+
 body {
   min-width: 100dvh;
   height: 100dvh;
