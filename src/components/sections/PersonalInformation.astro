@@ -8,27 +8,30 @@ import ThemeToggle from '@components/ThemeToggle.astro';
 
 <div class='personal-information-card'>
   <ThemeToggle />
-  <div class='personal-information-card-image'>
-    <ProfileImage />
-  </div>
-  <div class='personal-information-card-text'>
-    <h1>Hello!</h1>
-    <h1>I'm Sergio</h1>
-  </div>
-  <div class='personal-information-card-text-description'>
-    <p>
-      Welcome to my humble home on the web. I want to share with you my journey
-      recap as a <span software-developer>Software Developer</span> and my experiences.
-    </p>
-  </div>
-  <Experience />
-  <span class='divider'></span>
   <div class='personal-information-card-contact'>
     <Contact />
   </div>
-  <div class='personal-information-card-curriculum'>
-    <Curriculum />
+  <div class='personal-information-card-image'>
+    <ProfileImage />
   </div>
+  <section class='personal-information-card-content'>
+    <div class='card-title'>
+      <h1>Hello!</h1>
+      <h1>I'm Sergio</h1>
+    </div>
+    <div class='card-description'>
+      <p>
+        Welcome to my humble home on the web. I want to share with you my
+        journey recap as a <span software-developer>Software Developer</span> and
+        my experiences.
+      </p>
+    </div>
+    <Experience />
+    <span class='divider'></span>
+    <div class='personal-information-card-curriculum'>
+      <Curriculum />
+    </div>
+  </section>
 </div>
 
 <style>
@@ -40,15 +43,20 @@ import ThemeToggle from '@components/ThemeToggle.astro';
     height: 100%;
     width: 100%;
   }
-  .personal-information-card-text { 
+  .personal-information-card-content {
     position: absolute;
-    top: calc(50% - var(--space-10));
+    top: calc(var(--profile-card-height) / 1.2);
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .card-title {
     line-height: 4.5rem;
     > h1 {
       font-size: var(--font-size-xxxl);
     }
   }
-  .personal-information-card-text-description {
+  .card-description {
     > p {
       font-size: var(--font-size-base);
       margin-top: var(--space-4);
@@ -63,18 +71,18 @@ import ThemeToggle from '@components/ThemeToggle.astro';
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 99;
   }
 
   @container personal-information-card (width <= 400px) {
     .personal-information-card-image {
-      height: 375px;
+      --profile-card-height: 375px;
     }
   }
 
   @container personal-information-card (width >= 500px) {
     .personal-information-card-image {
-      height: 568px;
+      --profile-card-height: 568px;
     }
   }
-
 </style>

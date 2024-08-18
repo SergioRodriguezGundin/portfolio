@@ -6,7 +6,10 @@ interface Props {
 const { isRounded = false } = Astro.props as Props;
 ---
 
-<button class='outline-button flex flex-center gap-2' class:list={[ isRounded ? 'rounded-full' : 'rounded-md' ]}>
+<button
+  class='outline-button flex flex-center gap-2'
+  class:list={[isRounded ? 'rounded-full' : 'rounded-md']}
+>
   <slot />
 </button>
 
