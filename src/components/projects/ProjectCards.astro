@@ -1,0 +1,108 @@
+---
+import ProjectCard from './ProjectCard.astro';
+
+const cards = [
+  {
+    title: 'Project 1',
+    description: 'Description of project 1',
+    image: 'https://via.placeholder.com/150',
+  },
+  {
+    title: 'Project 2',
+    description: 'Description of project 2',
+    image: 'https://via.placeholder.com/150',
+  },
+  {
+    title: 'Project 3',
+    description: 'Description of project 3',
+    image: 'https://via.placeholder.com/150',
+  },
+  {
+    title: 'Project 4',
+    description: 'Description of project 4',
+    image: 'https://via.placeholder.com/150',
+  },
+];
+
+const numCards = cards.length;
+const cardWidth = 0;
+const cardHeight = '40vw';
+const cardGap = 'var(--space-4)';
+---
+
+<ul id='project-cards'>
+  {
+    cards.map((card, index) => (
+      <li class='card' id={`card_${index + 1}`}>
+        <div class='card-content'>
+          <ProjectCard
+            title={card.title}
+            description={card.description}
+            image={card.image}
+          />
+        </div>
+      </li>
+    ))
+  }
+</ul>
+
+<style define:vars={{ numCards, cardWidth, cardHeight, cardGap }}>
+  #card_1 {
+    --index: 1;
+  }
+  #card_2 {
+    --index: 2;
+  }
+  #card_3 {
+    --index: 3;
+  }
+  #card_4 {
+    --index: 4;
+  }
+
+  #project-cards {
+    view-timeline-name: --cards-element-scrolls-in-body;
+
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(var(--numCards), var(--cardHeight));
+    gap: var(--cardGap);
+  }
+
+  .card {
+    --index0: calc(var(--index) - 1);
+    --reverse-index: calc(var(--numCards) - var(--index0));
+    --reverse-index0: calc(var(--reverse-index) - 1);
+
+    position: sticky;
+    top: 0;
+    padding-top: calc(var(--index) * var(--cardGap));
+  }
+
+  .card-content {
+    --start-range: calc(var(--index0) / var(--numcards) * 100%);
+    --end-range: calc((var(--index)) / var(--numcards) * 100%);
+
+    animation: linear scale forwards;
+    animation-timeline: --cards-element-scrolls-in-body;
+    animation-range: exit-crossing var(--start-range) exit-crossing
+      var(--end-range);
+    overflow: hidden;
+    transform-origin: 50% 0%;
+    will-change: transform;
+    width: 100%;
+    height: 100%;
+
+    /* styles for testing */
+    background-color: var(--bg-color);
+    border: 2px solid var(--color-300);
+    border-radius: var(--border-3);
+  }
+
+  @keyframes scale {
+    to {
+      transform: scale(calc(1.1 - calc(0.1 * var(--reverse-index))));
+    }
+  }
+</style>

@@ -1,7 +1,17 @@
 ---
-
+import ProjectCards from '@components/projects/ProjectCards.astro';
 ---
 
 <div class='projects'>
-  <p>Here are some of my projects</p>
+  <ProjectCards />
 </div>
+
+<style>
+  .projects {
+    overflow-y: scroll;
+    height: 80vh;
+    width: 100%;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  }
+</style>

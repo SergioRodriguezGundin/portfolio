@@ -18,7 +18,7 @@ import Layout from '@layouts/Layout.astro';
         <PersonalInformation />
       </Card>
     </div>
-    <div class='proyects'>
+    <div class='my-proyects flex flex-center'>
       <Projects />
     </div>
     <div class='my-journey'>
@@ -26,7 +26,7 @@ import Layout from '@layouts/Layout.astro';
         <Experience />
       </Card>
     </div>
-    <div class='hobbies'>
+    <div class='my-hobbies'>
       <Card title='Hobbies'>
         <Hobbies />
       </Card>
@@ -49,13 +49,12 @@ import Layout from '@layouts/Layout.astro';
   .personal-information {
     grid-area: 1 / 1 / 3 / 2;
   }
-  .proyects {
+  .my-proyects {
     grid-area: 1 / 2 / 3 / 3;
+    padding: 0 var(--space-4);
+    width: 100%;
   }
-  .experience {
-    grid-area: 1 / 3 / 2 / 4;
-  }
-  .hobbies {
+  .my-hobbies {
     grid-area: 2 / 3 / 3 / 4;
   }
   .bg-shadow {
