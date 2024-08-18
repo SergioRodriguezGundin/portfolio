@@ -5,6 +5,7 @@ import Hobbies from '@components/sections/Hobbies.astro';
 import PersonalInformation from '@components/sections/PersonalInformation.astro';
 import Projects from '@components/sections/Projects.astro';
 import Layout from '@layouts/Layout.astro';
+import MouseWheel from '@components/icons/MouseWheel.astro';
 ---
 
 <Layout
@@ -20,6 +21,7 @@ import Layout from '@layouts/Layout.astro';
     </div>
     <div class='my-proyects flex flex-center'>
       <Projects />
+      <MouseWheel />
     </div>
     <div class='my-journey'>
       <Card title='My journey'>
@@ -50,6 +52,7 @@ import Layout from '@layouts/Layout.astro';
     grid-area: 1 / 1 / 3 / 2;
   }
   .my-proyects {
+    position: relative;
     grid-area: 1 / 2 / 3 / 3;
     padding: 0 var(--space-4);
     width: 100%;
