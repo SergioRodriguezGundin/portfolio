@@ -25,4 +25,10 @@ const { isRounded = false } = Astro.props as Props;
   .rounded-md {
     border-radius: var(--border-4);
   }
+
+  @media (480px <= width <= 1920px) {
+    .outline-button {
+      padding: var(--space-2);
+    }
+  }
 </style>

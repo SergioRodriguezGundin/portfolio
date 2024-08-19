@@ -75,6 +75,12 @@ import ThemeToggle from '@components/ThemeToggle.astro';
   }
 
   @container personal-information-card (width <= 400px) {
+    .card-title {
+      line-height: 2rem;
+      > h1 {
+        font-size: var(--font-size-xl);
+      }
+    }
     .personal-information-card-image {
       --profile-card-height: 375px;
     }
