@@ -17,8 +17,8 @@ import Hand from '../icons/Hand.astro';
   <div class='cv-container flex flex-column flex-start gap-2'>
     <h4 class='download-cv-title'>DOWNLOAD MY CV</h4>
     <p class='download-cv-text'>
-      Scan the QR to download my CV or click here to download it.
-      <Hand size={{ width: 20, height: 20 }} />
+      Scan the QR or click here to download it.
+      <!--<Hand size={{ width: 20, height: 20 }} />-->
     </p>
   </div>
   <div class='download-button'>
@@ -62,5 +62,21 @@ import Hand from '../icons/Hand.astro';
     display: block;
     width: 100px;
     height: 100px;
+  }
+
+  @media (768px <= width <= 1920px) {
+    #qrCV {
+      width: 60px;
+      height: 60px;
+    }
+    .download-cv-title {
+      display: none;
+    }
+    .download-cv-text {
+      font-size: var(--font-size-sm);
+    }
+    .download-button {
+      display: none;
+    }
   }
 </style>

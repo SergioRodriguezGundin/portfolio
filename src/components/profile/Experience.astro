@@ -69,4 +69,21 @@
       margin-top: var(--space-3);
     }
   }
+  
+  @media (768px <= width <= 1920px) {
+    .experience {
+      > span[experience-years] {
+        font-size: var(--font-size-xl);
+        > span {
+          font-size: var(--font-size-base);
+        }
+      }
+      > span[experience-text] {
+        font-size: var(--font-size-sm);
+      }
+      .tech-stack {
+        display: none;
+      }
+    }
+  }
 </style>
