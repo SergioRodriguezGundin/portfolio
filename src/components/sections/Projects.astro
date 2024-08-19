@@ -10,9 +10,33 @@ import ProjectCards from '@components/projects/ProjectCards.astro';
   .projects {
     position: relative;
     overflow-y: scroll;
-    height: 80vh;
+    height: 85vh;
     width: 100%;
     scrollbar-width: none; /* For Firefox */
     -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  }
+
+  @media (width <= 768px) {
+    .projects {
+      height: 50vh;
+    }
+  }
+
+  @media (width >= 768px) {
+    .projects {
+      height: 65vh;
+    }
+  }
+
+  @media (width >= 1280px) {
+    .projects {
+      height: 75vh;
+    }
+  }
+
+  @media (width > 1920px) {
+    .projects {
+      height: 85vh;
+    }
   }
 </style>
