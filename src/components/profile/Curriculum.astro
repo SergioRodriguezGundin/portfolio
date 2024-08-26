@@ -6,7 +6,7 @@ import Download from '@components/icons/Download.astro';
   <div class='qr-code'>
     <qr-code
       id='qrCV'
-      contents='https://blog.bitjson.com/cashtokens-v2/'
+      contents={'/cv/SergioRodriguez.pdf'}
       module-color='var(--color-100)'
       position-ring-color='var(--color-100)'
       position-center-color='var(--global-color)'
@@ -29,9 +29,9 @@ import Download from '@components/icons/Download.astro';
 
   qr.defineCustomElements(window);
   document.getElementById('qrCV')?.addEventListener('codeRendered', () => {
-    document.getElementById('qrCV')?.animateQRCode('FadeInCenterOut');
+    (document.getElementById('qrCV') as any).animateQRCode('FadeInCenterOut');
   });
-
+  
   const downloadButton = document.querySelector('.download-button');
   downloadButton?.addEventListener('click', () => {
     const link = document.createElement('a');
