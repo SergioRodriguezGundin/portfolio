@@ -1,0 +1,22 @@
+{
+  "title": "La Liga",
+  "description": "La Liga is the Spanish football league. It is the top professional football league in Spain and is contested by 20 teams.",
+  "images": [
+    "/images/la-liga/la-liga-1.png",
+    "/images/la-liga/la-liga-2.png",
+    "/images/la-liga/la-liga-3.png"
+  ],
+  "company": "La Liga",
+  "milestones": [
+    "2021-01-01: Started the project",
+    "2021-01-02: Finished the project"
+  ],
+  "stack": [
+    {
+      "name": "React",
+      "icon": "react"
+    }
+  ],
+  "url": "https://www.laliga.com",
+  "color": "#000000"
+}

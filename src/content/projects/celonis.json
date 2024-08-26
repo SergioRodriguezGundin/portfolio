@@ -1,0 +1,22 @@
+{
+  "title": "Celonis",
+  "description": "Celonis is the leading provider of process mining software. It is the leading provider of process mining software in the world and is used by many large companies.",
+  "images": [
+    "/images/celonis/celonis-1.png",
+    "/images/celonis/celonis-2.png",
+    "/images/celonis/celonis-3.png"
+  ],
+  "company": "Celonis",
+  "milestones": [
+    "2021-01-01: Started the project",
+    "2021-01-02: Finished the project"
+  ],
+  "stack": [
+    {
+      "name": "React",
+      "icon": "react"
+    }
+  ],
+  "url": "https://www.celonis.com",
+  "color": "#000000"
+}

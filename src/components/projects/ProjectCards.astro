@@ -1,30 +1,10 @@
 ---
+import { getCollection, type CollectionEntry } from 'astro:content';
 import ProjectCard from './ProjectCard.astro';
 
-const cards = [
-  {
-    title: 'Project 1',
-    description: 'Description of project 1',
-    image: 'https://via.placeholder.com/150',
-  },
-  {
-    title: 'Project 2',
-    description: 'Description of project 2',
-    image: 'https://via.placeholder.com/150',
-  },
-  {
-    title: 'Project 3',
-    description: 'Description of project 3',
-    image: 'https://via.placeholder.com/150',
-  },
-  {
-    title: 'Project 4',
-    description: 'Description of project 4',
-    image: 'https://via.placeholder.com/150',
-  },
-];
+const projects: CollectionEntry<'projects'>[] = await getCollection('projects');
 
-const numCards = cards.length;
+const numCards = projects.length;
 const cardWidth = 0;
 const cardHeight = '40vw';
 const cardGap = 'var(--space-4)';
@@ -32,13 +12,11 @@ const cardGap = 'var(--space-4)';
 
 <ul id='project-cards'>
   {
-    cards.map((card, index) => (
+    projects.map((project, index) => (
       <li class='card' id={`card_${index + 1}`}>
         <div class='card-content'>
           <ProjectCard
-            title={card.title}
-            description={card.description}
-            image={card.image}
+            project={project}
           />
         </div>
       </li>
@@ -58,6 +36,9 @@ const cardGap = 'var(--space-4)';
   }
   #card_4 {
     --index: 4;
+  }
+  #card_5 {
+    --index: 5;
   }
 
   #project-cards {

@@ -1,15 +1,14 @@
 ---
+import type { CollectionEntry } from 'astro:content';
+
 export interface ProjectCardProps {
-  title: string;
-  description: string;
-  image: string;
+  project: CollectionEntry<'projects'>;
 }
 
-const { title, description, image } = Astro.props as ProjectCardProps;
+const { data } = (Astro.props as ProjectCardProps).project;
 ---
 
 <div class='project-card'>
-  <img src={image} alt={title} />
-  <h3>{title}</h3>
-  <p>{description}</p>
+  <h3>{data.title}</h3>
+  <p>{data.description}</p>
 </div>

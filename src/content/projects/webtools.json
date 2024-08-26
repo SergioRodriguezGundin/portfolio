@@ -1,0 +1,22 @@
+{
+  "title": "Webtools",
+  "description": "Webtools is a collection of tools for web development. It is a collection of tools for web development.",
+  "images": [
+    "/images/webtools/webtools-1.png",
+    "/images/webtools/webtools-2.png",
+    "/images/webtools/webtools-3.png"
+  ],
+  "company": "Webtools",
+  "milestones": [
+    "2021-01-01: Started the project",
+    "2021-01-02: Finished the project"
+  ],
+  "stack": [
+    {
+      "name": "React",
+      "icon": "react"
+    }
+  ],
+  "url": "https://www.webtools.com",
+  "color": "#000000"
+}

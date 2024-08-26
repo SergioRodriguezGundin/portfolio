@@ -1,0 +1,42 @@
+{
+  "title": "Dixper",
+  "description": "Dixper is the viewer-streamer interaction tool you've been waiting for. In a quick and easy way, it allows you to take your streaming to another level with a real time interactions.",
+  "images": [
+    "/images/dixper/dixper-1.png",
+    "/images/dixper/dixper-2.png",
+    "/images/dixper/dixper-3.png"
+  ],
+  "company": "Dixper",
+  "milestones": [
+    "Viewers team lead",
+    "New payment system",
+    "Streaming providers lib",
+    "Monthly goal",
+    "Finishers",
+    "Integration with Twitch Channel Points"
+  ],
+  "stack": [
+    {
+      "name": "TypeScript",
+      "icon": "typescript"
+    },
+    {
+      "name": "Angular v15",
+      "icon": "angular"
+    },
+    {
+      "name": "Firebase",
+      "icon": "firebase"
+    },
+    {
+      "name": "Nx project",
+      "icon": "nx"
+    },
+    {
+      "name": "NestJS",
+      "icon": "nestjs"
+    }
+  ],
+  "url": "https://dixper.gg",
+  "color": "#000000"
+}

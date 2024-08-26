@@ -1,0 +1,22 @@
+{
+  "title": "Bankinter",
+  "description": "Bankinter is the Spanish bank. It is the second largest bank in Spain and is part of the Banco Santander group.",
+  "images": [
+    "/images/bankinter/bankinter-1.png",
+    "/images/bankinter/bankinter-2.png",
+    "/images/bankinter/bankinter-3.png"
+  ],
+  "company": "Bankinter",
+  "milestones": [
+    "2021-01-01: Started the project",
+    "2021-01-02: Finished the project"
+  ],
+  "stack": [
+    {
+      "name": "React",
+      "icon": "react"
+    }
+  ],
+  "url": "https://www.bankinter.com",
+  "color": "#000000"
+}
