@@ -1,9 +1,8 @@
 ---
 import Download from '@components/icons/Download.astro';
-import Hand from '../icons/Hand.astro';
 ---
 
-<button class='download-container flex flex-start gap-4'>
+<button class='download-button flex flex-start gap-4'>
   <div class='qr-code'>
     <qr-code
       id='qrCV'
@@ -18,10 +17,9 @@ import Hand from '../icons/Hand.astro';
     <h4 class='download-cv-title'>DOWNLOAD MY CV</h4>
     <p class='download-cv-text'>
       Scan the QR or click here to download it.
-      <!--<Hand size={{ width: 20, height: 20 }} />-->
     </p>
   </div>
-  <div class='download-button'>
+  <div class='download-icon'>
     <Download size={{ width: 20, height: 20 }} />
   </div>
 </button>
@@ -33,10 +31,18 @@ import Hand from '../icons/Hand.astro';
   document.getElementById('qrCV')?.addEventListener('codeRendered', () => {
     document.getElementById('qrCV')?.animateQRCode('FadeInCenterOut');
   });
+
+  const downloadButton = document.querySelector('.download-button');
+  downloadButton?.addEventListener('click', () => {
+    const link = document.createElement('a');
+    link.href = '/cv/SergioRodriguez.pdf';
+    link.download = 'sergio-rodriguez-cv.pdf';
+    link.click();
+  });
 </script>
 
 <style>
-  .download-container {
+  .download-button {
     position: relative;
     padding: var(--space-4);
     border-radius: var(--border-4);
@@ -53,7 +59,7 @@ import Hand from '../icons/Hand.astro';
     font-size: var(--font-size-base);
     text-align: start;
   }
-  .download-button {
+  .download-icon {
     position: absolute;
     right: var(--space-4);
     top: var(--space-4);
