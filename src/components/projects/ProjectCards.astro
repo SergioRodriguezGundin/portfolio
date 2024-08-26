@@ -3,8 +3,9 @@ import { getCollection, type CollectionEntry } from 'astro:content';
 import ProjectCard from './ProjectCard.astro';
 
 const projects: CollectionEntry<'projects'>[] = await getCollection('projects');
+const sortedProjects = projects.sort((a, b) => a.data.sortOrder - b.data.sortOrder);
 
-const numCards = projects.length;
+const numCards = sortedProjects.length;
 const cardWidth = 0;
 const cardHeight = '40vw';
 const cardGap = 'var(--space-4)';
@@ -12,7 +13,7 @@ const cardGap = 'var(--space-4)';
 
 <ul id='project-cards'>
   {
-    projects.map((project, index) => (
+    sortedProjects.map((project, index) => (
       <li class='card' id={`card_${index + 1}`}>
         <div class='card-content'>
           <ProjectCard
