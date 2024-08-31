@@ -8,7 +8,7 @@
 }
 
 *::selection {
-  background-color: var(--global-color) !important;
+  background-color: var(--primary-color) !important;
   color: var(--black) !important;
 }
 

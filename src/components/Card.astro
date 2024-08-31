@@ -43,4 +43,10 @@ const { title = 'title' } = Astro.props as CardProps;
       padding-left: var(--space-2);
     }
   }
+
+  @container card (width > 1080px) {
+    .card-content {
+      clip-path: polygon(22% 0,100% 0,100% 100%,0 100%,0 45px,18% 45px)
+    }
+  }
 </style>
