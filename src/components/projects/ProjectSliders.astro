@@ -1,6 +1,7 @@
 ---
 import { getCollection, type CollectionEntry } from 'astro:content';
 import ProjectCard from './ProjectCard.astro';
+import MouseWheel from '@components/icons/MouseWheel.astro';
 
 const projects: CollectionEntry<'projects'>[] = await getCollection('projects');
 const sortedProjects = projects.sort((a, b) => a.data.sortOrder - b.data.sortOrder);
@@ -31,6 +32,9 @@ const numCards = sortedProjects.length;
       ))
     }
   </ul>
+  <div class="mouse-wheel-container">
+    <MouseWheel />
+  </div>
 </div>
 
 <style define:vars={{ numCards }}>
@@ -50,13 +54,12 @@ const numCards = sortedProjects.length;
   }
 
   [data-component='carousel'] {
-    border-radius: 0.5em;
     position: relative;
+    display: flex;
+    border-radius: 0.5em;
+    overflow: hidden;
     height: 100%;
     width: 100%;
-    overflow: hidden;
-
-    display: flex;
 
     .entries {
       display: flex;
@@ -101,6 +104,12 @@ const numCards = sortedProjects.length;
         &:nth-child(4) { --i: 4; }
         &:nth-child(5) { --i: 5; }
       }
+    }
+
+    .mouse-wheel-container {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
     }
   }
 </style>
