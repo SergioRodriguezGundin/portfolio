@@ -13,8 +13,8 @@
 		--color-3000: hsl(0, 0%, 98%);
 
 		--bg-color: hsl(0deg 0% 87.45%);
-		--background-gradient: none;
-		--bg-shadow: linear-gradient(90deg, rgb(0 0 0) 0%, rgb(0 0 0) 100%);
+		--background-gradient: radial-gradient(200% 36.7% at 41.8% -2.8000000000000003%,var(--color-2000, #101010) 0%,rgba(15,15,15,0) 100%);
+		--bg-shadow: linear-gradient(90deg, rgb(255 255 255 / 42%) 0%, rgb(255 255 255 / 42%) 100%)
 		--card-shadow: rgba(14, 63, 126, 0.06) 0px 0px 0px 1px, rgba(42, 51, 70, 0.03) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 2px 2px -1px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.03) 0px 5px 5px -2.5px, rgba(42, 51, 70, 0.03) 0px 10px 10px -5px, rgba(42, 51, 70, 0.03) 0px 24px 24px -8px;
 
 		/*--primary-color-bg: hsl(from var(--primary-color) h s 80%);*/
@@ -23,7 +23,6 @@
 		--white: hsl(0, 0%, 100%);
 
 		--accent-gradient: linear-gradient(120deg, var(--primary-color), var(--color-100) 30%, var(--color-100) 60%);
-
 		--profile-card-height: 568px;
 
 		.text-gradient {
@@ -72,11 +71,10 @@
 		--color-1000: hsl(0, 0%, 15%);
 		--color-2000: hsl(0, 0%, 10%);
 		--color-3000: hsl(0, 0%, 5%);
-		
-		--bg-color: hsl(0, 0%, 4%);
-		--background-gradient: linear-gradient(var(--color-2000) 0%, transparent 100%);
 
-		--bg-shadow: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .75) 100%);
+		--background-gradient: radial-gradient(200% 36.7% at 41.8% -2.80%,var(--color-2000, #101010) 0%,rgba(15,15,15,0) 100%);
+		--bg-color: hsl(0, 0%, 4%);
+		--bg-shadow: linear-gradient(90deg, rgb(255 255 255 / 42%) 0%, rgb(255 255 255 / 42%) 100%)
 	}
 
 	[data-theme="light"] {
@@ -93,8 +91,7 @@
 		--color-2000: hsl(0, 0%, 96%);
 		--color-3000: hsl(0, 0%, 98%);
 		
+		--background-gradient: radial-gradient(200% 36.7% at 41.8% -2.80%,var(--color-2000, #101010) 0%,rgba(15,15,15,0) 100%);
 		--bg-color: hsl(0deg 0% 87.45%);
-		--background-gradient: none;
-
 		--bg-shadow: linear-gradient(90deg, rgb(0 0 0) 0%, rgb(0 0 0) 100%);
 	}
