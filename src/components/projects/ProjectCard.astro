@@ -12,3 +12,13 @@ const { data } = (Astro.props as ProjectCardProps).project;
   <h3>{data.title}</h3>
   <p>{data.description}</p>
 </div>
+
+<style define:vars={{data}}>
+  .project-card {
+    background: var(--color-2000);
+    padding: var(--space-4);
+    border-radius: var(--border-4);
+    width: 100%;
+    height: 100%;
+  }
+</style>

@@ -22,7 +22,7 @@ import ThemeToggle from '@components/ThemeToggle.astro';
     <div class='card-description'>
       <p>
         Welcome to my humble home on the web. I want to share with you my
-        journey recap as a <span software-developer>Software Developer</span>.
+        journey recap as a <span software-developer class='text-gradient'>Software Developer</span>.
       </p>
     </div>
     <Experience />
@@ -61,9 +61,8 @@ import ThemeToggle from '@components/ThemeToggle.astro';
       line-height: 2rem;
       margin-top: var(--space-4);
       span[software-developer] {
-        color: var(--black);
         font-weight: bold;
-        background: var(--primary-color);
+        text-decoration: underline;
       }
     }
   }
