@@ -15,7 +15,9 @@ const projectsCollection = defineCollection({
       icon: z.string(),
     })),
     url: z.string().url(),
-    color: z.string(),
+    colors: z.object({
+      'bg-icon': z.string(),
+    }),
   }),
 });
 

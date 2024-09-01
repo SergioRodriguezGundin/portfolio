@@ -20,5 +20,7 @@
     }
   ],
   "url": "https://www.webtools.com",
-  "color": "#000000"
+  "colors": {
+    "bg-icon": "hsl(78.1deg 100% 37.06%)"
+  }
 }

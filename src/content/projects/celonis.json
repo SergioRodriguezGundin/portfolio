@@ -20,5 +20,7 @@
     }
   ],
   "url": "https://www.celonis.com",
-  "color": "#000000"
+  "colors": {
+    "bg-icon": "hsl(0deg 0% 0%)"
+  }
 }

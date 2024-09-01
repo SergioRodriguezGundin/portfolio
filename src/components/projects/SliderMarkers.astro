@@ -28,7 +28,7 @@ const iconMap = {
       const IconComponent = iconMap[project.data.id as keyof typeof iconMap];
       return (
         <li>
-          <a href={`#carousel_${index}`}>
+          <a href={`#carousel_${index}`} style={`background-color: ${project.data.colors['bg-icon']}`}>
             {IconComponent && <IconComponent />}
           </a>
         </li>
@@ -47,6 +47,11 @@ const iconMap = {
     a {
       animation-timeline: --carousel;
       animation-range: calc((var(--i) - 1) * 20%) calc(var(--i) * 20% + 1px);
+      display: flex;
+      border-radius: var(--border-3);
+      background-color: var(--colors-100);
+      padding: var(--space-2);
+      width: fit-content;
     }
     li {
       &:nth-child(1) { --i: 1; }

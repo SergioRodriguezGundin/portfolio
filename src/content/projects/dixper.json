@@ -40,5 +40,7 @@
     }
   ],
   "url": "https://dixper.gg",
-  "color": "#000000"
+  "colors": {
+    "bg-icon": "hsla(166, 91.8%, 52%, 1)"
+  }
 }

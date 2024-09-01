@@ -20,5 +20,7 @@
     }
   ],
   "url": "https://www.bankinter.com",
-  "color": "#000000"
+  "colors": {
+    "bg-icon": "hsl(26.96deg 100% 55.49%)"
+  }
 }
