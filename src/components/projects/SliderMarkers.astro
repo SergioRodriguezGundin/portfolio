@@ -1,22 +1,39 @@
 ---
+import Celonis from '@components/icons/Celonis.astro';
+import LaLiga from '@components/icons/LaLiga.astro';
+import Dixper from '@components/icons/Dixper.astro';
+import Bankinter from '@components/icons/Bankinter.astro';
 import { type CollectionEntry } from 'astro:content';
+import Dreamfit from '@components/icons/Dreamfit.astro';
+import { DREAMFIT, LALIGA, DIXPER, BANKINTER, CELONIS } from '@models/projects.model';
 
 interface MarkerProps {
   sortedProjects: CollectionEntry<'projects'>[];
 }
 
 const { sortedProjects }: MarkerProps = Astro.props as MarkerProps;
+
+const iconMap = {
+  [CELONIS]: Celonis,
+  [LALIGA]: LaLiga,
+  [DIXPER]: Dixper,
+  [BANKINTER]: Bankinter,
+  [DREAMFIT]: Dreamfit
+};
 ---
 
 <ul class="markers">
   {
-    sortedProjects.map((project, index) => (
-      <li>
-        <a href={`#carousel_${index}`}>
-          <span>{project.data.title}</span>
-        </a>
-      </li>
-    ))
+    sortedProjects.map((project, index) => {
+      const IconComponent = iconMap[project.data.id as keyof typeof iconMap];
+      return (
+        <li>
+          <a href={`#carousel_${index}`}>
+            {IconComponent && <IconComponent />}
+          </a>
+        </li>
+      )
+    })
   }
 </ul>
 

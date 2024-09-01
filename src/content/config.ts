@@ -3,6 +3,7 @@ import { defineCollection, z } from 'astro:content';
 const projectsCollection = defineCollection({
   type: 'data',
   schema: z.object({
+    id: z.string(),
     sortOrder: z.number(),
     title: z.string(),
     description: z.string(),
