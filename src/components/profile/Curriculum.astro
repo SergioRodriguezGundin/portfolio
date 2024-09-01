@@ -2,7 +2,7 @@
 import Download from '@components/icons/Download.astro';
 ---
 
-<button class='download-button flex flex-start gap-4'>
+<button class='download-button flex flex-start gap-3'>
   <div class='qr-code'>
     <qr-code
       id='qrCV'
@@ -72,17 +72,14 @@ import Download from '@components/icons/Download.astro';
 
   @media (768px <= width <= 1920px) {
     #qrCV {
-      width: 60px;
-      height: 60px;
+      width: 75px;
+      height: 75px;
     }
     .download-cv-title {
       display: none;
     }
     .download-cv-text {
-      font-size: var(--font-size-sm);
-    }
-    .download-button {
-      display: none;
+      margin-right: var(--space-6);
     }
   }
 </style>

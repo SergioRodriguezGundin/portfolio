@@ -73,9 +73,9 @@ import ThemeToggle from '@components/ThemeToggle.astro';
     z-index: 0;
   }
 
-  @media (width <= 1920px) {
+  @media (1440px <= width <= 1920px) {
     .layout {
-      grid-column-gap: 0;
+      max-width: 1320px;
     }
   }
 </style>
