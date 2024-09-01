@@ -1,0 +1,42 @@
+---
+import { type CollectionEntry } from 'astro:content';
+
+interface MarkerProps {
+  sortedProjects: CollectionEntry<'projects'>[];
+}
+
+const { sortedProjects }: MarkerProps = Astro.props as MarkerProps;
+---
+
+<ul class="markers">
+  {
+    sortedProjects.map((project, index) => (
+      <li>
+        <a href={`#carousel_${index}`}>
+          <span>{project.data.title}</span>
+        </a>
+      </li>
+    ))
+  }
+</ul>
+
+<style>
+  .markers {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    padding: var(--space-6) 0;
+    width: 120px;
+    a {
+      animation-timeline: --carousel;
+      animation-range: calc((var(--i) - 1) * 20%) calc(var(--i) * 20% + 1px);
+    }
+    li {
+      &:nth-child(1) { --i: 1; }
+      &:nth-child(2) { --i: 2; }
+      &:nth-child(3) { --i: 3; }
+      &:nth-child(4) { --i: 4; }
+      &:nth-child(5) { --i: 5; }
+    }
+  }
+</style>
