@@ -28,7 +28,7 @@ const iconMap = {
       const IconComponent = iconMap[project.data.id as keyof typeof iconMap];
       return (
         <li>
-          <a href={`#carousel_${index}`} style={`background-color: ${project.data.colors['bg-icon']}`}>
+          <a href={`#carousel_${index}`} style={`background: ${project.data.colors['bg-icon']}`}>
             {IconComponent && <IconComponent />}
           </a>
         </li>
@@ -41,17 +41,38 @@ const iconMap = {
   .markers {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     gap: var(--space-4);
-    padding: var(--space-6) 0;
+    padding: var(--space-6) var(--space-3);
     width: 120px;
     a {
       animation-timeline: --carousel;
       animation-range: calc((var(--i) - 1) * 20%) calc(var(--i) * 20% + 1px);
+      position: relative;
       display: flex;
       border-radius: var(--border-3);
-      background-color: var(--colors-100);
+      background: var(--colors-100);
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
       padding: var(--space-2);
       width: fit-content;
+      transition: transform 0.35s linear;
+
+      &:hover::after {
+        content: '';
+        width: 30px;
+        height: 30px;
+        background: inherit;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        filter: blur(40px) saturate(400%);
+        z-index: -1;
+      }
+      &:hover {
+        transform: scale(0.9);
+      }
     }
     li {
       &:nth-child(1) { --i: 1; }
