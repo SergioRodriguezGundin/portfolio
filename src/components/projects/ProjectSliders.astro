@@ -41,7 +41,6 @@ const numCards = sortedProjects.length;
   [data-component='carousel'] {
     position: relative;
     display: flex;
-    border-radius: 0.5em;
     overflow: hidden;
     height: 100%;
     width: 100%;
@@ -49,6 +48,7 @@ const numCards = sortedProjects.length;
     .entries {
       display: flex;
       flex-direction: column;
+      gap: var(--space-4);
       border-radius: var(--border-3);
       overflow-x: scroll;
       scroll-snap-type: y mandatory;
