@@ -10,7 +10,7 @@ import ThemeToggle from '@components/ThemeToggle.astro';
   title="Hi! I'm Sergio. I'm a software developer from Spain."
   description='This is the mockup of the home page of my portfolio.'
 >
-  <div class='bg-shadow'></div>
+  <!--<BgShadow position={{top: '0', bottom: '0', left: '-85px', right: '0'}} size={{width: '20vw', height: '20vh'}} />-->
   <ThemeToggle />
   <div class='layout'>
     <div class='personal-information'>
@@ -60,20 +60,6 @@ import ThemeToggle from '@components/ThemeToggle.astro';
   .hobbies {
     grid-area: 2 / 3 / 3 / 4;
   }
-  .bg-shadow {
-    position: absolute;
-    top: 0;
-    background: var(--bg-shadow);
-    border-radius: 1200px;
-    filter: blur(100px);
-    opacity: 0.25;
-    overflow: hidden;
-    width: 20vw;
-    height: 20vh;
-    z-index: 0;
-    left: -85px;
-  }
-
   @media (1440px <= width <= 1920px) {
     .layout {
       max-width: 1320px;
