@@ -5,14 +5,14 @@ import Linkedin from '@components/icons/Linkedin.astro';
 import OutlineButton from '@components/OutlineButton.astro';
 ---
 
-<div class='contact flex flex-column flex-center gap-3'>
-  <OutlineButton isRounded={true}>
+<div class='contact flex flex-column flex-start gap-3'>
+  <OutlineButton isRounded={true} text='Linkedin'>
     <Linkedin />
   </OutlineButton >
-  <OutlineButton isRounded={true}>
+  <OutlineButton isRounded={true} text='GitHub'>
     <GitHub />
   </OutlineButton>
-  <OutlineButton isRounded={true}>
+  <OutlineButton isRounded={true} text='Email'>
     <Email />
   </OutlineButton>
 </div>
