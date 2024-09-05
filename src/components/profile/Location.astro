@@ -5,8 +5,8 @@ import locationPicture from '@assets/images/location.webp';
 
 <div class="location flex flex-row flex-center gap-2">
   <div class="location-data flex flex-column items-start flex-start gap-1">
-    <p>Based in</p>
-    <h3>Spain, Madrid</h3>
+    <p>Based on</p>
+    <h3>Madrid, Spain</h3>
   </div>
   <Picture
       src={locationPicture}
@@ -40,7 +40,8 @@ import locationPicture from '@assets/images/location.webp';
     height: 100px;
     > p {
       position: relative;
-      font-size: var(--font-size-md);
+      font-size: var(--font-size-base);
+      font-weight: 700;
       color: var(--color-3000);
     }
     > h3 {
