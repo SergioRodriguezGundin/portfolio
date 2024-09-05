@@ -2,6 +2,7 @@
 import Contact from '@components/profile/Contact.astro';
 import Curriculum from '@components/profile/Curriculum.astro';
 import Experience from '@components/profile/Experience.astro';
+import Location from '@components/profile/Location.astro';
 import ProfileImage from '@components/profile/ProfileImage.astro';
 ---
 
@@ -26,7 +27,8 @@ import ProfileImage from '@components/profile/ProfileImage.astro';
     <Experience />
     <span class='divider'></span>
     <div class='personal-information-card-curriculum'>
-      <Curriculum />
+      <!--<Curriculum />-->
+      <Location />
     </div>
   </section>
 </div>
@@ -68,6 +70,11 @@ import ProfileImage from '@components/profile/ProfileImage.astro';
     top: 0;
     left: 0;
     z-index: 99;
+  }
+
+  .personal-information-card-curriculum {
+    /* Conditional height for the personal-information-card-content top */
+    height: 23%; 
   }
 
   @container personal-information-card (width <= 400px) {

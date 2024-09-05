@@ -1,0 +1,33 @@
+<div class="location flex flex-row flex-center">
+  <div class="location-data flex flex-column items-start flex-start gap-1">
+    <p>Based in</p>
+    <h3>Spain, Madrid</h3>
+  </div>
+</div>
+
+<style>
+  .location {
+    position: relative;
+    height: 100%;
+  }
+
+  .location-data {
+    background: repeating-linear-gradient(90deg, var(--color-100), var(--color-100) 1px, transparent 1px, transparent 2px);
+    --mask: linear-gradient(90deg, #000 30%, rgba(0, 0, 0, .2) 90%, transparent);
+    mask-image: var(--mask);
+    -webkit-mask-image: var(--mask);
+    padding: var(--space-3);
+    border-radius: var(--border-3);
+    width: 250px;
+    height: 96px;
+    > p {
+      position: relative;
+      font-size: var(--font-size-md);
+      color: var(--color-3000);
+    }
+    > h3 {
+      font-size: var(--font-size-lg);
+      color: var(--color-3000);
+    }
+  }
+</style>

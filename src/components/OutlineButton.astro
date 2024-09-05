@@ -19,15 +19,15 @@ const { isRounded = false, text = 'Button'} = Astro.props as Props;
   .outline-button:has(span) {
     span {
       width: 0;
-      transform: translateX(-115px);
+      overflow: hidden;
     }
     &:hover {
       border-radius: var(--border-5);
       gap: var(--space-1);
       span {
         opacity: 1;
-        transform: translateX(0);
-        width: 100%;
+        margin-left: var(--space-2);
+        width: fit-content;
         animation: slideIn 0.35s linear;
       }
       &::before {
@@ -42,15 +42,12 @@ const { isRounded = false, text = 'Button'} = Astro.props as Props;
   @keyframes slideIn {
     0% {
       opacity: 0;
-      transform: translateX(-115px);
     }
     100% {
       opacity: 1;
-      transform: translateX(0);
-      width: 100%;
     }
   }
-  
+
   .outline-button {
     position: relative;
     background-color: var(--color-1000);
