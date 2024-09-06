@@ -52,7 +52,7 @@ import locationPicture from '@assets/images/location.webp';
   }
 
   .location-image {
-    /*filter: invert(1);*/
+    filter: var(--filter);
     border-radius: var(--border-3);
     mask-image: linear-gradient(to left, var(--color-100) 30%, rgba(0, 0, 0, .2) 90%, transparent);
   }
@@ -67,6 +67,7 @@ import locationPicture from '@assets/images/location.webp';
     border-radius: 50%;
     box-shadow: 0 0 0 0 var(--primary-color);
     background-color: var(--primary-color);
+    border: 1px solid var(--color-800);
     animation: pulse 2s infinite;
   }
 
