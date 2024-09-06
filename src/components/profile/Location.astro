@@ -4,7 +4,7 @@ import locationPicture from '@assets/images/location.webp';
 ---
 
 <div class="location flex flex-row flex-center gap-2">
-  <div class="location-data flex flex-column items-start flex-start gap-1">
+  <div class="location-data flex flex-column items-start flex-startß">
     <p>Based on</p>
     <h3>Madrid, Spain</h3>
   </div>
@@ -17,6 +17,7 @@ import locationPicture from '@assets/images/location.webp';
       alt="Sergio Rodriguez Gundin based on Spain"
       class="location-image"
   />
+  <span class="location-dot"></span>
 </div>
 
 <style>
@@ -36,7 +37,7 @@ import locationPicture from '@assets/images/location.webp';
     padding: var(--space-3);
     border-top-left-radius: var(--border-3);
     border-bottom-left-radius: var(--border-3);
-    width: 300px;
+    width: 350px;
     height: 100px;
     > p {
       position: relative;
@@ -51,8 +52,30 @@ import locationPicture from '@assets/images/location.webp';
   }
 
   .location-image {
-    /*filter: invert(1); TODO: Add a dark theme*/
+    /*filter: invert(1);*/
     border-radius: var(--border-3);
-    mask-image: linear-gradient(to right,transparent -4%,var(--color-3000) 50%);
+    mask-image: linear-gradient(to left, var(--color-100) 30%, rgba(0, 0, 0, .2) 90%, transparent);
+  }
+
+  .location-dot {
+    position: absolute;
+    top: 50%;
+    right: 20%;
+    transform: translate(-50%, -50%);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 var(--primary-color);
+    background-color: var(--primary-color);
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0px rgba(16, 200, 151, 0.50);
+    }
+    100% {
+      box-shadow: 0 0 0 20px rgba(110, 158, 139, 0.036);
+    }
   }
 </style>
