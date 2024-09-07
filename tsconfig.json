@@ -9,6 +9,10 @@
       "@models/*": ["src/models/*"],
       "@styles/*": ["src/styles/*"],
       "@assets/*": ["public/*"],
-    }
+      "@lib/*": ["src/lib/*"]
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "verbatimModuleSyntax": false
   }
 }

@@ -36,6 +36,10 @@
 			background-position: 0%;
 		}
 
+		.primary-color {
+			color: var(--primary-color);
+		}
+
 		p {
 			color: var(--color-100);
 			font-family: 'Roboto Mono Variable';

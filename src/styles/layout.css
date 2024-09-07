@@ -86,7 +86,6 @@
     gap: var(--space-4);
   }
 
-  /* Grid utility classes */
   .grid {
     display: grid;
   }

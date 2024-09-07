@@ -1,5 +1,6 @@
 ---
 import BlurIn from '@components/magicui/blur-in';
+import HyperText from '@components/magicui/hyper-text';
 import Contact from '@components/profile/Contact.astro';
 import Curriculum from '@components/profile/Curriculum.astro';
 import Experience from '@components/profile/Experience.astro';
@@ -22,7 +23,7 @@ import ProfileImage from '@components/profile/ProfileImage.astro';
     <div class='card-description'>
       <p>
         Welcome to my humble home on the web. I want to share with you my
-        journey recap as a <span software-developer class='text-gradient'>Software Developer</span>.
+        journey recap as a <HyperText text="Software Developer" className='primary-color font-size-base' duration={1000} client:load/>
       </p>
     </div>
     <Experience />
@@ -52,14 +53,11 @@ import ProfileImage from '@components/profile/ProfileImage.astro';
     line-height: 3.5rem;
   }
   .card-description {
+    min-height: 110px;
     > p {
       font-size: var(--font-size-md);
       line-height: 1.6rem;
       margin-top: var(--space-4);
-      span[software-developer] {
-        font-weight: bold;
-        text-decoration: underline;
-      }
     }
   }
   .personal-information-card-contact {
