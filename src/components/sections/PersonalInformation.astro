@@ -1,4 +1,5 @@
 ---
+import BlurIn from '@components/magicui/blur-in';
 import Contact from '@components/profile/Contact.astro';
 import Curriculum from '@components/profile/Curriculum.astro';
 import Experience from '@components/profile/Experience.astro';
@@ -15,8 +16,8 @@ import ProfileImage from '@components/profile/ProfileImage.astro';
   </div>
   <section class='personal-information-card-content'>
     <div class='card-title'>
-      <h1>Hello!</h1>
-      <h1>I'm Sergio</h1>
+      <BlurIn word={"Hello!"} className='font-size-xxl' client:load></BlurIn>
+      <BlurIn word={"I'm Sergio"} className='font-size-xxxl' client:load></BlurIn>
     </div>
     <div class='card-description'>
       <p>
@@ -27,7 +28,6 @@ import ProfileImage from '@components/profile/ProfileImage.astro';
     <Experience />
     <span class='divider'></span>
     <div class='personal-information-card-curriculum'>
-      <!--<Curriculum />-->
       <Location />
     </div>
   </section>
@@ -49,10 +49,7 @@ import ProfileImage from '@components/profile/ProfileImage.astro';
     height: 100%;
   }
   .card-title {
-    line-height: 4.5rem;
-    > h1 {
-      font-size: var(--font-size-xxxl);
-    }
+    line-height: 3.5rem;
   }
   .card-description {
     > p {
@@ -77,12 +74,6 @@ import ProfileImage from '@components/profile/ProfileImage.astro';
   }
 
   @container personal-information-card (width <= 400px) {
-    .card-title {
-      line-height: 2rem;
-      > h1 {
-        font-size: var(--font-size-xl);
-      }
-    }
     .personal-information-card-image {
       --profile-card-height: 375px;
     }
