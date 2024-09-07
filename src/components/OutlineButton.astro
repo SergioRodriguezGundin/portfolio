@@ -18,15 +18,17 @@ const { isRounded = false, text = 'Button'} = Astro.props as Props;
 <style>
   .outline-button:has(span) {
     span {
+      font-size: var(--font-size-sm);
       width: 0;
       overflow: hidden;
     }
     &:hover {
       border-radius: var(--border-5);
       gap: var(--space-1);
+      width: fit-content;
       span {
         opacity: 1;
-        margin-left: var(--space-2);
+        margin-left: var(--space-1);
         width: fit-content;
         animation: slideIn 0.35s linear;
       }
@@ -45,6 +47,7 @@ const { isRounded = false, text = 'Button'} = Astro.props as Props;
     }
     100% {
       opacity: 1;
+      width: fit-content;
     }
   }
 
@@ -54,7 +57,9 @@ const { isRounded = false, text = 'Button'} = Astro.props as Props;
     padding: var(--space-3);
     inline-size: fit-content;
     margin: 0;
-
+    width: 30px;
+    height: 30px;
+    
     &::before {
       content: '';
       position: absolute;
