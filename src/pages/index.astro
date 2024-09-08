@@ -4,12 +4,20 @@ import PersonalInformation from '@components/sections/PersonalInformation.astro'
 import Layout from '@layouts/Layout.astro';
 import ProjectSliders from '@components/projects/ProjectSliders.astro';
 import ThemeToggle from '@components/ThemeToggle.astro';
+import Particles from '@components/magicui/particles.tsx';
 ---
 <Layout
   title="Hi! I'm Sergio. I'm a software developer from Spain."
   description='This is the mockup of the home page of my portfolio.'
 >
-  <!--<BgShadow position={{top: '0', bottom: '0', left: '-85px', right: '0'}} size={{width: '20vw', height: '20vh'}} />-->
+  <Particles
+    className='particles'
+    quantity={100}
+    ease={80}
+    color='#ffffff'
+    refresh
+    client:load
+/>
   <ThemeToggle />
   <div class='layout'>
     <div class='personal-information'>

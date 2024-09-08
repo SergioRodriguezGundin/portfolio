@@ -23,7 +23,7 @@ import ProfileImage from '@components/profile/ProfileImage.astro';
     <div class='card-description'>
       <p>
         Welcome to my humble home on the web. I want to share with you my
-        journey recap as a <HyperText text="Software Developer" className='primary-color font-size-base' duration={1000} client:load/>
+        journey recap as a <span software-developer>Software Developer</span>.
       </p>
     </div>
     <Experience />
@@ -53,11 +53,15 @@ import ProfileImage from '@components/profile/ProfileImage.astro';
     line-height: 3.5rem;
   }
   .card-description {
-    min-height: 110px;
     > p {
       font-size: var(--font-size-md);
       line-height: 1.6rem;
       margin-top: var(--space-4);
+      span[software-developer] {
+        font-size: var(--font-size-base);
+        text-transform: uppercase;
+        color: var(--primary-color);
+      }
     }
   }
   .personal-information-card-contact {
@@ -68,7 +72,7 @@ import ProfileImage from '@components/profile/ProfileImage.astro';
   }
 
   .personal-information-card-curriculum {
-    margin-top: var(--space-9);
+    margin-top: var(--space-7);
   }
 
   @container personal-information-card (width <= 400px) {

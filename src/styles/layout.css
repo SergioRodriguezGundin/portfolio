@@ -27,7 +27,6 @@
     mask-image: radial-gradient(var(--color-700) 25%, transparent 80%);
   }
 
-  /* Flexbox utility classes */
   .flex {
     display: flex;
   }
@@ -112,5 +111,18 @@
 
   .grid-gap-large {
     gap: var(--space-large);
+  }
+
+  /* Remove it when we have tailwind classes */
+  .particles {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .size-full {
+    width: 100% !important;
+    height: 100% !important;
   }
 }
