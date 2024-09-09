@@ -1,8 +1,8 @@
 ---
 import BlurIn from '@components/magicui/blur-in';
+import GradualSpacing from '@components/magicui/gradual-spacing';
 import HyperText from '@components/magicui/hyper-text';
 import Contact from '@components/profile/Contact.astro';
-import Curriculum from '@components/profile/Curriculum.astro';
 import Experience from '@components/profile/Experience.astro';
 import Location from '@components/profile/Location.astro';
 import ProfileImage from '@components/profile/ProfileImage.astro';
@@ -17,8 +17,16 @@ import ProfileImage from '@components/profile/ProfileImage.astro';
   </div>
   <section class='personal-information-card-content'>
     <div class='card-title'>
-      <BlurIn word={"Hello!"} className='font-size-xxl' client:load></BlurIn>
-      <BlurIn word={"I'm Sergio"} className='font-size-xxxl' client:load></BlurIn>
+      <GradualSpacing
+        className="font-size-xxl"
+        text="Hello!"
+        client:load
+      />
+      <GradualSpacing
+        className="font-size-xxxl"
+        text="I'm Sergio"
+        client:load
+      />
     </div>
     <div class='card-description'>
       <p>
