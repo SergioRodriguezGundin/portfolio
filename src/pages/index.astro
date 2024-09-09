@@ -4,20 +4,13 @@ import PersonalInformation from '@components/sections/PersonalInformation.astro'
 import Layout from '@layouts/Layout.astro';
 import ProjectSliders from '@components/projects/ProjectSliders.astro';
 import ThemeToggle from '@components/ThemeToggle.astro';
-import Particles from '@components/magicui/particles.tsx';
+import ParticlesTheme from '@components/ui/ParticlesTheme';
 ---
 <Layout
   title="Hi! I'm Sergio. I'm a software developer from Spain."
   description='This is the mockup of the home page of my portfolio.'
 >
-  <Particles
-    className='particles'
-    quantity={100}
-    ease={80}
-    color='#ffffff'
-    refresh
-    client:load
-/>
+  <ParticlesTheme client:load/>
   <ThemeToggle />
   <div class='layout'>
     <div class='personal-information'>
