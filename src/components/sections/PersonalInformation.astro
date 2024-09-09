@@ -1,7 +1,5 @@
 ---
-import BlurIn from '@components/magicui/blur-in';
 import GradualSpacing from '@components/magicui/gradual-spacing';
-import HyperText from '@components/magicui/hyper-text';
 import Contact from '@components/profile/Contact.astro';
 import Experience from '@components/profile/Experience.astro';
 import Location from '@components/profile/Location.astro';
@@ -18,7 +16,12 @@ import ProfileImage from '@components/profile/ProfileImage.astro';
   <section class='personal-information-card-content'>
     <div class='card-title'>
       <GradualSpacing
-        className="font-size-xxl"
+        className="font-size-base primary-color"
+        text="SOFTWARE DEVELOPER"
+        client:load
+      />
+      <GradualSpacing
+        className="font-size-xxxl"
         text="Hello!"
         client:load
       />
@@ -31,7 +34,7 @@ import ProfileImage from '@components/profile/ProfileImage.astro';
     <div class='card-description'>
       <p>
         Welcome to my humble home on the web. I want to share with you my
-        journey recap as a <span software-developer>Software Developer</span>.
+        journey recap throw all the projects I've been working on.
       </p>
     </div>
     <Experience />
@@ -62,14 +65,9 @@ import ProfileImage from '@components/profile/ProfileImage.astro';
   }
   .card-description {
     > p {
-      font-size: var(--font-size-md);
+      font-size: var(--font-size-base);
       line-height: 1.6rem;
       margin-top: var(--space-4);
-      span[software-developer] {
-        font-size: var(--font-size-base);
-        text-transform: uppercase;
-        color: var(--primary-color);
-      }
     }
   }
   .personal-information-card-contact {
