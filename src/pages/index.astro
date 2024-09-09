@@ -28,16 +28,6 @@ import Particles from '@components/magicui/particles.tsx';
     <div class='my-proyects flex flex-center'>
       <ProjectSliders />
     </div>
-    <div class='my-status'>
-      <Card title='Status'>
-        <p>Status</p>
-      </Card>
-    </div>
-    <div class='hobbies'>
-      <Card title='Hobbies'>
-        <p>Hobbies</p>
-      </Card>
-    </div>
   </div>
 </Layout>
 
@@ -58,14 +48,8 @@ import Particles from '@components/magicui/particles.tsx';
   }
   .my-proyects {
     position: relative;
-    grid-area: 1 / 2 / 2 / 4;
+    grid-area: 1 / 2 / 3 / 4;
     width: 100%;
-  }
-  .my-status {
-    grid-area: 2 / 2 / 3 / 3;
-  }
-  .hobbies {
-    grid-area: 2 / 3 / 3 / 4;
   }
   @media (1440px <= width <= 1920px) {
     .layout {
