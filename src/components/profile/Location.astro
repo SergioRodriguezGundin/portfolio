@@ -38,7 +38,7 @@ import locationPicture from '@assets/images/location.webp';
     border-top-left-radius: var(--border-3);
     border-bottom-left-radius: var(--border-3);
     width: 415px;
-    height: 100px;
+    height: 100%;
     > p {
       position: relative;
       font-size: var(--font-size-base);
@@ -77,6 +77,12 @@ import locationPicture from '@assets/images/location.webp';
     }
     100% {
       box-shadow: 0 0 0 20px rgba(110, 158, 139, 0.036);
+    }
+  }
+
+  @media (width <= 1920px) {
+    .location {
+      height: 75px;
     }
   }
 </style>

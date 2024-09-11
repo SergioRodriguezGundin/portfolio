@@ -20,16 +20,18 @@ import ProfileImage from '@components/profile/ProfileImage.astro';
         text="SOFTWARE DEVELOPER"
         client:load
       />
-      <GradualSpacing
-        className="font-size-xxxl"
-        text="Hello!"
-        client:load
-      />
-      <GradualSpacing
-        className="font-size-xxxl"
-        text="I'm Sergio"
-        client:load
-      />
+      <div class="card-title-main">
+        <GradualSpacing
+          className="font-size-xxxl"
+          text="Hello!"
+          client:load
+        />
+        <GradualSpacing
+          className="font-size-xxxl"
+          text="I'm Sergio"
+          client:load
+        />
+      </div>
     </div>
     <div class='card-description'>
       <p>
@@ -59,8 +61,9 @@ import ProfileImage from '@components/profile/ProfileImage.astro';
     left: 0;
     width: 100%;
   }
-  .card-title {
-    line-height: 3.5rem;
+  .card-title-main {
+    margin-top: var(--space-2);
+    line-height: 3.8rem;
   }
   .card-description {
     > p {
