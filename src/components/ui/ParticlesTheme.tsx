@@ -25,7 +25,7 @@ const ParticlesTheme = () => {
 
   return (
     <Particles
-      className="particles"
+      className="absolute inset-0"
       quantity={100}
       ease={80}
       color={color}
