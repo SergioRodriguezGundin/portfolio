@@ -4,6 +4,7 @@ import PersonalInformation from '@components/sections/PersonalInformation.astro'
 import Layout from '@layouts/Layout.astro';
 import ProjectSliders from '@components/projects/ProjectSliders.astro';
 import ThemeToggle from '@components/ThemeToggle.astro';
+import BlurIn from '@/components/magicui/blur-in';
 ---
 
 <Layout
@@ -23,7 +24,7 @@ import ThemeToggle from '@components/ThemeToggle.astro';
     </div>
     <div class='my-status'>
       <Card title='Status'>
-        <p>Status</p>
+        <BlurIn word={"Hello World"} client:load></BlurIn>
       </Card>
     </div>
     <div class='hobbies'>
