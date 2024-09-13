@@ -4,9 +4,7 @@ import react from '@astrojs/react';
 
 import tailwind from '@astrojs/tailwind';
 
-/**
- * @type {import('astro').AstroConfig}
- */
+/** @type {import('astro').AstroConfig} */
 export default defineConfig({
   integrations: [react(), tailwind({
     config: {
