@@ -8,14 +8,13 @@ export interface ProjectCardProps {
 const { data } = (Astro.props as ProjectCardProps).project;
 ---
 
-<div class='project-card rounded-lg'>
+<div class='project-card p-3 rounded-lg'>
   <h3>{data.title}</h3>
   <p>{data.description}</p>
 </div>
 
 <style define:vars={{data}}>
   .project-card {
-    padding: var(--space-4);
     width: 100%;
     height: 100%;
   }

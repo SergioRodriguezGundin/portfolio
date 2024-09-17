@@ -8,7 +8,7 @@ const { isRounded = false, text = 'Button'} = Astro.props as Props;
 ---
 
 <button
-  class='outline-button flex flex-center before:rounded-md after:rounded-md hover:rounded-lg hover:before:rounded-lg hover:after:rounded-lg' 
+  class='outline-button flex flex-center p-3 before:rounded-md after:rounded-md hover:rounded-lg hover:before:rounded-lg hover:after:rounded-lg hover:gap-1 xs:max-3xl:p-1' 
   class:list={[isRounded ? 'rounded-full' : 'rounded-md']}
 >
   <slot />
@@ -23,11 +23,10 @@ const { isRounded = false, text = 'Button'} = Astro.props as Props;
       overflow: hidden;
     }
     &:hover {
-      gap: var(--space-1);
       width: fit-content;
       span {
         opacity: 1;
-        margin-left: var(--space-1);
+        @apply ml-1;
         width: fit-content;
         animation: slideIn 0.35s linear;
       }
@@ -47,7 +46,6 @@ const { isRounded = false, text = 'Button'} = Astro.props as Props;
   .outline-button {
     position: relative;
     background-color: var(--color-1000);
-    padding: var(--space-3);
     inline-size: fit-content;
     margin: 0;
     
@@ -92,9 +90,9 @@ const { isRounded = false, text = 'Button'} = Astro.props as Props;
     }
   }
 
-  @media (480px <= width <= 1920px) {
+  /*@media (480px <= width <= 1920px) {
     .outline-button {
       padding: var(--space-2);
     }
-  }
+  }*/
 </style>

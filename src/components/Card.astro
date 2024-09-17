@@ -7,8 +7,8 @@ const { title = 'title' } = Astro.props as CardProps;
 ---
 
 <div class='card'>
-  <h2 class='card-title text-secondary'>{title}</h2>
-  <div class='card-content border-lg'>
+  <h2 class='card-title text-secondary pl-4 xs:pt-3 xs:pl-2'>{title}</h2>
+  <div class='card-content border-1 rounded-lg py-9 px-6'>
     <slot />
   </div>
 </div>
@@ -21,8 +21,6 @@ const { title = 'title' } = Astro.props as CardProps;
   }
 
   .card-content {
-    padding: var(--space-9) var(--space-5) var(--space-5);
-    /*background: var(--background-gradient);*/
     border: 1px solid var(--color-1000);
     clip-path: polygon(38% 0, 100% 0, 100% 100%, 0 100%, 0 45px, 30% 45px);
     height: 100%;
@@ -32,14 +30,11 @@ const { title = 'title' } = Astro.props as CardProps;
     position: absolute;
     top: 0;
     left: 0;
-    padding-left: var(--space-4);
   }
 
   @container card (width < 400px) {
     .card-title {
       font-size: var(--font-size-base);
-      top: var(--space-3);
-      padding-left: var(--space-2);
     }
   }
 

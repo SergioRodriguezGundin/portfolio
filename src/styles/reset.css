@@ -62,7 +62,7 @@ ul, li {
   width: 100%;
   height: 1px;
   background-color: var(--color-700);
-  margin: var(--space-2) 0;
+  margin: 16px 0;
   mask-image: radial-gradient(var(--color-700) 25%, transparent 80%);
 }
 

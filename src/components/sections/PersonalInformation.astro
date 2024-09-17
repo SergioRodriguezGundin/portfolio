@@ -20,7 +20,7 @@ import ProfileImage from '@components/profile/ProfileImage.astro';
         text="SOFTWARE DEVELOPER"
         client:load
       />
-      <div class="card-title-main">
+      <div class="card-title-main mt-2">
         <GradualSpacing
           className="font-size-xxxl"
           text="Hello!"
@@ -41,7 +41,7 @@ import ProfileImage from '@components/profile/ProfileImage.astro';
     </div>
     <Experience />
     <span class='divider'></span>
-    <div class='personal-information-card-curriculum'>
+    <div class='personal-information-card-curriculum mt-5'>
       <Location />
     </div>
   </section>
@@ -62,14 +62,13 @@ import ProfileImage from '@components/profile/ProfileImage.astro';
     width: 100%;
   }
   .card-title-main {
-    margin-top: var(--space-2);
     line-height: 3.8rem;
   }
   .card-description {
     > p {
       font-size: var(--font-size-base);
       line-height: 1.6rem;
-      margin-top: var(--space-4);
+      margin-top: @apply mt-4;
     }
   }
   .personal-information-card-contact {
@@ -77,10 +76,6 @@ import ProfileImage from '@components/profile/ProfileImage.astro';
     top: 0;
     left: 0;
     z-index: 99;
-  }
-
-  .personal-information-card-curriculum {
-    margin-top: var(--space-7);
   }
 
   @container personal-information-card (width <= 400px) {

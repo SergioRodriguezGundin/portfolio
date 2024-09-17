@@ -22,7 +22,7 @@ const iconMap = {
 };
 ---
 
-<ul class="markers">
+<ul class="markers g-3 px-0 py-4">
   {
     sortedProjects.map((project, index) => {
       const IconComponent = iconMap[project.data.id as keyof typeof iconMap];
@@ -43,8 +43,6 @@ const iconMap = {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap: var(--space-4);
-    padding: 0 var(----space-5);
     width: 120px;
     a {
       animation-timeline: --carousel;
@@ -52,7 +50,6 @@ const iconMap = {
       position: relative;
       display: flex;
       box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-      padding: var(--space-2);
       width: fit-content;
       transition: transform 0.15s linear;
 

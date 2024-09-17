@@ -5,7 +5,7 @@ import Linkedin from '@components/icons/Linkedin.astro';
 import OutlineButton from '@components/OutlineButton.astro';
 ---
 
-<div class='contact flex flex-column flex-start gap-3'>
+<div class='contact flex flex-column flex-start gap-3 p-2'>
   <OutlineButton isRounded={true} text='Linkedin'>
     <Linkedin />
   </OutlineButton >
@@ -16,9 +16,3 @@ import OutlineButton from '@components/OutlineButton.astro';
     <Email />
   </OutlineButton>
 </div>
-
-<style>
-  .contact {
-    padding: var(--space-4) 0;
-  }
-</style>

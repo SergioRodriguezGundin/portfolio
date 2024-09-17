@@ -2,7 +2,7 @@
 import Download from '@components/icons/Download.astro';
 ---
 
-<button class='download-button flex flex-start gap-3 rounded-xl'>
+<button class='download-button flex flex-start gap-3 rounded-xl p-2 mt-3'>
   <div class='qr-code'>
     <qr-code
       id='qrCV'
@@ -15,11 +15,11 @@ import Download from '@components/icons/Download.astro';
   </div>
   <div class='cv-container flex flex-column flex-start gap-2'>
     <h4 class='download-cv-title'>DOWNLOAD MY CV</h4>
-    <p class='download-cv-text'>
+    <p class='download-cv-text mr-4'>
       Scan the QR or click here to download it.
     </p>
   </div>
-  <div class='download-icon'>
+  <div class='download-icon absolute right-2 top-2'>
     <Download size={{ width: 20, height: 20 }} />
   </div>
 </button>
@@ -44,9 +44,7 @@ import Download from '@components/icons/Download.astro';
 <style>
   .download-button {
     position: relative;
-    padding: var(--space-4);
     border: 1px solid var(--color-900);
-    margin-top: var(--space-6);
     box-shadow: var(--card-shadow);
     width: 100%;
   }
@@ -57,11 +55,6 @@ import Download from '@components/icons/Download.astro';
     color: var(--color-500);
     font-size: var(--font-size-base);
     text-align: start;
-  }
-  .download-icon {
-    position: absolute;
-    right: var(--space-4);
-    top: var(--space-4);
   }
   #qrCV {
     display: block;
@@ -76,9 +69,6 @@ import Download from '@components/icons/Download.astro';
     }
     .download-cv-title {
       display: none;
-    }
-    .download-cv-text {
-      margin-right: var(--space-6);
     }
   }
 </style>

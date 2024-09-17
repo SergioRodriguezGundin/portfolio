@@ -4,7 +4,7 @@ import NumberTicker from '@components/magicui/number-ticker';
 
 ---
 
-<div class='experience-container flex flex-row flex-space-around gap-2'>
+<div class='experience-container flex flex-row flex-space-around gap-2 px-4 py-6'>
   <div class='experience flex flex-column flex-start'>
     <span experience-years>
       <span>+</span>0<NumberTicker value={8} client:load/>
@@ -23,11 +23,9 @@ import NumberTicker from '@components/magicui/number-ticker';
 <style>
   .experience-container {
     container-type: inline-size;
-    padding: var(--space-6) var(--space-4);
     width: 100%;
-
     @container (max-width: 375px) {
-      padding: var(--space-4);
+      padding: @apply p-4;
     }
   }
   .experience {
