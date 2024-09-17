@@ -3,8 +3,8 @@ import Picture from 'astro/components/Picture.astro';
 import locationPicture from '@assets/images/location.webp';
 ---
 
-<div class="location flex flex-row flex-center gap-2">
-  <div class="location-data flex flex-column items-start flex-startß">
+<div class="location flex flex-row flex-center gap-2 rounded-lg">
+  <div class="location-data flex flex-column items-start flex-start border-tl-lg border-bl-lg">
     <p>Based on</p>
     <h3>Madrid, Spain</h3>
   </div>
@@ -15,7 +15,7 @@ import locationPicture from '@assets/images/location.webp';
       width={450}
       height={350}
       alt="Sergio Rodriguez Gundin based on Spain"
-      class="location-image"
+      class="location-image rounded-lg"
   />
   <span class="location-dot"></span>
 </div>
@@ -24,7 +24,6 @@ import locationPicture from '@assets/images/location.webp';
   .location {
     position: relative;
     overflow: hidden;
-    border-radius: var(--border-3);
     width: 100%;
     height: 100px;
   }
@@ -35,8 +34,6 @@ import locationPicture from '@assets/images/location.webp';
     mask-image: var(--mask);
     -webkit-mask-image: var(--mask);
     padding: var(--space-3);
-    border-top-left-radius: var(--border-3);
-    border-bottom-left-radius: var(--border-3);
     width: 415px;
     height: 100%;
     > p {
@@ -53,7 +50,6 @@ import locationPicture from '@assets/images/location.webp';
 
   .location-image {
     filter: var(--filter);
-    border-radius: var(--border-3);
     mask-image: linear-gradient(to left, var(--color-100) 30%, rgba(0, 0, 0, .2) 90%, transparent);
   }
 

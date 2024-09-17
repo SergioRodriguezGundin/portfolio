@@ -12,10 +12,10 @@ const numCards = sortedProjects.length;
 
 <div data-component='carousel'>
   <SliderMarkers sortedProjects={sortedProjects} />
-  <ul class="entries" tabindex="0">
+  <ul class="entries rounded-lg" tabindex="0">
     {
       sortedProjects.map((project, index) => (
-        <li>
+        <li class="rounded-lg">
           <a name={`carousel_${index}`} href={`#carousel_${index}`}>
             <ProjectCard project={project} />
           </a>
@@ -49,7 +49,6 @@ const numCards = sortedProjects.length;
       display: flex;
       flex-direction: column;
       gap: var(--space-4);
-      border-radius: var(--border-3);
       overflow-x: scroll;
       scroll-snap-type: y mandatory;
       scrollbar-width: none;
@@ -63,7 +62,6 @@ const numCards = sortedProjects.length;
         flex: 100% 1 0;
         display: flex;
         gap: var(--space-3);
-        border-radius: var(--border-3);
 
         a {
           width: 100%;
