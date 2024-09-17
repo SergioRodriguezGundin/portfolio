@@ -42,17 +42,14 @@
 
 		p {
 			color: var(--color-100);
-			font-family: 'Roboto Mono Variable';
 		}
 		
 		span {
 			color: var(--color-500);
-			font-family: 'Roboto Mono Variable';
 		}
 
 		h1, h2, h3, h4, h5, h6 {
 			color: var(--color-300);
-			font-family: 'Prompt-400';
 		}
 
 		h1 {
