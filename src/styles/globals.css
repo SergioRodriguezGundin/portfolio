@@ -1,8 +1,6 @@
 @import './reset.css';
 @import './fonts.css';
 @import './font-sizes.css';
-/*@import './colors.css';*/
-/*@import './breakpoints.css';*/
 
 @tailwind base;
 @tailwind components;

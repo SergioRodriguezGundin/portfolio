@@ -1,5 +1,5 @@
 module.exports = {
-  darkMode: ["class"],
+  darkMode: ['selector', '[data-theme="dark"]'],
   content: [
     './src/**/*.{js,jsx,ts,tsx,astro}',
   ],
