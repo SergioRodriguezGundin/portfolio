@@ -9,8 +9,8 @@ const { data } = (Astro.props as ProjectCardProps).project;
 ---
 
 <div class='project-card p-3 rounded-lg'>
-  <h3>{data.title}</h3>
-  <p>{data.description}</p>
+  <h3 class='text-base-100 dark:text-base-3000'>{data.title}</h3>
+  <p class='text-base-100 dark:text-base-3000'>{data.description}</p>
 </div>
 
 <style define:vars={{data}}>
