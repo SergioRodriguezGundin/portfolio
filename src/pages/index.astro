@@ -1,8 +1,9 @@
 ---
 import Card from '@components/Card.astro';
+import Experience from '@components/profile/Experience.astro';
 import Location from '@components/profile/Location.astro';
 import ProjectSliders from '@components/projects/ProjectSliders.astro';
-import PersonalInformation from '@components/sections/PersonalInformation.astro';
+import PersonalInformation from '@components/profile/PersonalInformation.astro';
 import ThemeToggle from '@components/ThemeToggle.astro';
 import ParticlesTheme from '@components/ui/ParticlesTheme';
 import Layout from '@layouts/Layout.astro';
@@ -15,24 +16,18 @@ import Layout from '@layouts/Layout.astro';
   <ThemeToggle />
   <div class='layout mx-auto my-auto py-6'>
     <div class='say-hello'>
-      <Card>
-        <PersonalInformation />
-      </Card>
+      <PersonalInformation />
     </div>
-    <div class='contact flex flex-col gap-4'>
+    <div class='about-me flex flex-col gap-4'>
       <Card>
-        <Location />
-      </Card>
-      <Card>
-        <h1 class='text-primary'>experiencia, proyectos</h1>
-      </Card>
-    </div>
-    <div class="curriculum flex flex-col gap-4">
-      <Card>
-        <h1 class='text-primary'>curriculum</h1>
+        <Experience />
       </Card>
       <Card>
         <h1 class='text-primary'>github, linkedin, etc</h1>
+        <h1 class='text-primary'>curriculum</h1>
+      </Card>
+      <Card>
+        <Location />
       </Card>
     </div>
     <div class="tech-love">
@@ -55,7 +50,7 @@ import Layout from '@layouts/Layout.astro';
   .layout {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: 1fr 2fr;
     grid-column-gap: 16px;
     grid-row-gap: 16px;
     height: 100%;
@@ -65,21 +60,18 @@ import Layout from '@layouts/Layout.astro';
   .say-hello {
     grid-area: 1 / 1 / 2 / 2;
   }
-  .contact {
-    grid-area: 2 / 1 / 2 / 2;
-  }
-  .curriculum {
-    grid-area: 3 / 1 / 3 / 2;
+  .about-me {
+    grid-area: 2 / 1 / 3 / 2;
   }
   .tech-love {
-    grid-area: 1 / 2 / 1 / 3;
+    grid-area: 1 / 2 / 2 / 3;
   }
   .my-journey {
-    grid-area: 1 / 3 / 1 / 4;
+    grid-area: 1 / 3 / 2 / 4;
   }
   .my-proyects {
     position: relative;
-    grid-area: 2 / 2 / 4 / 4;
+    grid-area: 2 / 2 / 3 / 4;
     width: 100%;
   }
 </style>

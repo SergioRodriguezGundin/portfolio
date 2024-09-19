@@ -1,0 +1,36 @@
+---
+import GradualSpacing from '@components/magicui/gradual-spacing';
+import ProfileImage from '@components/profile/ProfileImage.astro';
+---
+
+<div class="relative flex flex-col items-start justify-end overflow-clip w-full h-full p-4">
+  <div class="personal-information-image absolute top-0 right-0 z-[-1]">
+    <ProfileImage />
+  </div>
+  <section>
+    <div class="flex flex-col items-start gap-3 leading-10">
+      <GradualSpacing
+        className="font-prompt font-bold text-2xl text-base-100 dark:text-base-900"
+        text="Hello!"
+        client:load
+      />
+      <GradualSpacing
+        className="font-prompt font-bold text-2xl text-base-100 dark:text-base-900"
+        text="I'm Sergio"
+        client:load
+      />
+    </div>
+    <div class="mt-4">
+      <p class="text-base-700 text-sm">
+        Welcome to my humble home on the web. I want to share with you my
+        journey recap throw all the projects I've been working on.
+      </p>
+    </div>
+  </section>
+</div>
+
+<style>
+  .personal-information-image {
+    mask-image: linear-gradient(to bottom, hsl(var(--color-100)), #00000014);
+  }
+</style>

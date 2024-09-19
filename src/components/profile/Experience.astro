@@ -1,58 +1,26 @@
 ---
+import GradualSpacing from '@components/magicui/gradual-spacing';
 import NumberTicker from '@components/magicui/number-ticker';
-
-
 ---
 
-<div class='experience-container flex flex-row flex-space-around gap-2 px-4 py-6'>
-  <div class='experience flex flex-column flex-start'>
-    <span experience-years>
-      <span>+</span>0<NumberTicker value={8} client:load/>
-    </span>
-    <span experience-text>Years of experience</span>
-  </div>
-  <div class='experience flex flex-column flex-start'>
-    <span experience-years>
-      <span>+</span>0<NumberTicker value={9} client:load/>
-    </span>
-    <span experience-text>Projects worked</span>
+<div class='experience-container flex flex-col flex-center gap-2 px-4 py-6 w-full'>
+  <div class='flex flex-row gap-2 mb-4'>
+    <div class='flex-1 flex flex-col justify-center items-center'>
+      <span class="flex flex-row justify-center items-center gap-2">
+        <span class="text-base-600 text-lg">+</span><NumberTicker value={8} className='text-base-100 dark:text-base-900 font-prompt font-bold text-3xl' client:load/>
+      </span>
+      <span class='text-base-700 text-sm'>Years of experience</span>
+    </div>
+    <div class='flex-1 flex flex-col justify-center items-center'>
+      <span class='flex flex-row justify-center items-center gap-2'>
+        <span class='text-base-600 text-lg'>+</span><NumberTicker value={9} className='text-base-100 dark:text-base-900 font-prompt font-bold text-3xl' client:load/>
+      </span>
+      <span class='text-base-700 text-sm'>Projects worked</span>
     </div>
   </div>
+  <GradualSpacing
+    className="font-prompt font-bold text-sm text-primary"
+    text="SOFTWARE DEVELOPER"
+    client:load
+  />
 </div>
-
-<style>
-  .experience-container {
-    container-type: inline-size;
-    width: 100%;
-    /*@container (max-width: 375px) {
-      padding: @apply p-4;
-    }*/
-  }
-  .experience {
-    > span[experience-years] {
-      font-size: var(--font-size-xxxl);
-      font-weight: bold;
-      > span {
-        font-size: var(--font-size-lg);
-        font-weight: 300;
-      }
-    }
-    > span[experience-text] {
-      font-size: var(--font-size-base);
-    }
-  }
-  
-  @media (768px <= width <= 1920px) {
-    .experience {
-      > span[experience-years] {
-        font-size: var(--font-size-xl);
-        > span {
-          font-size: var(--font-size-base);
-        }
-      }
-      > span[experience-text] {
-        font-size: var(--font-size-sm);
-      }
-    }
-  }
-</style>
