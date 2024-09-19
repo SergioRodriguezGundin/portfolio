@@ -7,34 +7,34 @@ import ProfileImage from '@components/profile/ProfileImage.astro';
 ---
 
 <div class='personal-information-card'>
-  <div class='personal-information-card-contact'>
+  <!--<div class='personal-information-card-contact'>
     <Contact />
-  </div>
+  </div>-->
   <div class='personal-information-card-image'>
     <ProfileImage />
   </div>
   <section class='personal-information-card-content'>
     <div class='card-title'>
       <GradualSpacing
-        className="font-size-base primary-color"
+        className="font-size-base text-primary"
         text="SOFTWARE DEVELOPER"
         client:load
       />
       <div class="card-title-main mt-2">
         <GradualSpacing
-          className="font-prompt font-bold text-3xl"
+          className="font-prompt font-bold text-3xl text-base-100 dark:text-base-3000"
           text="Hello!"
           client:load
         />
         <GradualSpacing
-          className="font-prompt font-bold text-3xl"
+          className="font-prompt font-bold text-3xl text-base-100 dark:text-base-3000"
           text="I'm Sergio"
           client:load
         />
       </div>
     </div>
     <div class='card-description'>
-      <p>
+      <p class='text-base-100 dark:text-base-3000'>
         Welcome to my humble home on the web. I want to share with you my
         journey recap throw all the projects I've been working on.
       </p>
