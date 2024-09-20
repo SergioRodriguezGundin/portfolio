@@ -1,28 +1,30 @@
 ---
-import Download from '@components/icons/Download.astro';
+import { MagicCard } from '@components/magicui/magic-card';
 ---
 
-<button class='download-button flex flex-start gap-3 rounded-xl p-2 mt-3'>
-  <div class='qr-code'>
-    <qr-code
-      id='qrCV'
-      contents={'/cv/SergioRodriguez.pdf'}
-      module-color='var(--color-100)'
-      position-ring-color='var(--color-100)'
-      position-center-color='var(--primary-color)'
-    >
-    </qr-code>
-  </div>
-  <div class='cv-container flex flex-column flex-start gap-2'>
-    <h4 class='download-cv-title'>DOWNLOAD MY CV</h4>
-    <p class='download-cv-text mr-4'>
-      Scan the QR or click here to download it.
-    </p>
-  </div>
-  <div class='download-icon absolute right-2 top-2'>
-    <Download size={{ width: 20, height: 20 }} />
-  </div>
-</button>
+<MagicCard
+  className="cursor-pointer flex-col items-center justify-center shadow-2xl whitespace-nowrap h-full w-full"
+  client:load
+>
+  <button class='download-button flex flex-col gap-2 rounded-xl w-full'>
+    <div class='flex flex-col justify-start items-start gap-1'>
+      <h4 class='text-base-700 text-sm'>2024 CV</h4>
+      <p class='text-base-500 dark:text-base-2000 text-base'>
+        RESUME
+      </p>
+    </div>
+    <div class='flex justify-center items-center w-full'>
+      <qr-code
+        id='qrCV'
+        contents={'/cv/SergioRodriguez.pdf'}
+        module-color='hsl(var(--color-700))'
+        position-ring-color='hsl(var(--color-800))'
+        position-center-color='hsl(var(--primary))'
+      >
+      </qr-code>
+    </div>
+  </button>
+</MagicCard>
 
 <script>
   import * as qr from '@bitjson/qr-code';
@@ -42,33 +44,8 @@ import Download from '@components/icons/Download.astro';
 </script>
 
 <style>
-  .download-button {
-    position: relative;
-    border: 1px solid var(--color-900);
-    box-shadow: var(--card-shadow);
-    width: 100%;
-  }
-  .download-cv-title {
-    color: var(--color-100);
-  }
-  .download-cv-text {
-    color: var(--color-500);
-    font-size: var(--font-size-base);
-    text-align: start;
-  }
   #qrCV {
-    display: block;
-    width: 100px;
-    height: 100px;
-  }
-
-  @media (768px <= width <= 1920px) {
-    #qrCV {
-      width: 75px;
-      height: 75px;
-    }
-    .download-cv-title {
-      display: none;
-    }
+    width: 200px;
+    height: 200px;
   }
 </style>

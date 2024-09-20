@@ -1,6 +1,7 @@
 ---
 import Card from '@components/Card.astro';
 import Contact from '@components/profile/Contact.astro';
+import Curriculum from '@components/profile/Curriculum.astro';
 import Experience from '@components/profile/Experience.astro';
 import Location from '@components/profile/Location.astro';
 import PersonalInformation from '@components/profile/PersonalInformation.astro';
@@ -21,8 +22,12 @@ import Layout from '@layouts/Layout.astro';
     </div>
     <div class='about-me flex flex-col gap-4'>
       <Experience />
-      <Contact />
-      <!--<h1 class='text-primary'>curriculum</h1>-->
+      <div class='flex flex-row gap-6'>
+        <div class='flex-1'>
+          <Contact />
+        </div>
+        <Curriculum />
+      </div>
       <Card>
         <Location />
       </Card>
