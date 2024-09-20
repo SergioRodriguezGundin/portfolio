@@ -5,6 +5,7 @@ import Curriculum from '@components/profile/Curriculum.astro';
 import Experience from '@components/profile/Experience.astro';
 import Location from '@components/profile/Location.astro';
 import PersonalInformation from '@components/profile/PersonalInformation.astro';
+import { Techs } from '@components/profile/Techs';
 import ProjectSliders from '@components/projects/ProjectSliders.astro';
 import ThemeToggle from '@components/ThemeToggle.astro';
 import ParticlesTheme from '@components/ui/ParticlesTheme';
@@ -31,9 +32,7 @@ import Layout from '@layouts/Layout.astro';
       <Location />
     </div>
     <div class="tech-love">
-      <Card>
-        <h1 class='text-primary'>tech love</h1>
-      </Card>
+      <Techs containerWidth={390} />
     </div>
     <div class="my-journey">
       <Card>
