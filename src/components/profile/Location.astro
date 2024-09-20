@@ -1,55 +1,34 @@
 ---
 import Picture from 'astro/components/Picture.astro';
 import locationPicture from '@assets/images/location.webp';
+import { MagicCard } from '@components/magicui/magic-card';
 ---
 
-<div class="location flex flex-row flex-center gap-2 rounded-lg">
-  <div class="location-data flex flex-column items-start flex-start p-2 border-tl-lg border-bl-lg">
-    <p>Based on</p>
-    <h3>Madrid, Spain</h3>
+<MagicCard
+  className="cursor-pointer flex-col items-center justify-center shadow-xl whitespace-nowrap w-full"
+  client:load
+>
+<div class="relative overflow-clip flex flex-row justify-between items-center w-full">
+  <div class="flex-2 flex flex-col justify-start items-start gap-0 pl-4">
+    <p class="text-base-700 text-sm">Based on</p>
+    <h3 class="text-base-100 dark:text-base-2000 text-base">Madrid, Spain</h3>
   </div>
   <Picture
-      src={locationPicture}
-      formats={['webp']}
-      loading="lazy"
-      width={450}
-      height={350}
-      alt="Sergio Rodriguez Gundin based on Spain"
-      class="location-image rounded-lg"
-  />
-  <span class="location-dot"></span>
-</div>
+    src={locationPicture}
+    formats={['webp']}
+    loading="lazy"
+    width={250}
+    height={250}
+    alt="Sergio Rodriguez Gundin based on Spain"
+    class="location-image flex-1 invert dark:invert-0 rounded-lg"
+    />
+    <span class="location-dot"></span>
+  </div>
+</MagicCard>
 
 <style>
-  .location {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    height: 100px;
-  }
-
-  .location-data {
-    background: repeating-linear-gradient(90deg, var(--color-100), var(--color-100) 1px, transparent 1px, transparent 2px);
-    --mask: linear-gradient(90deg, var(--color-100) 30%, rgba(0, 0, 0, .2) 90%, transparent);
-    mask-image: var(--mask);
-    -webkit-mask-image: var(--mask);
-    width: 415px;
-    height: 100%;
-    > p {
-      position: relative;
-      font-size: var(--font-size-base);
-      font-weight: 700;
-      color: var(--color-3000);
-    }
-    > h3 {
-      font-size: var(--font-size-lg);
-      color: var(--color-3000);
-    }
-  }
-
   .location-image {
-    filter: var(--filter);
-    mask-image: linear-gradient(to left, var(--color-100) 30%, rgba(0, 0, 0, .2) 90%, transparent);
+    mask-image: linear-gradient(to left, hsl(var(--color-100)) 30%, rgba(0, 0, 0, .2) 90%, transparent);
   }
 
   .location-dot {
@@ -60,24 +39,18 @@ import locationPicture from '@assets/images/location.webp';
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    box-shadow: 0 0 0 0 var(--primary-color);
-    background-color: var(--primary-color);
+    box-shadow: 0 0 0 0 hsl(var(--primary));
+    background-color: hsl(var(--primary));
     border: 1px solid var(--color-800);
     animation: pulse 2s infinite;
   }
 
   @keyframes pulse {
     0% {
-      box-shadow: 0 0 0 0px rgba(16, 200, 151, 0.50);
+      box-shadow: 0 0 0 0px hsl(var(--primary));
     }
     100% {
       box-shadow: 0 0 0 20px rgba(110, 158, 139, 0.036);
-    }
-  }
-
-  @media (width <= 1920px) {
-    .location {
-      height: 75px;
     }
   }
 </style>
