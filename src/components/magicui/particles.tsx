@@ -166,7 +166,6 @@ const Particles: React.FC<ParticlesProps> = ({
       magnetism,
     };
   };
-
   const rgb = hexToRgb(color);
 
   const drawCircle = (circle: Circle, update = false) => {

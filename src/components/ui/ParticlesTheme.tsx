@@ -1,28 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
-
-import Particles from "@components/magicui/particles";
+import Particles from '@components/magicui/particles';
+import useThemeColor from "@hooks/UseThemeColor";
 
 const ParticlesTheme = () => {
-  const [color, setColor] = useState("#ffffff");
-
-  useEffect(() => {
-    const handleThemeChange = () => {
-      const theme = document.documentElement.getAttribute('data-theme');
-      console.log(theme);
-      setColor(theme === "dark" ? "#ffffff" : "#000000");
-    };
-
-    handleThemeChange();
-    const observer = new MutationObserver(handleThemeChange);
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
-
+  const color = useThemeColor({lightColor: "#ffffff", darkColor: "#000000"});
+  console.log(color);
   return (
     <Particles
       className="absolute inset-0"

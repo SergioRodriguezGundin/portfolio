@@ -1,18 +1,27 @@
 ---
-import Email from '@components/icons/Email.astro';
-import GitHub from '@components/icons/GitHub.astro';
+import Discord from '@components/icons/Discord.astro';
+import Github from '@components/icons/GitHub.astro';
 import Linkedin from '@components/icons/Linkedin.astro';
-import OutlineButton from '@components/OutlineButton.astro';
+import { MagicCard } from '@components/magicui/magic-card';
 ---
 
-<div class='contact flex flex-column flex-start gap-3 p-2'>
-  <OutlineButton isRounded={true} text='Linkedin'>
-    <Linkedin />
-  </OutlineButton >
-  <OutlineButton isRounded={true} text='GitHub'>
-    <GitHub />
-  </OutlineButton>
-  <OutlineButton isRounded={true} text='Email'>
-    <Email />
-  </OutlineButton>
+<div class='contact flex flex-col flex-start gap-3 p-2 h-full w-full'>
+  <MagicCard
+    className="cursor-pointer flex-col items-center justify-center shadow-2xl whitespace-nowrap h-24 w-24"
+    client:load
+  >
+    <Linkedin size={{width: 36, height: 36}} />
+  </MagicCard>
+  <MagicCard
+    className="cursor-pointer flex-col items-center justify-center shadow-2xl whitespace-nowrap h-24 w-24"
+    client:load
+  >
+    <Github size={{width: 36, height: 36}} />
+  </MagicCard>
+  <MagicCard
+    className="cursor-pointer flex-col items-center justify-center shadow-2xl whitespace-nowrap h-24 w-24"
+    client:load
+  >
+    <Discord size={{width: 36, height: 36}} />
+  </MagicCard>
 </div>

@@ -1,9 +1,10 @@
 ---
 import Card from '@components/Card.astro';
+import Contact from '@components/profile/Contact.astro';
 import Experience from '@components/profile/Experience.astro';
 import Location from '@components/profile/Location.astro';
-import ProjectSliders from '@components/projects/ProjectSliders.astro';
 import PersonalInformation from '@components/profile/PersonalInformation.astro';
+import ProjectSliders from '@components/projects/ProjectSliders.astro';
 import ThemeToggle from '@components/ThemeToggle.astro';
 import ParticlesTheme from '@components/ui/ParticlesTheme';
 import Layout from '@layouts/Layout.astro';
@@ -20,10 +21,8 @@ import Layout from '@layouts/Layout.astro';
     </div>
     <div class='about-me flex flex-col gap-4'>
       <Experience />
-      <Card>
-        <h1 class='text-primary'>github, linkedin, etc</h1>
-        <h1 class='text-primary'>curriculum</h1>
-      </Card>
+      <Contact />
+      <!--<h1 class='text-primary'>curriculum</h1>-->
       <Card>
         <Location />
       </Card>

@@ -9,7 +9,8 @@
       "@models/*": ["src/models/*"],
       "@styles/*": ["src/styles/*"],
       "@assets/*": ["public/*"],
-      "@lib/*": ["src/lib/*"]
+      "@lib/*": ["src/lib/*"],
+      "@hooks/*": ["src/hooks/*"]
     },
     "jsx": "react-jsx",
     "jsxImportSource": "react",
