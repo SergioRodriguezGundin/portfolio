@@ -1,11 +1,11 @@
 ---
-import Card from '@components/Card.astro';
 import Contact from '@components/profile/Contact.astro';
 import Curriculum from '@components/profile/Curriculum.astro';
 import Experience from '@components/profile/Experience.astro';
+import Journey from '@components/profile/Journey.astro';
 import Location from '@components/profile/Location.astro';
 import PersonalInformation from '@components/profile/PersonalInformation.astro';
-import {Techs} from '@components/profile/techs/Techs.tsx';
+import {Techs} from '@components/profile/Techs';
 import ProjectSliders from '@components/projects/ProjectSliders.astro';
 import ThemeToggle from '@components/ThemeToggle.astro';
 import ParticlesTheme from '@components/ui/ParticlesTheme';
@@ -35,9 +35,7 @@ import Layout from '@layouts/Layout.astro';
       <Techs containerWidth={390} />
     </div>
     <div class="my-journey">
-      <Card>
-        <h1 class='text-primary'>my journey</h1>
-      </Card>
+      <Journey />
     </div>
     <div class='my-proyects flex flex-center'>
       <ProjectSliders />
