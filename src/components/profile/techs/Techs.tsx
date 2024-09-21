@@ -4,28 +4,28 @@ import { cn } from '@lib/utils';
 
 const techIcons = [
   {
-    img: "public/icons/js.svg",
+    img: "icons/js.svg",
   },
   {
-    img: "public/icons/typescript.svg",
+    img: "icons/typescript.svg",
   },
   {
-    img: "public/icons/angular.svg",
+    img: "icons/angular.svg",
   },
   {
-    img: "public/icons/ngrx.svg",
+    img: "icons/ngrx.svg",
   },
   {
-    img: "public/icons/react.svg",
+    img: "icons/react.svg",
   },
   {
-    img: "public/icons/nextjs.svg",
+    img: "icons/nextjs.svg",
   },
   {
-    img: "public/icons/astro.svg",
+    img: "icons/astro.svg",
   },
   {
-    img: "public/icons/threejs.svg",
+    img: "icons/threejs.svg",
   },
 ];
 
