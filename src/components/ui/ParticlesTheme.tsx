@@ -4,7 +4,7 @@ import Particles from '@components/magicui/particles';
 import useThemeColor from "@hooks/UseThemeColor";
 
 const ParticlesTheme = () => {
-  const color = useThemeColor({lightColor: "#ffffff", darkColor: "#000000"});
+  const color = useThemeColor({ lightColor: "#ffffff", darkColor: "#000000" });
   return (
     <Particles
       className="absolute inset-0"

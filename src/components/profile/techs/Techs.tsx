@@ -1,31 +1,37 @@
 import Marquee from '@components/magicui/marquee';
 import { cn } from '@lib/utils';
 
- 
-const reviews = [
+
+const techIcons = [
   {
-    img: "https://avatar.vercel.sh/jack",
+    img: "public/icons/js.svg",
   },
   {
-    img: "https://avatar.vercel.sh/jill",
+    img: "public/icons/typescript.svg",
   },
   {
-    img: "https://avatar.vercel.sh/john",
+    img: "public/icons/angular.svg",
   },
   {
-    img: "https://avatar.vercel.sh/jane",
+    img: "public/icons/ngrx.svg",
   },
   {
-    img: "https://avatar.vercel.sh/jenny",
+    img: "public/icons/react.svg",
   },
   {
-    img: "https://avatar.vercel.sh/james",
+    img: "public/icons/nextjs.svg",
+  },
+  {
+    img: "public/icons/astro.svg",
+  },
+  {
+    img: "public/icons/threejs.svg",
   },
 ];
- 
-const firstRow = reviews.slice(0, reviews.length / 2);
-const secondRow = reviews.slice(reviews.length / 2);
- 
+
+const firstRow = techIcons.slice(0, techIcons.length / 2);
+const secondRow = techIcons.slice(techIcons.length / 2);
+
 const ReviewCard = ({
   img,
 }: {
@@ -42,13 +48,13 @@ const ReviewCard = ({
       )}
     >
       <div className="flex flex-row items-center gap-2">
-        <img className="rounded-full" width="32" height="32" alt="" src={img} />
+        <img width="32" height="32" alt="" src={img} />
       </div>
     </figure>
   );
 };
- 
-export function Techs({containerWidth}: {containerWidth: number} = {containerWidth: 390}) {
+
+export function Techs({ containerWidth }: { containerWidth: number } = { containerWidth: 390 }) {
   const width = containerWidth ? containerWidth : 390;
 
   return (
