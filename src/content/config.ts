@@ -21,6 +21,18 @@ const projectsCollection = defineCollection({
   }),
 });
 
+const journeyCollection = defineCollection({
+  type: 'data',
+  schema: z.object({
+    id: z.string(),
+    jobPosition: z.string(),
+    company: z.string(),
+    period: z.string(),
+    url: z.string().url(),
+  }),
+});
+
 export const collections = {
   projects: projectsCollection,
+  journey: journeyCollection,
 };

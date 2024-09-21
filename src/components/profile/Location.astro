@@ -9,18 +9,19 @@ import { MagicCard } from '@components/magicui/magic-card';
   client:load
 >
 <div class="relative overflow-clip flex flex-row justify-between items-center w-full">
-  <div class="flex-2 flex flex-col justify-start items-start gap-0 pl-4">
+  <div class="flex flex-col justify-start items-start gap-0 pl-4 w-100">
     <p class="text-base-700 text-sm">Based on</p>
     <h3 class="text-base-100 dark:text-base-2000 text-base">Madrid, Spain</h3>
+
   </div>
   <Picture
     src={locationPicture}
     formats={['webp']}
     loading="lazy"
-    width={250}
-    height={250}
+    width={238}
+    height={225}
     alt="Sergio Rodriguez Gundin based on Spain"
-    class="location-image flex-1 invert dark:invert-0 rounded-lg"
+    class="location-image invert dark:invert-0 rounded-lg"
     />
     <span class="location-dot"></span>
   </div>
