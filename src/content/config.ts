@@ -25,6 +25,7 @@ const journeyCollection = defineCollection({
   type: 'data',
   schema: z.object({
     id: z.string(),
+    sortOrder: z.number(),
     jobPosition: z.string(),
     company: z.string(),
     period: z.string(),
