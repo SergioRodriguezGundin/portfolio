@@ -10,10 +10,10 @@ const sortedJourney = journey.sort((a, b) => b.data.sortOrder - a.data.sortOrder
     sortedJourney.map((item, index) => (
       <div class={`flex flex-row justify-between items-center gap-2 w-full ${index > 0 ? 'scale-90' : 'scale-100'}`}>
         <div class="flex flex-row justify-start items-start h-full">
-          <h5 class={`font-prompt text-md text-base-500 dark:text-base-2000 ${index > 0 ? 'line-through dark:text-base-800' : ''}`}>{item.data.jobPosition}</h5>
+          <h5 class={`font-prompt text-md ${index > 0 ? 'line-through text-base-800 dark:text-base-800' : 'text-base-300 dark:text-base-2000'}`}>{item.data.jobPosition}</h5>
         </div>
         <div class="flex flex-col justify-end items-end">
-          <a href={item.data.url} target="_blank" class={`font-prompt text-base text-base-500 ${index > 0 ? 'dark:text-base-800' : 'dark:text-base-1000 '}`}>{item.data.company}</a>
+          <a href={item.data.url} target="_blank" class={`font-prompt text-base ${index > 0 ? 'text-base-700 dark:text-base-800' : 'text-base-500 dark:text-base-1000 '}`}>{item.data.company}</a>
           <span class="text-sm text-base-800 dark:text-base-700">{item.data.period}</span>
         </div>
       </div>
