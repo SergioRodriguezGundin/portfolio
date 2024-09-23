@@ -30,6 +30,7 @@ const journeyCollection = defineCollection({
     company: z.string(),
     period: z.string(),
     url: z.string().url(),
+    color: z.string(),
   }),
 });
 

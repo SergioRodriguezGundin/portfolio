@@ -3,6 +3,12 @@ module.exports = {
   content: [
     './src/**/*.{js,jsx,ts,tsx,astro}',
   ],
+  safelist: [
+    {
+      pattern: /(text|bg)-(celonis|secture-laliga|dixper|sopra-bankinter|webtools-dreamfit)/,
+      variants: ['hover', 'dark'],
+    },  
+  ],
   theme: {
     container: {
       center: true,
@@ -50,6 +56,25 @@ module.exports = {
           1000: "hsl(var(--color-1000))",
           2000: "hsl(var(--color-2000))",
           3000: "hsl(var(--color-3000))",
+        },
+        celonis: {
+          DEFAULT: "hsl(var(--celonis))",
+        },
+        dixper: {
+          DEFAULT: "hsl(var(--dixper))",
+          foreground: "hsl(var(--dixper-foreground))",
+        },
+        secture: {
+          DEFAULT: "hsl(var(--secture))",
+          laliga: "hsl(var(--secture-laliga))",
+        },
+        sopra: {
+          DEFAULT: "hsl(var(--sopra))",
+          bankinter: "hsl(var(--sopra-bankinter))",
+        },
+        webtools: {
+          DEFAULT: "hsl(var(--webtools))",
+          dreamfit: "hsl(var(--webtools-dreamfit))",
         },
         primary: {
           DEFAULT: "hsl(var(--primary))",

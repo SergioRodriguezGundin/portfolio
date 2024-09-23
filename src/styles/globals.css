@@ -26,7 +26,21 @@
 
     --secondary: 0 0% 96.1%;
     --secondary-foreground: 0 0% 9%;
-    
+
+    --celonis: 116, 99%, 65%;
+
+    --dixper: 166, 92%, 52%;
+    --dixper-foreground: 166, 92%, 52%;
+
+    --secture: 0deg 0% 100%;
+    --secture-laliga: 2, 100%, 63%;
+
+    --sopra: 210, 100%, 40%;
+    --sopra-bankinter: 26.96deg 100% 55.49%;
+
+    --webtools: 78.1, 100%, 37.06%;
+    --webtools-dreamfit: 78.1deg 100% 37.06%;
+
     --background: 0deg 0% 87.45%;
     --foreground: 0 0% 3.9%;
 
