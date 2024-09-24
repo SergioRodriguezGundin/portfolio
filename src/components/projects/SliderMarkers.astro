@@ -27,7 +27,6 @@ const iconMap = {
     sortedProjects.map((project, index) => {
       const IconComponent = iconMap[project.data.id as keyof typeof iconMap];
       const bgIcon = project.data.colors['bg-icon'];
-      console.log(bgIcon);
       return (
         <li>
           <a href={`#carousel_${index}`} class={`rounded-lg bg-${bgIcon}`}>
