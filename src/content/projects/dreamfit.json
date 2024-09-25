@@ -3,15 +3,17 @@
   "sortOrder": 5,
   "title": "Dreamfit",
   "description": "Webtools is a collection of tools for web development. It is a collection of tools for web development.",
-  "images": [
-    "/images/webtools/webtools-1.png",
-    "/images/webtools/webtools-2.png",
-    "/images/webtools/webtools-3.png"
-  ],
   "company": "Webtools",
   "milestones": [
-    "2021-01-01: Started the project",
-    "2021-01-02: Finished the project"
+    {
+      "images": [
+        "/images/webtools/webtools-1.png",
+        "/images/webtools/webtools-2.png",
+        "/images/webtools/webtools-3.png"
+      ],
+      "title": "SaaS Dashboard for Dreamfit employees",
+      "description": "SaaS Dashboard for Dreamfit employees"
+    }
   ],
   "stack": [
     {

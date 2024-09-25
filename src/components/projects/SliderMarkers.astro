@@ -22,14 +22,14 @@ const iconMap = {
 };
 ---
 
-<ul class="markers g-3 px-0 py-4">
+<ul class="absolute left-1/2 -translate-x-1/2 top-2 flex flex-row justify-start gap-3">
   {
     sortedProjects.map((project, index) => {
       const IconComponent = iconMap[project.data.id as keyof typeof iconMap];
       const bgIcon = project.data.colors['bg-icon'];
       return (
         <li>
-          <a href={`#carousel_${index}`} class={`rounded-lg bg-${bgIcon}`}>
+          <a href={`#carousel_${index}`} class={`bg-${bgIcon} rounded-lg p-1`}>
             {IconComponent && <IconComponent />}
           </a>
         </li>
@@ -39,12 +39,7 @@ const iconMap = {
 </ul>
 
 <style>
-  .markers {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    width: 120px;
+  ul {
     a {
       animation-timeline: --carousel;
       animation-range: calc((var(--i) - 1) * 20%) calc(var(--i) * 20% + 1px);

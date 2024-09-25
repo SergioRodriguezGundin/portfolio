@@ -12,10 +12,10 @@ const numCards = sortedProjects.length;
 
 <div data-component='carousel'>
   <SliderMarkers sortedProjects={sortedProjects} />
-  <ul class="entries g-3 rounded-lg" tabindex="0">
+  <ul class="entries rounded-lg" tabindex="0">
     {
       sortedProjects.map((project, index) => (
-        <li class="g-2 rounded-lg">
+        <li class="rounded-lg pt-12">
           <a name={`carousel_${index}`} href={`#carousel_${index}`}>
             <ProjectCard project={project} />
           </a>
