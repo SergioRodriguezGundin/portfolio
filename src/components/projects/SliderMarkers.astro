@@ -26,10 +26,9 @@ const iconMap = {
   {
     sortedProjects.map((project, index) => {
       const IconComponent = iconMap[project.data.id as keyof typeof iconMap];
-      const bgIcon = project.data.colors['bg-icon'];
       return (
         <li>
-          <a href={`#carousel_${index}`} class={`bg-${bgIcon} rounded-lg p-1`}>
+          <a href={`#carousel_${index}`} class={`bg-transparent p-1`}>
             {IconComponent && <IconComponent />}
           </a>
         </li>
@@ -41,12 +40,11 @@ const iconMap = {
 <style>
   ul {
     a {
+      animation: colorize-mark linear;
       animation-timeline: --carousel;
       animation-range: calc((var(--i) - 1) * 20%) calc(var(--i) * 20% + 1px);
       position: relative;
       display: flex;
-      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-      width: fit-content;
       transition: transform 0.15s linear;
 
       &:hover::after {
@@ -71,6 +69,12 @@ const iconMap = {
       &:nth-child(3) { --i: 3; }
       &:nth-child(4) { --i: 4; }
       &:nth-child(5) { --i: 5; }
+    }
+  }
+
+  @keyframes colorize-mark {
+    0%, 100% {
+      border-bottom: 2px solid hsl(var(--primary));
     }
   }
 </style>

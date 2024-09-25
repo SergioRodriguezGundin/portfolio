@@ -13,7 +13,7 @@ const sortedJourney = journey.sort((a, b) => b.data.sortOrder - a.data.sortOrder
           <h5 class={`font-prompt text-md ${index > 0 ? 'line-through text-base-800' : 'text-base-300'}`}>{item.data.jobPosition}</h5>
         </div>
         <div class="flex flex-col justify-end items-end">
-          <a href={item.data.url} target="_blank" class={`font-prompt text-base transition-colors duration-500 ${index > 0 ? 'text-base-700' : 'text-base-500'} hover:text-${item.data.color} dark:hover:text-${item.data.color}`}>{item.data.company}</a>
+          <a href={item.data.url} target="_blank" class={`font-prompt text-base transition-colors duration-500 ${index > 0 ? 'text-base-700' : 'text-base-500'} hover:text-primary`}>{item.data.company}</a>
           <span class="text-sm text-base-800 dark:text-base-700">{item.data.period}</span>
         </div>
       </div>
