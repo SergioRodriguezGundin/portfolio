@@ -9,7 +9,9 @@ const { data } = (Astro.props as ProjectCardProps).project;
 const color = data.colors['bg-icon'];
 ---
 
-<div class='project-card rounded-lg w-full h-full'>
-  <h3 class={`text-${color} dark:text-${color}`}>{data.title}</h3>
-  <p class='text-base-600'>{data.description}</p>
+<div class='project-card relative rounded-lg w-full h-full'>
+  <div class="absolute pt-14">
+    <h3 class={`text-${color} dark:text-${color}`}>{data.title}</h3>
+    <p class='text-base-600'>{data.description}</p>
+  </div>
 </div>
