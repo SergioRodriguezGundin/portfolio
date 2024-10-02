@@ -6,7 +6,7 @@ export interface ProjectCardProps {
 }
 
 const { data } = (Astro.props as ProjectCardProps).project;
-const color = data.colors['bg-icon'];
+const color = data.colors['project-primary'];
 ---
 
 <div class='project-card relative rounded-lg w-full h-full'>

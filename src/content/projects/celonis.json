@@ -23,6 +23,6 @@
   ],
   "url": "https://www.celonis.com",
   "colors": {
-    "bg-icon": "celonis-foreground"
+    "project-primary": "celonis-foreground"
   }
 }
