@@ -21,6 +21,7 @@ const projectsCollection = defineCollection({
     colors: z.object({
       'project-primary': z.string(),
     }),
+    background: z.string(),
   }),
 });
 

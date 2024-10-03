@@ -24,5 +24,6 @@
   "url": "https://www.webtools.com",
   "colors": {
     "project-primary": "webtools-dreamfit"
-  }
+  },
+  "background": "/images/dreamfit/dreamfit.webp"
 }

@@ -45,5 +45,6 @@
   "url": "https://www.laliga.com",
   "colors": {
     "project-primary": "secture-laliga"
-  }
+  },
+  "background": "/images/laliga/laliga.webp"
 }

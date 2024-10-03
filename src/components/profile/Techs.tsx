@@ -40,11 +40,9 @@ const ReviewCard = ({
   return (
     <figure
       className={cn(
-        "relative cursor-pointer overflow-hidden rounded-xl border p-4",
-        // light styles
-        "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
-        // dark styles
-        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
+        "relative cursor-pointer overflow-hidden rounded-xl shadow-md border p-4",
+        "bg-neutral-200 border-neutral-300 hover:bg-neutral-950/[.05]",
+        "dark:bg-neutral-900 dark:border-neutral-800 dark:hover:bg-neutral-50/[.15]",
       )}
     >
       <div className="flex flex-row items-center gap-2">
@@ -72,8 +70,8 @@ export function Techs({ containerWidth }: { containerWidth: number } = { contain
           ))}
         </Marquee>
       </div>
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/6 bg-gradient-to-r from-white dark:from-black"></div>
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/6 bg-gradient-to-l from-white dark:from-black"></div>
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/6 bg-gradient-to-r from-background"></div>
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/6 bg-gradient-to-l from-background"></div>
     </div>
   );
 }

@@ -10,7 +10,7 @@ const { title, description } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" class="dark:bg-black">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<title>{title}</title>
@@ -26,7 +26,7 @@ const { title, description } = Astro.props;
 	html {
 		font-family: 'Roboto Mono Variable', sans-serif;
 		font-size: var(--font-size-base);
-		background: var(--color-3000);
+		background: hsl(var(--background));
 	}
 	body {
 		position: relative;

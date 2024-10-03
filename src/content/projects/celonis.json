@@ -24,5 +24,6 @@
   "url": "https://www.celonis.com",
   "colors": {
     "project-primary": "celonis-foreground"
-  }
+  },
+  "background": "/images/celonis/celonis.webp"
 }

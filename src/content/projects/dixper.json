@@ -76,5 +76,6 @@
   "url": "https://dixper.gg",
   "colors": {
     "project-primary": "dixper"
-  }
+  },
+  "background": "/images/dixper/dixper.webp"
 }

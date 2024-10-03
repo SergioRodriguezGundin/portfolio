@@ -32,5 +32,6 @@
   "url": "https://www.bankinter.com",
   "colors": {
     "project-primary": "sopra-bankinter"
-  }
+  },
+  "background": "/images/bankinter/bankinter.webp"
 }
