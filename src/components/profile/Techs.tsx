@@ -58,7 +58,7 @@ export function Techs({ containerWidth }: { containerWidth: number } = { contain
   return (
     <div className={`relative flex flex-col justify-center items-start overflow-hidden w-[${width}px] h-full`}>
       <div className='flex flex-col gap-2'>
-        <h4 className="absolute top-16 max-xl:top-3 left-0 pl-2 z-10 text-base text-base-600">TECHS I ❤️</h4>
+        <h4 className="absolute top-16 left-0 pl-2 z-10 text-base text-base-600">TECHS I ❤️</h4>
         <Marquee pauseOnHover className="[--duration:20s]">
           {firstRow.map((review) => (
             <ReviewCard {...review} />
