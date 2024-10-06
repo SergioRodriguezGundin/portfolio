@@ -2,6 +2,7 @@
   "id": "celonis",
   "sortOrder": 1,
   "title": "Celonis",
+  "logo": "/images/celonis/celonis-logo.png",
   "description": "Celonis is the leading provider of process mining software. It is the leading provider of process mining software in the world and is used by many large companies.",
   "company": "Celonis",
   "milestones": [
@@ -17,8 +18,16 @@
   ],
   "stack": [
     {
-      "name": "React",
-      "icon": "react"
+      "name": "TypeScript",
+      "icon": "typescript"
+    },
+    {
+      "name": "Angular",
+      "icon": "angular"
+    },
+    {
+      "name": "Nx monorepo",
+      "icon": "nx"
     }
   ],
   "url": "https://www.celonis.com",

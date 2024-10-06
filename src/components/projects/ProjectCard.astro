@@ -1,19 +1,58 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import Celonis from '@components/icons/Celonis.astro';
+import LaLigaLogo from '@components/icons/LaligaLogo.astro';
+import DixperLogo from '@components/icons/DixperLogo.astro';
+import Bankinter from '@components/icons/Bankinter.astro';
+import Dreamfit from '@components/icons/Dreamfit.astro';
+import { DREAMFIT, LALIGA, DIXPER, BANKINTER, CELONIS } from '@models/projects.model';
+import ArrowExternal from '@components/icons/ArrowExternal.astro';
 
 export interface ProjectCardProps {
   project: CollectionEntry<'projects'>;
 }
 
 const { data } = (Astro.props as ProjectCardProps).project;
+
+// TODO: we can pass the color into the icon component
 const color = data.colors['project-primary'];
 const backgroundImage = `url(${data.background})`;
+
+const iconMap = {
+  [CELONIS]: Celonis,
+  [LALIGA]: LaLigaLogo,
+  [DIXPER]: DixperLogo,
+  [BANKINTER]: Bankinter, 
+  [DREAMFIT]: Dreamfit,
+};
+const IconComponent = iconMap[data.id as keyof typeof iconMap];
 ---
 
 <div class='project-card relative rounded-lg w-full h-full bg-cover bg-no-repeat'>
-  <div class="absolute pt-14">
-    <h3 class={`text-${color} dark:text-${color}`}>{data.title}</h3>
-    <p class='text-base-600'>{data.description}</p>
+  <div class="absolute flex justify-between items-start gap-2 pt-20 px-4 w-full h-full">
+    <div class="flex-1 flex flex-col">
+      <div class="flex flex-col justify-between items-between px-4 w-full">
+        <div class="flex flex-row justify-start items-center gap-4">
+          {IconComponent && <IconComponent size={{width: 120, height: 75}} />}
+          <span class="flex flex-row items-center gap-1 ml-16">
+            <span class="text-base-300 text-sm">Visit website</span>
+            <ArrowExternal size={{width: 16, height: 16}} />
+          </span>
+        </div>
+        <p class="description text-base-600 text-sm">{data.description}</p>
+        <span class="divider my-6"></span>
+        <div class="flex flex-col justify-start items-start gap-2">
+          <span class="text-base-600 text-sm">Techs worked</span>
+          <span class="flex flex-row justify-start items-center gap-2"> {
+            data.stack.map((tech) => (
+              <img src={`/icons/${tech.icon}.svg`} alt={`${tech.name} icon`} width={22} height={22} />
+            ))
+          }</span>
+        </div>
+      </div>
+    </div>
+    <div class="flex-1 flex flex-col">
+    </div>
   </div>
 </div>
 

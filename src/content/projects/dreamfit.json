@@ -2,7 +2,8 @@
   "id": "dreamfit",
   "sortOrder": 5,
   "title": "Dreamfit",
-  "description": "Webtools is a collection of tools for web development. It is a collection of tools for web development.",
+  "logo": "/images/dreamfit/dreamfit-logo.png",
+  "description": "Webtools-Dreamfit implemented a tailor-made evaluation system, to listen to your voice through surveys. Manage your data and get insights.",
   "company": "Webtools",
   "milestones": [
     {
@@ -17,8 +18,20 @@
   ],
   "stack": [
     {
-      "name": "React",
-      "icon": "react"
+      "name": "HTML 5",
+      "icon": "html"
+    },
+    {
+      "name": "CSS 3",
+      "icon": "css"
+    },
+    {
+      "name": "Spring Boot",
+      "icon": "spring"
+    },
+    {
+      "name": "Thymeleaf",
+      "icon": "thymeleaf"
     }
   ],
   "url": "https://www.webtools.com",

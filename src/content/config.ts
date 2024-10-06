@@ -7,6 +7,7 @@ const projectsCollection = defineCollection({
     sortOrder: z.number(),
     title: z.string(),
     company: z.string(),
+    logo: z.string(),
     description: z.string(),
     milestones: z.array(z.object({
       images: z.array(z.string()).optional(),

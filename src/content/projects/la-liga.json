@@ -1,8 +1,9 @@
 {
   "id": "la-liga",
   "sortOrder": 3,
-  "title": "La Liga",
-  "description": "La Liga is the Spanish football league. It is the top professional football league in Spain and is contested by 20 teams.",
+  "title": "La Liga Fantasy",
+  "logo": "/images/laliga/laliga-logo.png",
+  "description": "A sports management app where users can build their own teams using real football players. A fun and competitive experience with friends or in public leagues.",
   "company": "La Liga",
   "milestones": [
     {
@@ -38,8 +39,28 @@
   ],
   "stack": [
     {
+      "name": "Typescript",
+      "icon": "typescript"
+    },
+    {
+      "name": "Angular",
+      "icon": "angular"
+    },
+    {
+      "name": "Vue.js",
+      "icon": "vue"
+    },
+    {
       "name": "React",
       "icon": "react"
+    },
+    {
+      "name": "Next.js",
+      "icon": "nextjs"
+    },
+    {
+      "name": "Amazon Web Services",
+      "icon": "aws"
     }
   ],
   "url": "https://www.laliga.com",

@@ -16,7 +16,7 @@ const numCards = sortedProjects.length;
     {
       sortedProjects.map((project, index) => (
         <li class="rounded-lg">
-          <a name={`carousel_${index}`} href={`#carousel_${index}`}>
+          <a data-component='project-wrapper' name={`carousel_${index}`} href={`#carousel_${index}`}>
             <ProjectCard project={project} />
           </a>
         </li>
@@ -62,7 +62,8 @@ const numCards = sortedProjects.length;
         flex: 100% 1 0;
         display: flex;
 
-        a {
+        a[data-component='project-wrapper'] {
+          cursor: default;
           width: 100%;
         }
       }
