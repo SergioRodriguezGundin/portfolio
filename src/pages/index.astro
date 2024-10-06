@@ -23,7 +23,7 @@ import Layout from '@layouts/Layout.astro';
         <div class='say-hello'>
           <PersonalInformation />
         </div>
-        <div class='about-me flex flex-col gap-6'>
+        <div class='about-me flex flex-col gap-6 mt-12'>
           <Experience />
           <div class='flex flex-row gap-6'>
             <div class='flex-1'>
@@ -39,7 +39,7 @@ import Layout from '@layouts/Layout.astro';
         <div class="my-journey">
           <Journey/>
         </div>
-        <div class='my-proyects flex flex-center rounded-lg shadow-xl'>
+        <div class='my-proyects flex flex-center bg-neutral-200 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl shadow-xl'>
           <ProjectSliders/>
         </div>
     </div>
@@ -53,7 +53,7 @@ import Layout from '@layouts/Layout.astro';
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 1fr 2.4fr;
     grid-column-gap: calc(var(--grid-row-gap) * 2);
     height: 100%;
     max-width: 1200px;
@@ -64,7 +64,6 @@ import Layout from '@layouts/Layout.astro';
   }
   .about-me {
     grid-area: 2 / 1 / 3 / 2;
-    margin-top: 16px;
   }
   .tech-love {
     grid-area: 1 / 2 / 2 / 3;
