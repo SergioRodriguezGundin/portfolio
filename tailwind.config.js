@@ -37,6 +37,9 @@ module.exports = {
           'var(--font-size-2xl, clamp(2.14rem, 0.81vi + 1.93rem, 2.93rem))',
         '3xl': 'var(--font-size-3xl, clamp(2.67rem, 1.25vi + 2.36rem, 3.9rem))',
       },
+      letterSpacing: {
+        widest: '0.25em',
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
