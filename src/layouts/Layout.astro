@@ -32,4 +32,10 @@ const { title, description } = Astro.props;
 		position: relative;
 		overflow: hidden;
 	}
+
+	@media (max-width: 768px) {
+		body {
+			overflow: auto;
+		}
+	}
 </style>

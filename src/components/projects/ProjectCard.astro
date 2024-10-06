@@ -60,4 +60,14 @@ const IconComponent = iconMap[data.id as keyof typeof iconMap];
   .project-card {
     background-image: linear-gradient(to bottom, transparent 50%, hsl(var(--background)) 100%), var(--backgroundImage);
   }
+
+  @media (max-width: 768px) {
+    .project-card {
+      background-position-x: center;
+      background-size: cover;
+      > div {
+        flex-direction: column;
+      }
+    }
+  }
 </style>

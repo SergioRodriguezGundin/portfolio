@@ -69,4 +69,14 @@ const numCards = sortedProjects.length;
       }
     }
   }
+
+  @media (max-width: 768px) {
+    [data-component='carousel'] {
+      .entries {
+        height: 100dvh;
+        overflow-y: hidden;
+        touch-action: pan-y;
+      }
+    }
+  }
 </style>
