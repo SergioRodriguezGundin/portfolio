@@ -1,0 +1,48 @@
+---
+import ArrowExternal from '@components/icons/ArrowExternal.astro';
+import Bankinter from '@components/icons/Bankinter.astro';
+import Celonis from '@components/icons/Celonis.astro';
+import DixperLogo from '@components/icons/DixperLogo.astro';
+import Dreamfit from '@components/icons/Dreamfit.astro';
+import LaLigaLogo from '@components/icons/LaligaLogo.astro';
+import { BANKINTER, CELONIS, DIXPER, DREAMFIT, LALIGA } from '@models/projects.model';
+import { CollectionEntry } from 'astro:content';
+
+export interface ProjectHeaderProps {
+  project: CollectionEntry<'projects'>['data'];
+}
+
+const { project } = (Astro.props as ProjectHeaderProps);
+
+const iconMap = {
+  [CELONIS]: Celonis,
+  [LALIGA]: LaLigaLogo,
+  [DIXPER]: DixperLogo,
+  [BANKINTER]: Bankinter, 
+  [DREAMFIT]: Dreamfit,
+};
+const IconComponent = iconMap[project.id as keyof typeof iconMap];
+
+---
+<div class="flex gap-6">
+  <div class="flex-1 flex flex-col justify-between items-between gap-2 w-full">
+    <div class="flex flex-row justify-between items-center">
+      {IconComponent && <IconComponent size={{width: 120, height: 75}} />}
+      <span class="flex flex-row items-center gap-1">
+        <span class="text-base-300 text-sm">Visit website</span>
+        <ArrowExternal size={{width: 16, height: 16}} />
+      </span>
+    </div>
+    <p class="description text-base-600 text-sm">{project.description}</p>
+  </div>
+  <div class="flex flex-1 flex-col h-full">
+    <div class="flex flex-col justify-end items-start gap-2 grow pb-1">
+      <span class="text-base-600 text-sm">Techs worked</span>
+      <span class="flex flex-row justify-start items-center gap-2"> {
+        project.stack.map((tech) => (
+          <img src={`/icons/${tech.icon}.svg`} alt={`${tech.name} icon`} width={22} height={22} />
+        ))
+      }</span>
+    </div>
+  </div>
+</div>

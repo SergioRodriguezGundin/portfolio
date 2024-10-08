@@ -1,60 +1,24 @@
 ---
-import type { CollectionEntry } from 'astro:content';
-import Celonis from '@components/icons/Celonis.astro';
-import LaLigaLogo from '@components/icons/LaligaLogo.astro';
-import DixperLogo from '@components/icons/DixperLogo.astro';
-import Bankinter from '@components/icons/Bankinter.astro';
-import Dreamfit from '@components/icons/Dreamfit.astro';
-import { DREAMFIT, LALIGA, DIXPER, BANKINTER, CELONIS } from '@models/projects.model';
-import ArrowExternal from '@components/icons/ArrowExternal.astro';
 import Milestones from '@components/milestones/Milestones.astro';
+import type { CollectionEntry } from 'astro:content';
+import ProjectHeader from './ProjectHeader.astro';
 
 export interface ProjectCardProps {
   project: CollectionEntry<'projects'>;
 }
 
-const { data } = (Astro.props as ProjectCardProps).project;
+const { data: project } = (Astro.props as ProjectCardProps).project;
 
-// TODO: we can pass the color into the icon component
-const color = data.colors['project-primary'];
-const backgroundImage = `url(${data.background})`;
-
-const iconMap = {
-  [CELONIS]: Celonis,
-  [LALIGA]: LaLigaLogo,
-  [DIXPER]: DixperLogo,
-  [BANKINTER]: Bankinter, 
-  [DREAMFIT]: Dreamfit,
-};
-const IconComponent = iconMap[data.id as keyof typeof iconMap];
+//FYI: we can pass the color into the icon component
+//const color = project.colors['project-primary'];
+const backgroundImage = `url(${project.background})`;
 ---
 
 <div class='project-card relative rounded-lg w-full h-full bg-cover bg-no-repeat'>
   <div class="absolute flex flex-col justify-between items-start gap-6 pt-24 px-4 w-full h-full">
-    <div class="flex gap-6">
-      <div class="flex-1 flex flex-col justify-between items-between gap-2 w-full">
-        <div class="flex flex-row justify-between items-center">
-          {IconComponent && <IconComponent size={{width: 120, height: 75}} />}
-          <span class="flex flex-row items-center gap-1">
-            <span class="text-base-300 text-sm">Visit website</span>
-            <ArrowExternal size={{width: 16, height: 16}} />
-          </span>
-        </div>
-        <p class="description text-base-600 text-sm">{data.description}</p>
-      </div>
-      <div class="flex flex-1 flex-col h-full">
-        <div class="flex flex-col justify-end items-start gap-2 grow pb-1">
-          <span class="text-base-600 text-sm">Techs worked</span>
-          <span class="flex flex-row justify-start items-center gap-2"> {
-            data.stack.map((tech) => (
-              <img src={`/icons/${tech.icon}.svg`} alt={`${tech.name} icon`} width={22} height={22} />
-            ))
-          }</span>
-        </div>
-      </div>
-    </div>
+    <ProjectHeader project={project} />
     <div class="divider"></div>
-    <Milestones milestones={data.milestones} />
+    <Milestones milestones={project.milestones} />
   </div>
 </div>
 
