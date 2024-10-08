@@ -29,9 +29,9 @@ const IconComponent = iconMap[data.id as keyof typeof iconMap];
 ---
 
 <div class='project-card relative rounded-lg w-full h-full bg-cover bg-no-repeat'>
-  <div class="absolute flex justify-between items-start gap-2 pt-24 px-4 w-full h-full">
-    <div class="flex-1 flex flex-col">
-      <div class="flex flex-col justify-between items-between px-4 w-full">
+  <div class="absolute flex flex-col justify-between items-start gap-6 pt-24 px-4 w-full h-full">
+    <div class="flex gap-6">
+      <div class="flex-1 flex flex-col justify-between items-between gap-2 w-full">
         <div class="flex flex-row justify-between items-center">
           {IconComponent && <IconComponent size={{width: 120, height: 75}} />}
           <span class="flex flex-row items-center gap-1">
@@ -40,8 +40,9 @@ const IconComponent = iconMap[data.id as keyof typeof iconMap];
           </span>
         </div>
         <p class="description text-base-600 text-sm">{data.description}</p>
-        <span class="divider my-6"></span>
-        <div class="flex flex-col justify-start items-start gap-2">
+      </div>
+      <div class="flex flex-1 flex-col h-full">
+        <div class="flex flex-col justify-end items-start gap-2 grow pb-1">
           <span class="text-base-600 text-sm">Techs worked</span>
           <span class="flex flex-row justify-start items-center gap-2"> {
             data.stack.map((tech) => (
@@ -51,7 +52,8 @@ const IconComponent = iconMap[data.id as keyof typeof iconMap];
         </div>
       </div>
     </div>
-    <div class="flex-1 flex flex-col">
+    <div class="divider"></div>
+    <div class="grow flex">
       <span class="text-base-600 text-sm uppercase font-prompt">MILESTONES</span>
       {
         data.milestones.map((milestone, index) => (
