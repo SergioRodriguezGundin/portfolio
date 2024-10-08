@@ -22,14 +22,14 @@ const iconMap = {
 };
 ---
 
-<ul class="absolute left-1/2 -translate-x-1/2 top-3 flex flex-row justify-start gap-3 z-10">
+<ul class="absolute left-1/2 -translate-x-1/2 top-3 flex flex-row justify-start gap-3 bg-base-1000 rounded-xl p-2 z-10">
   {
     sortedProjects.map((project, index) => {
       const IconComponent = iconMap[project.data.id as keyof typeof iconMap];
       return (
         <li>
           <a href={`#carousel_${index}`} class={`bg-transparent p-1`}>
-            {IconComponent && <IconComponent />}
+            {IconComponent && <IconComponent size={{width: 28, height: 28}} />}
           </a>
         </li>
       )
@@ -60,7 +60,7 @@ const iconMap = {
         z-index: -1;
       }
       &:hover {
-        transform: scale(0.9);
+        transform: scale(1.1);
       }
     }
     li {
