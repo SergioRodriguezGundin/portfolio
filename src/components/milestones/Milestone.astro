@@ -1,0 +1,15 @@
+---
+import { CollectionEntry } from 'astro:content';
+
+export interface MilestoneProps {
+  milestone: CollectionEntry<'projects'>['data']['milestones'][number];
+  index: number;
+}
+
+const { milestone, index } = (Astro.props as MilestoneProps);
+---
+
+<div class="flex flex-col justify-start items-start gap-2">
+  <h5 class="text-base-300 text-md font-prompt"><span class="text-base-600">#{index + 1} </span>{milestone.title}</h5>
+  <p class="text-base-500 text-sm">{milestone.description}</p>
+</div>

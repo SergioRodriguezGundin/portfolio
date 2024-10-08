@@ -7,6 +7,7 @@ import Bankinter from '@components/icons/Bankinter.astro';
 import Dreamfit from '@components/icons/Dreamfit.astro';
 import { DREAMFIT, LALIGA, DIXPER, BANKINTER, CELONIS } from '@models/projects.model';
 import ArrowExternal from '@components/icons/ArrowExternal.astro';
+import Milestones from '@components/milestones/Milestones.astro';
 
 export interface ProjectCardProps {
   project: CollectionEntry<'projects'>;
@@ -53,17 +54,7 @@ const IconComponent = iconMap[data.id as keyof typeof iconMap];
       </div>
     </div>
     <div class="divider"></div>
-    <div class="grow flex">
-      <span class="text-base-600 text-sm uppercase font-prompt">MILESTONES</span>
-      {
-        data.milestones.map((milestone, index) => (
-          <div class="flex flex-col justify-start items-start gap-2">
-            <h5 class="text-base-300 text-md font-prompt"><span class="text-base-600">#{index + 1} </span>{milestone.title}</h5>
-            <p class="text-base-500 text-sm">{milestone.description}</p>
-          </div>
-        ))
-      }
-    </div>
+    <Milestones milestones={data.milestones} />
   </div>
 </div>
 

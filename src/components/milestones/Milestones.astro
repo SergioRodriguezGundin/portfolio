@@ -1,0 +1,21 @@
+---
+import { CollectionEntry } from 'astro:content';
+import Milestone from './Milestone.astro';
+
+export interface MilestonesProps {
+  milestones: CollectionEntry<'projects'>['data']['milestones'];
+}
+
+const { milestones } = (Astro.props as MilestonesProps);
+---
+
+<div class="grow flex flex-col gap-2">
+  <span class="text-base-600 text-sm uppercase font-prompt">MILESTONES</span>
+  <div class="flex justify-start items-start gap-4 flex-wrap"> 
+    {
+      milestones.map((milestone, index) => (
+        <Milestone milestone={milestone} index={index} />
+      ))
+    }
+  </div>
+</div>
