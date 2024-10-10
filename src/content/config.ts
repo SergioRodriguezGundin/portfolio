@@ -10,9 +10,8 @@ const projectsCollection = defineCollection({
     logo: z.string(),
     description: z.string(),
     milestones: z.array(z.object({
-      images: z.array(z.string()).optional(),
+      strongPoints: z.array(z.string()).optional(),
       title: z.string(),
-      description: z.string(),
     })),
     stack: z.array(z.object({
       name: z.string(),

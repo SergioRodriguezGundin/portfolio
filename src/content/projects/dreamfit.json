@@ -7,13 +7,17 @@
   "company": "Webtools",
   "milestones": [
     {
-      "images": [
-        "/images/webtools/webtools-1.png",
-        "/images/webtools/webtools-2.png",
-        "/images/webtools/webtools-3.png"
+      "strongPoints": [
+        "Architecture design",
+        "Patterns & Best Practices"
       ],
-      "title": "SaaS Dashboard for Dreamfit employees",
-      "description": "SaaS Dashboard for Dreamfit employees"
+      "title": "First steps as a Software Developer"
+    },
+    {
+      "title": "Fullstack project"
+    },
+    {
+      "title": "Final Customer"
     }
   ],
   "stack": [

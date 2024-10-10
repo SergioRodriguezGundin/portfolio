@@ -7,34 +7,21 @@
   "company": "La Liga",
   "milestones": [
     {
-      "images": [
-        "/images/la-liga/la-liga-1.png",
-        "/images/la-liga/la-liga-2.png",
-        "/images/la-liga/la-liga-3.png"
+      "strongPoints": [
+        "Successfully migrated from Angular to Next.js",
+        "Strong product focus",
+        "Implemented internationalization"
       ],
-      "title": "Clausulazo",
-      "description": "Clausulazo is a feature where you can pay the player to leave the club."
+      "title": "Evolve as a Frontend Developer"
     },
     {
-      "images": [
-        "/images/la-liga/la-liga-1.png",
-        "/images/la-liga/la-liga-2.png",
-        "/images/la-liga/la-liga-3.png"
-      ],
-      "title": "Team stats",
-      "description": "Team stats is a feature where you can see the stats of the team."
+      "title": "+200K users"
     },
     {
-      "title": "Internationalization",
-      "description": "Internationalization to support the 10 most spoken languages around the world."
+      "title": "Agile Team"
     },
     {
-      "title": "Translations Dashboard",
-      "description": "Translations Dashboard to manage the translations of the website."
-    },
-    {
-      "title": "Transition from Angular to Next.js",
-      "description": "Transition from Angular to Next.js"
+      "title": "Worldwide audience"
     }
   ],
   "stack": [

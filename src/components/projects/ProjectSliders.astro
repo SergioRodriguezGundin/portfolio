@@ -15,7 +15,7 @@ const numCards = sortedProjects.length;
   <ul class="entries rounded-lg" tabindex="0">
     {
       sortedProjects.map((project, index) => (
-        <li class="rounded-lg">
+        <li data-component='project-list-item' class="rounded-lg">
           <a data-component='project-wrapper' name={`carousel_${index}`} href={`#carousel_${index}`}>
             <ProjectCard project={project} />
           </a>
@@ -57,7 +57,7 @@ const numCards = sortedProjects.length;
       width: 100%;
       height: 100%;
 
-      li {
+      li[data-component='project-list-item'] {
         scroll-snap-align: center;
         flex: 100% 1 0;
         display: flex;

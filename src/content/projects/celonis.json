@@ -7,13 +7,17 @@
   "company": "Celonis",
   "milestones": [
     {
-      "images": [
-        "/images/celonis/celonis-1.png",
-        "/images/celonis/celonis-2.png",
-        "/images/celonis/celonis-3.png"
+      "strongPoints": [
+        "Improved code quality",
+        "Develop core features"
       ],
-      "title": "Quality Code and new features",
-      "description": "Improved code quality and added new features to the product."
+      "title": "Excellence in Every Step"
+    },
+    {
+      "title": "International team"
+    },
+    {
+      "title": "Customer-centric"
     }
   ],
   "stack": [

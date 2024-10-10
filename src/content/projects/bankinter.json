@@ -7,21 +7,18 @@
   "company": "Bankinter",
   "milestones": [
     {
-      "images": [
-        "/images/bankinter/bankinter-1.png",
-        "/images/bankinter/bankinter-2.png",
-        "/images/bankinter/bankinter-3.png"
+      "strongPoints": [
+        "Funnel Air Europa",
+        "Car Financing Simulator",
+        "Start a new Design System"
       ],
-      "title": "Funnel Air Europa",
-      "description": "Funnel Air Europa is a website that allows you to book flights to Europe."
+      "title": "Facing new and challenging projects"
     },
     {
-      "title": "Simulador para financiacion de automoviles",
-      "description": "Simulador para financiacion de automoviles"
+      "title": "Critical Product"
     },
     {
-      "title": "Design System Bankinter customer finance",
-      "description": "Design System Bankinter customer finance"
+      "title": "Agile Team"
     }
   ],
   "stack": [
