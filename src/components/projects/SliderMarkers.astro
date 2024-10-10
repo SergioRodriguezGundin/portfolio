@@ -22,7 +22,7 @@ const iconMap = {
 };
 ---
 
-<ul class="absolute left-1/2 -translate-x-1/2 top-3 flex flex-row justify-start gap-3 bg-base-2000 dark:bg-base-3000 rounded-xl p-2 z-10">
+<ul class="absolute left-1/2 -translate-x-1/2 top-3 flex flex-row justify-start gap-3 bg-neutral-200 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl shadow-xl p-2 z-10">
   {
     sortedProjects.map((project, index) => {
       const IconComponent = iconMap[project.data.id as keyof typeof iconMap];

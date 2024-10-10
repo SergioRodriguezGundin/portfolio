@@ -9,8 +9,7 @@ export interface ProjectCardProps {
 
 const { data: project } = (Astro.props as ProjectCardProps).project;
 
-//FYI: we can pass the color into the icon component
-//const color = project.colors['project-primary'];
+const color = project.colors['project-primary'];
 const backgroundImage = `url(${project.background})`;
 ---
 
@@ -18,7 +17,7 @@ const backgroundImage = `url(${project.background})`;
   <div class="absolute flex flex-col justify-between items-start gap-6 pt-24 px-4 w-full h-full">
     <ProjectHeader project={project} />
     <div class="divider"></div>
-    <Milestones milestones={project.milestones} />
+    <Milestones milestones={project.milestones} color={color}/>
   </div>
 </div>
 

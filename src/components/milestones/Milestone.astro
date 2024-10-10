@@ -1,15 +1,47 @@
 ---
 import { CollectionEntry } from 'astro:content';
+import trophy from '@assets/images/trophy.webp';
+import Picture from 'astro/components/Picture.astro';
 
 export interface MilestoneProps {
   milestone: CollectionEntry<'projects'>['data']['milestones'][number];
   index: number;
+  color: string;
 }
 
-const { milestone, index } = (Astro.props as MilestoneProps);
+const { milestone, index, color } = (Astro.props as MilestoneProps);
+const gradientColor = `hsl(var(--${color}))`;
 ---
 
-<div class="flex flex-col justify-start items-start gap-2">
-  <h5 class="text-base-300 text-md font-prompt"><span class="text-base-600">#{index + 1} </span>{milestone.title}</h5>
-  <p class="text-base-500 text-sm">{milestone.description}</p>
-</div>
+{ index === 0 && <div class="milestone-card relative flex flex-col justify-start items-start gap-2 w-[375px] h-[280px] bg-neutral-200 dark:bg-neutral-900 p-4 shadow-xl rounded-xl">
+  <h5 class="text-base-300 text-md font-prompt"><span class="text-base-600"></span>{milestone.title}</h5>
+  <p class="text-base-500 text-sm z-10">{milestone.description}</p>
+  <Picture
+    src={trophy}
+    formats={['webp']}
+    loading="lazy"
+    width={60} 
+    height={60}
+    alt="Sergio Rodriguez Gundin profile"
+    class="absolute -top-4 -right-5 z-0 drop-shadow-lg"
+  />
+</div> }
+
+{ index !== 0 && <div class="milestone-card relative flex flex-col justify-start items-start gap-2 w-[375px] h-[120px] bg-neutral-200 dark:bg-neutral-900 p-4 shadow-xl rounded-xl">
+  <h5 class="text-base-300 text-base font-prompt"><span class="text-base-600"></span>{milestone.title}</h5>
+  <p class="text-base-500 text-sm z-10">{milestone.description}</p>
+  </div>
+}
+
+<style define:vars={{gradientColor}}>
+  .milestone-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 0.75rem;
+    border: 1px solid transparent;
+    background: linear-gradient(135deg, hsl(var(--color-700)) 25%, transparent 80%) border-box;
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+  }
+</style>

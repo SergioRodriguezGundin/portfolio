@@ -30,26 +30,17 @@
         "/images/dixper/dixper-2.png",
         "/images/dixper/dixper-3.png"
       ],
-      "title": "Monthly goal",
-      "description": "Monthly goal"
-    },
-    {
-      "images": [
-        "/images/dixper/dixper-1.png",
-        "/images/dixper/dixper-2.png",
-        "/images/dixper/dixper-3.png"
-      ],
-      "title": "Finishers",
-      "description": "Finishers"
-    },
-    {
-      "images": [
-        "/images/dixper/dixper-1.png",
-        "/images/dixper/dixper-2.png",
-        "/images/dixper/dixper-3.png"
-      ],
       "title": "Integration with Twitch Channel Points",
       "description": "Integration with Twitch Channel Points"
+    },
+    {
+      "images": [
+        "/images/dixper/dixper-1.png",
+        "/images/dixper/dixper-2.png",
+        "/images/dixper/dixper-3.png"
+      ],
+      "title": "New features",
+      "description": "Monthly goal for streamers, Halloween rewards event..."
     }
   ],
   "stack": [
