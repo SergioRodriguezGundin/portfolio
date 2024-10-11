@@ -14,10 +14,12 @@
       "title": "Excellence in Every Step"
     },
     {
-      "title": "International team"
+      "title": "International team",
+      "icon": "rocket"
     },
     {
-      "title": "Customer-centric"
+      "title": "Customer centric",
+      "icon": "hand"
     }
   ],
   "stack": [

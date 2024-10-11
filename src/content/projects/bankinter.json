@@ -15,10 +15,12 @@
       "title": "Facing challenging projects"
     },
     {
-      "title": "Critical Product"
+      "title": "Critical Product",
+      "icon": "thunder"
     },
     {
-      "title": "Agile Team"
+      "title": "Agile Team",
+      "icon": "pinned"
     }
   ],
   "stack": [

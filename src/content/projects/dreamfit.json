@@ -11,13 +11,15 @@
         "Architecture design",
         "Patterns & Best Practices"
       ],
-      "title": "First steps as a Software Developer"
+      "title": "First steps being Engineer"
     },
     {
-      "title": "Fullstack project"
+      "title": "Fullstack project",
+      "icon": "thunder"
     },
     {
-      "title": "Final Customer"
+      "title": "Final Customer",
+      "icon": "hand"
     }
   ],
   "stack": [

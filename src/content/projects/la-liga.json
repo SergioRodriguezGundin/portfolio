@@ -12,16 +12,19 @@
         "Strong product focus",
         "Implemented internationalization"
       ],
-      "title": "Evolve as a Frontend Developer"
+      "title": "Evolve as Frontend Developer"
     },
     {
-      "title": "+200K users"
+      "title": "+200K users",
+      "icon": "flame"
     },
     {
-      "title": "Agile Team"
+      "title": "Agile Team",
+      "icon": "pinned"
     },
     {
-      "title": "Worldwide audience"
+      "title": "Worldwide audience",
+      "icon": "audience"
     }
   ],
   "stack": [

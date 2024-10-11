@@ -12,16 +12,19 @@
         "Streaming Platforms Integration",
         "Multiple new features designed"
       ],
-      "title": "Shining as a Versatile Engineer"
+      "title": "Shining as Versatile Engineer"
     },
     {
-      "title": "Squad Lead"
+      "title": "Squad Lead",
+      "icon": "thunder"
     },
     {
-      "title": "Tech Startup"
+      "title": "Tech Startup",
+      "icon": "rocket"
     },
     {
-      "title": "Impulse Metrics"
+      "title": "Impulse Metrics",
+      "icon": "flag"
     }
   ],
   "stack": [

@@ -12,6 +12,7 @@ const projectsCollection = defineCollection({
     milestones: z.array(z.object({
       strongPoints: z.array(z.string()).optional(),
       title: z.string(),
+      icon: z.string().optional(),
     })),
     stack: z.array(z.object({
       name: z.string(),
