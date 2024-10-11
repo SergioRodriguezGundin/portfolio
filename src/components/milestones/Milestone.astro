@@ -2,7 +2,7 @@
 import { CollectionEntry } from 'astro:content';
 import trophy from '@assets/images/trophy.webp';
 import Picture from 'astro/components/Picture.astro';
-import Thunderbolt from '@components/icons/Thunderbolt.astro';
+import { ProjectHighlightsMarquee } from '@components/profile/ProjectHighlights';
 
 export interface MilestoneProps {
   milestone: CollectionEntry<'projects'>['data']['milestones'][number];
@@ -10,28 +10,22 @@ export interface MilestoneProps {
   color: string;
 }
 
-const { milestone, index, color } = (Astro.props as MilestoneProps);
-//const gradientColor = `hsl(var(--${color}))`;
+const { milestone, index } = (Astro.props as MilestoneProps);
 ---
 
-{ index === 0 && <div class="milestone-card relative flex flex-col justify-start items-start gap-2 w-[375px] h-[285px] bg-neutral-200 dark:bg-neutral-900 p-4 shadow-xl rounded-xl overflow-hidden">
-  <h5 class="text-base-500 text-xl font-prompt"><span class="text-base-600"></span>{milestone.title}</h5>
-  <ul class="flex flex-col justify-start items-start gap-1 w-full">
-    {milestone.strongPoints?.map((point) => (
-      <li class="flex flex-row justify-start items-center gap-1 w-full h-auto">
-        <Thunderbolt size={{ width: 24, height: 24 }}/>
-        <span class="text-base-600 text-sm z-10">{point}</span>
-      </li>
-    ))}
-  </ul>
+{ index === 0 && <div class="milestone-card relative flex flex-col justify-start items-start gap-2 w-[375px] h-[285px] bg-neutral-200 dark:bg-neutral-900 shadow-xl rounded-xl overflow-hidden">
+  <h5 class="text-base-500 text-xl font-prompt p-4"><span class="text-base-600"></span>{milestone.title}</h5>
+  <div class="flex flex-col justify-start items-start ml-[1px] w-full overflow-hidden">
+    <ProjectHighlightsMarquee highlights={milestone.strongPoints ?? []} containerWidth={375}/>
+  </div>
   <Picture
     src={trophy}
     formats={['webp']}
     loading="lazy"
-    width={180} 
-    height={180}
+    width={250} 
+    height={250}
     alt="Sergio Rodriguez Gundin profile"
-    class="absolute -bottom-8 -right-10 z-0 drop-shadow-lg opacity-20 grayscale"
+    class="absolute -bottom-10 -right-20 z-0 drop-shadow-lg opacity-10 grayscale"
   />
 </div> }
 
