@@ -14,7 +14,7 @@ const { milestone, index, color } = (Astro.props as MilestoneProps);
 //const gradientColor = `hsl(var(--${color}))`;
 ---
 
-{ index === 0 && <div class="milestone-card relative flex flex-col justify-start items-start gap-2 w-[375px] h-[280px] bg-neutral-200 dark:bg-neutral-900 p-4 shadow-xl rounded-xl overflow-hidden">
+{ index === 0 && <div class="milestone-card relative flex flex-col justify-start items-start gap-2 w-[375px] h-[285px] bg-neutral-200 dark:bg-neutral-900 p-4 shadow-xl rounded-xl overflow-hidden">
   <h5 class="text-base-500 text-xl font-prompt"><span class="text-base-600"></span>{milestone.title}</h5>
   <ul class="flex flex-col justify-start items-start gap-1 w-full">
     {milestone.strongPoints?.map((point) => (
@@ -35,7 +35,7 @@ const { milestone, index, color } = (Astro.props as MilestoneProps);
   />
 </div> }
 
-{ index !== 0 && <div class="relative flex flex-col justify-start items-start gap-2 w-[375px] h-[120px] bg-neutral-200 dark:bg-neutral-900 p-4 shadow-xl rounded-xl">
+{ index !== 0 && <div class="relative flex flex-col justify-start items-start gap-2 w-[135px] h-[135px] bg-neutral-200 dark:bg-neutral-900 p-4 shadow-xl rounded-xl">
   <h5 class="text-base-500 text-base font-prompt"><span class="text-base-600"></span>{milestone.title}</h5>
   </div>
 }
