@@ -21,7 +21,7 @@ import ProfileImage from '@components/profile/ProfileImage.astro';
         text="I'm Sergio"
         client:load
       />
-      <h1 class="font-prompt font-bold text-base text-primary tracking-widest">SOFTWARE DEVELOPER</h1>
+      <h1 class="software-engineer font-prompt font-bold text-base text-primary tracking-widest">SOFTWARE ENGINEER</h1>
     </div>
     <div class="mt-4">
       <p class="text-base-600 text-sm">
@@ -35,5 +35,8 @@ import ProfileImage from '@components/profile/ProfileImage.astro';
 <style>
   .personal-information-image {
     mask-image: linear-gradient(to bottom, hsl(var(--color-100)), hsla(0, 0%, 0%, 0));
+  }
+  .software-engineer {
+    text-shadow: 1px 1px 2px hsl(var(--color-600));
   }
 </style>
