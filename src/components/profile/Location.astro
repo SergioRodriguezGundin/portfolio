@@ -1,5 +1,4 @@
 ---
-import Picture from 'astro/components/Picture.astro';
 import locationPicture from '@assets/images/location.webp';
 import { MagicCard } from '@components/magicui/magic-card';
 ---
@@ -8,21 +7,12 @@ import { MagicCard } from '@components/magicui/magic-card';
   className="cursor-pointer flex-col items-center justify-center shadow-xl whitespace-nowrap w-full"
   client:load
 >
-<div class="relative overflow-clip flex flex-row justify-between items-center w-full">
+<img src={locationPicture.src} alt="Sergio Rodriguez Gundin based on Spain" class="location-image absolute w-full h-full object-cover rounded-lg invert dark:invert-0 " />
+<div class="relative overflow-clip flex flex-row justify-between items-center w-full h-24">
   <div class="flex-1 flex-col justify-start items-start gap-0 pl-3">
     <p class="text-base-700 text-sm">Based on</p>
     <h3 class="text-base-500 text-base">Madrid, Spain</h3>
-
   </div>
-  <Picture
-    src={locationPicture}
-    formats={['webp']}
-    loading="lazy"
-    width={240}
-    height={225}
-    alt="Sergio Rodriguez Gundin based on Spain"
-    class="location-image invert dark:invert-0 rounded-lg"
-    />
     <span class="location-dot"></span>
   </div>
 </MagicCard>
@@ -35,7 +25,7 @@ import { MagicCard } from '@components/magicui/magic-card';
   .location-dot {
     position: absolute;
     top: 50%;
-    right: 20%;
+    right: 40%;
     transform: translate(-50%, -50%);
     width: 15px;
     height: 15px;
