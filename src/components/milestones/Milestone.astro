@@ -50,19 +50,19 @@ const splitedTitle = milestone.title.split(' ');
   />
 </div> }
 
-{ index !== 0 && <div class="milestone-card relative flex flex-col justify-end items-start flex-wrap w-[150px] h-[125px] bg-neutral-200 dark:bg-neutral-900 p-4 shadow-xl rounded-xl">
+{ index !== 0 && <div class="milestone-card relative flex flex-col justify-start items-start flex-wrap w-[150px] h-[125px] bg-neutral-200 dark:bg-neutral-900 p-4 shadow-xl rounded-xl overflow-hidden">
     <div class="flex flex-col justify-start items-start">
-      <h5 class="text-base-600 text-base font-prompt font-bold w-full">{splitedTitle[0].toUpperCase()}</h5>
+      <h5 class="text-base-500 text-base font-prompt font-bold w-full">{splitedTitle[0].toUpperCase()}</h5>
       <h5 class="text-base-700 text-xs font-prompt font-bold w-full">{splitedTitle[1].toUpperCase()}</h5>
     </div>
     { icon && <Picture
         src={icon}
         formats={['webp']}
         loading="lazy"
-        width={45} 
-        height={45}
+        width={75} 
+        height={75}
         alt="icon for Sergio Rodriguez Gundin goals"
-        class="absolute top-2 right-2 z-0 drop-shadow-lg opacity-75"
+        class="absolute -bottom-2 right-0 z-0 drop-shadow-lg opacity-10"
       /> 
     }
   </div>
