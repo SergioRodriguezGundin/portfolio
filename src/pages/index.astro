@@ -55,7 +55,6 @@ import Layout from '@layouts/Layout.astro';
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 2.4fr;
     grid-column-gap: calc(var(--grid-row-gap) * 2);
-    grid-row-gap: var(--grid-row-gap);
     height: 100%;
     max-width: 1200px;
     width: 100%; 
@@ -104,6 +103,12 @@ import Layout from '@layouts/Layout.astro';
     .my-proyects {
       grid-area: 5 / 1 / 6 / 2;
       height: 100%;
+    }
+  }
+
+  @media (min-width: 1800px) {
+    .layout {
+      grid-row-gap: var(--grid-row-gap);
     }
   }
 </style>
