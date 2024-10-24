@@ -39,7 +39,7 @@ const iconMap = {
 
 <style>
   ul {
-    a {
+    > li > a {
       animation: colorize-mark linear;
       animation-timeline: --carousel;
       animation-range: calc((var(--i) - 1) * 20%) calc(var(--i) * 20% + 1px);
@@ -63,7 +63,7 @@ const iconMap = {
         transform: scale(1.1);
       }
     }
-    li {
+    > li {
       &:nth-child(1) { --i: 1; }
       &:nth-child(2) { --i: 2; }
       &:nth-child(3) { --i: 3; }
