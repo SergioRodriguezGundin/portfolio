@@ -30,7 +30,6 @@ const milestoneIconMap = {
 };
 
 const icon = milestoneIconMap[milestone.icon as keyof typeof milestoneIconMap];
-
 const splitedTitle = milestone.title.split(' ');
 ---
 
@@ -75,8 +74,8 @@ const splitedTitle = milestone.title.split(' ');
     inset: 0;
     border-radius: 0.75rem;
     border: 1px solid transparent;
-    background: linear-gradient(135deg, hsl(var(--color-700)) -35%, hsl(var(--background)) 75%, transparent 100%) border-box;
-    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    /*background: linear-gradient(135deg, hsl(var(--color-700)) -35%, hsl(var(--background)) 75%, transparent 100%) border-box;*/
+    /*mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);*/
     mask-composite: exclude;
   }
 </style>
