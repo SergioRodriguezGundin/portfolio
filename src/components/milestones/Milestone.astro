@@ -8,7 +8,6 @@ import trophy from '@assets/images/trophy.webp';
 import flag from '@assets/images/flag.webp';
 import thunder from '@assets/images/thunder.webp';
 import { ProjectHighlightsMarquee } from '@components/profile/ProjectHighlights';
-import Image from 'astro/components/Image.astro';
 import { CollectionEntry } from 'astro:content';
 
 export interface MilestoneProps {
@@ -46,10 +45,8 @@ const splitedTitle = milestone.title.split(' ');
           containerWidth={375}
         />
       </div>
-      <Image
-        client:visible
-        src={trophy}
-        loading='lazy'
+      <img
+        src={trophy.src}
         width={250}
         height={250}
         alt='icon for Sergio Rodriguez Gundin milestones'
@@ -71,10 +68,8 @@ const splitedTitle = milestone.title.split(' ');
         </h5>
       </div>
       {icon && (
-        <Image
-          client:visible
-          src={icon}
-          loading='lazy'
+        <img
+          src={icon.src}
           width={75}
           height={75}
           alt='icon for Sergio Rodriguez Gundin goals'
