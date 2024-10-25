@@ -47,6 +47,7 @@ const splitedTitle = milestone.title.split(' ');
         />
       </div>
       <Image
+        client:visible
         src={trophy}
         loading='lazy'
         width={250}
@@ -71,6 +72,7 @@ const splitedTitle = milestone.title.split(' ');
       </div>
       {icon && (
         <Image
+          client:visible
           src={icon}
           loading='lazy'
           width={75}
