@@ -5,7 +5,13 @@ import Dixper from '@components/icons/Dixper.astro';
 import Bankinter from '@components/icons/Bankinter.astro';
 import { type CollectionEntry } from 'astro:content';
 import Dreamfit from '@components/icons/Dreamfit.astro';
-import { DREAMFIT, LALIGA, DIXPER, BANKINTER, CELONIS } from '@models/projects.model';
+import {
+  DREAMFIT,
+  LALIGA,
+  DIXPER,
+  BANKINTER,
+  CELONIS,
+} from '@models/projects.model';
 
 interface MarkerProps {
   sortedProjects: CollectionEntry<'projects'>[];
@@ -22,17 +28,21 @@ const iconMap = {
 };
 ---
 
-<ul class="absolute left-1/2 -translate-x-1/2 top-3 flex flex-row justify-start gap-3 bg-neutral-200 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl shadow-xl p-2 z-10">
+<ul
+  class='absolute left-1/2 -translate-x-1/2 top-3 flex flex-row justify-start gap-1 md:gap-3 bg-neutral-200 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl shadow-xl p-2 z-10'
+>
   {
     sortedProjects.map((project, index) => {
       const IconComponent = iconMap[project.data.id as keyof typeof iconMap];
       return (
         <li>
           <a href={`#carousel_${index}`} class={`bg-transparent p-1`}>
-            {IconComponent && <IconComponent size={{width: 28, height: 28}} />}
+            {IconComponent && (
+              <IconComponent size={{ width: 28, height: 28 }} />
+            )}
           </a>
         </li>
-      )
+      );
     })
   }
 </ul>
@@ -64,16 +74,27 @@ const iconMap = {
       }
     }
     > li {
-      &:nth-child(1) { --i: 1; }
-      &:nth-child(2) { --i: 2; }
-      &:nth-child(3) { --i: 3; }
-      &:nth-child(4) { --i: 4; }
-      &:nth-child(5) { --i: 5; }
+      &:nth-child(1) {
+        --i: 1;
+      }
+      &:nth-child(2) {
+        --i: 2;
+      }
+      &:nth-child(3) {
+        --i: 3;
+      }
+      &:nth-child(4) {
+        --i: 4;
+      }
+      &:nth-child(5) {
+        --i: 5;
+      }
     }
   }
 
   @keyframes colorize-mark {
-    0%, 100% {
+    0%,
+    100% {
       border-bottom: 2px solid hsl(var(--primary));
     }
   }

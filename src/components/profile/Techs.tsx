@@ -59,13 +59,13 @@ export function Techs({ containerWidth }: { containerWidth: number } = { contain
     <div className={`relative flex flex-col justify-center items-start overflow-hidden w-[${width}px] h-full`}>
       <div className='flex flex-col gap-2'>
         <Marquee pauseOnHover className="[--duration:20s]">
-          {firstRow.map((review) => (
-            <ReviewCard {...review} />
+          {firstRow.map((review, index) => (
+            <ReviewCard {...review} key={index} />
           ))}
         </Marquee>
         <Marquee reverse pauseOnHover className="[--duration:20s]">
-          {secondRow.map((review) => (
-            <ReviewCard {...review} />
+          {secondRow.map((review, index) => (
+            <ReviewCard {...review} key={index} />
           ))}
         </Marquee>
       </div>
