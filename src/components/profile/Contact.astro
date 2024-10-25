@@ -8,33 +8,34 @@ const contactLinks = {
   discord: 'https://discord.com/users/321234123412341234',
   github: 'https://github.com/SergioRodriguezGundin',
   linkedin: 'https://www.linkedin.com/in/sergio-rodríguez-gundin-435a6713b',
-}
-
+};
 ---
 
-<div class='contact flex flex-row md:flex-col justify-between gap-3 h-full w-full'>
-  <a href={contactLinks.linkedin} target="_blank" class='flex-1 md:flex-none'>
+<div
+  class='contact flex flex-row md:flex-col justify-between gap-3 h-full w-full'
+>
+  <a href={contactLinks.linkedin} target='_blank' class='flex-1 md:flex-none'>
     <MagicCard
-      className="cursor-pointer flex-col items-center justify-center shadow-xl whitespace-nowrap h-24 w-full md:w-24"
+      className='cursor-pointer flex-col items-center justify-center shadow-xl whitespace-nowrap h-24 w-full md:w-24'
       client:load
     >
-      <Linkedin size={{width: 36, height: 36}} />
+      <Linkedin size={{ width: 36, height: 36 }} />
     </MagicCard>
   </a>
-  <a href={contactLinks.github} target="_blank" class='flex-1 md:flex-none'>
+  <a href={contactLinks.github} target='_blank' class='flex-1 md:flex-none'>
     <MagicCard
-      className="cursor-pointer flex-col items-center justify-center shadow-xl whitespace-nowrap h-24 w-full md:w-24"
+      className='cursor-pointer flex-col items-center justify-center shadow-xl whitespace-nowrap h-24 w-full md:w-24'
       client:load
     >
-      <Github size={{width: 36, height: 36}} />
+      <Github size={{ width: 36, height: 36 }} />
     </MagicCard>
   </a>
-  <a href={contactLinks.discord} target="_blank" class='flex-1 md:flex-none'>
+  <a href={contactLinks.discord} target='_blank' class='flex-1 md:flex-none'>
     <MagicCard
-      className="cursor-pointer flex-col items-center justify-center shadow-xl whitespace-nowrap h-24 w-full md:w-24"
+      className='cursor-pointer flex-col items-center justify-center shadow-xl whitespace-nowrap h-24 w-full md:w-24'
       client:load
     >
-      <Discord size={{width: 36, height: 36}} />
+      <Discord size={{ width: 36, height: 36 }} />
     </MagicCard>
   </a>
 </div>
