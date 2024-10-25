@@ -1,16 +1,14 @@
 ---
-import { Picture } from 'astro:assets';
 import sergioPicture from '@assets/images/sergio.webp';
 ---
 
-<Picture
-  src={sergioPicture}
-  formats={['webp']}
-  loading="lazy"
-  width={250} 
+<img
+  src={sergioPicture.src}
+  loading='lazy'
+  width={250}
   height={250}
-  alt="Sergio Rodriguez Gundin profile"
-  class="rounded-mask w-52 3xl:w-full"
+  alt='Sergio Rodriguez Gundin profile'
+  class='rounded-mask w-52 3xl:w-full'
 />
 
 <style>
