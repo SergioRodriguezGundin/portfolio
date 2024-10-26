@@ -14,7 +14,7 @@ const backgroundImage = `url(${project.background})`;
 ---
 
 <div class='project-card relative rounded-lg w-full h-full bg-cover bg-no-repeat'>
-  <div class="absolute flex flex-col justify-between items-start gap-8 3xl:gap-14 pt-20 3xl:pt-24 px-4 w-full h-full">
+  <div class="absolute top-0 -left-4 flex flex-col justify-between items-start gap-10 3xl:gap-14 pt-20 3xl:pt-24 px-4 w-[calc(100%+2rem)]">
     <ProjectHeader project={project} />
     <Milestones milestones={project.milestones} color={color}/>
   </div>
