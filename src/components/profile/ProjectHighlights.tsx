@@ -24,8 +24,8 @@ export function ProjectHighlightsMarquee({ containerWidth, highlights }: { conta
     <div className={`relative flex flex-col justify-center items-center w-[${width}px] h-[75px]`}>
       <div className='flex flex-col gap-2 bg-base-3000 h-full'>
         <Marquee className='[--duration:25s]'>
-          {highlights.map((highlight) => (
-            <ProjectHighlightCard highlight={highlight} />
+          {highlights.map((highlight, index) => (
+            <ProjectHighlightCard key={index} highlight={highlight} />
           ))}
         </Marquee>
       </div>

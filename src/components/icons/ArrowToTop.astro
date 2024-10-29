@@ -1,0 +1,14 @@
+---
+interface ArrowToTopProps {
+  size: {
+    width: number;
+    height: number;
+  }
+}
+
+const { size = { width: 36, height: 36 } } = Astro.props as ArrowToTopProps;
+---
+
+<svg xmlns="http://www.w3.org/2000/svg" width={size.width} height={size.height} viewBox="0 0 32 32">
+  <path fill="hsl(var(--color-800))" d="M16 14L6 24l1.4 1.4l8.6-8.6l8.6 8.6L26 24zM4 8h24v2H4z"/>
+</svg>

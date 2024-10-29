@@ -1,17 +1,18 @@
 ---
-import Celonis from '@components/icons/Celonis.astro';
-import LaLiga from '@components/icons/LaLiga.astro';
-import Dixper from '@components/icons/Dixper.astro';
+import ArrowToTop from '@components/icons/ArrowToTop.astro';
 import Bankinter from '@components/icons/Bankinter.astro';
-import { type CollectionEntry } from 'astro:content';
+import Celonis from '@components/icons/Celonis.astro';
+import Dixper from '@components/icons/Dixper.astro';
 import Dreamfit from '@components/icons/Dreamfit.astro';
+import LaLiga from '@components/icons/LaLiga.astro';
 import {
-  DREAMFIT,
-  LALIGA,
-  DIXPER,
-  BANKINTER,
-  CELONIS,
+BANKINTER,
+CELONIS,
+DIXPER,
+DREAMFIT,
+LALIGA,
 } from '@models/projects.model';
+import { type CollectionEntry } from 'astro:content';
 
 interface MarkerProps {
   sortedProjects: CollectionEntry<'projects'>[];
@@ -29,7 +30,7 @@ const iconMap = {
 ---
 
 <ul
-  class='absolute left-1/2 -translate-x-1/2 top-3 flex flex-row justify-start gap-1 md:gap-3 bg-neutral-200 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl shadow-xl p-2 z-10'
+  class='w-[225px] md:max-w-max absolute left-1/2 -translate-x-1/2 top-3 flex flex-row justify-start gap-1.5 md:gap-3 bg-neutral-200 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl shadow-xl px-2 py-1 md:px-2 md:py-2  z-10'
 >
   {
     sortedProjects.map((project, index) => {
@@ -45,6 +46,14 @@ const iconMap = {
       );
     })
   }
+  <div class="md:hidden flex flex-row justify-center items-center">
+    <div data-orientation='vertical' role='none' class="shrink-0 bg-base-900 w-px mx-2 h-full"></div>
+    <li class='flex flex-row items-center justify-center'>
+      <button class='flex flex-row items-center justify-center' onclick='window.scrollTo({ top: 0, behavior: "smooth" }); return false;'>
+        <ArrowToTop size={{ width: 24, height: 24 }} />
+      </button>
+    </li>
+  </div>
 </ul>
 
 <style>
