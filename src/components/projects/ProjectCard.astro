@@ -13,16 +13,25 @@ const color = project.colors['project-primary'];
 const backgroundImage = `url(${project.background})`;
 ---
 
-<div class='project-card relative rounded-lg w-full h-full bg-cover bg-no-repeat'>
-  <div class="absolute top-0 -left-4 flex flex-col justify-between items-start gap-10 3xl:gap-14 pt-20 3xl:pt-24 px-4 w-[calc(100%+2rem)]">
+<div
+  class='project-card relative rounded-lg w-full h-full bg-cover bg-no-repeat'
+>
+  <div
+    class='absolute top-0 -left-4 flex flex-col justify-between items-start gap-10 3xl:gap-14 pt-20 3xl:pt-24 px-4 w-[calc(100%+2rem)]'
+  >
     <ProjectHeader project={project} />
-    <Milestones milestones={project.milestones} color={color}/>
+    <Milestones milestones={project.milestones} color={color} />
   </div>
 </div>
 
-<style define:vars={{backgroundImage}}>
+<style define:vars={{ backgroundImage }}>
   .project-card {
-    background-image: linear-gradient(to bottom, transparent -90%, hsl(var(--background)) 100%), var(--backgroundImage);
+    background-image: linear-gradient(
+        to bottom,
+        transparent -90%,
+        hsl(var(--background)) 100%
+      ),
+      var(--backgroundImage);
   }
 
   @media (max-width: 768px) {
