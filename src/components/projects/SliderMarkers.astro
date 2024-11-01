@@ -6,11 +6,11 @@ import Dixper from '@components/icons/Dixper.astro';
 import Dreamfit from '@components/icons/Dreamfit.astro';
 import LaLiga from '@components/icons/LaLiga.astro';
 import {
-BANKINTER,
-CELONIS,
-DIXPER,
-DREAMFIT,
-LALIGA,
+  BANKINTER,
+  CELONIS,
+  DIXPER,
+  DREAMFIT,
+  LALIGA,
 } from '@models/projects.model';
 import { type CollectionEntry } from 'astro:content';
 
@@ -30,14 +30,14 @@ const iconMap = {
 ---
 
 <ul
-  class='w-[225px] md:max-w-max absolute left-1/2 -translate-x-1/2 top-3 flex flex-row justify-start gap-1.5 md:gap-3 bg-neutral-200 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl shadow-xl px-2 py-1 md:px-2 md:py-2  z-10'
+  class='w-[225px] md:max-w-max absolute left-1/2 -translate-x-1/2 top-3 flex flex-row justify-start gap-1.5 md:gap-3 bg-neutral-200 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl shadow-xl px-2 py-1 md:px-2 md:py-2 z-10'
 >
   {
     sortedProjects.map((project, index) => {
       const IconComponent = iconMap[project.data.id as keyof typeof iconMap];
       return (
         <li>
-          <a href={`#carousel_${index}`} class={`bg-transparent p-1`}>
+          <a href={`#project_${index}`} class={`bg-transparent p-1`}>
             {IconComponent && (
               <IconComponent size={{ width: 28, height: 28 }} />
             )}
@@ -46,10 +46,18 @@ const iconMap = {
       );
     })
   }
-  <div class="md:hidden flex flex-row justify-center items-center">
-    <div data-orientation='vertical' role='none' class="shrink-0 bg-base-900 w-px mx-2 h-full"></div>
+  <div class='md:hidden flex flex-row justify-center items-center'>
+    <div
+      data-orientation='vertical'
+      role='none'
+      class='shrink-0 bg-base-900 w-px mx-2 h-full'
+    >
+    </div>
     <li class='flex flex-row items-center justify-center'>
-      <button class='flex flex-row items-center justify-center' onclick='window.scrollTo({ top: 0, behavior: "smooth" }); return false;'>
+      <button
+        class='flex flex-row items-center justify-center'
+        onclick='window.scrollTo({ top: 0, behavior: "smooth" }); return false;'
+      >
         <ArrowToTop size={{ width: 24, height: 24 }} />
       </button>
     </li>
@@ -60,7 +68,7 @@ const iconMap = {
   ul {
     > li > a {
       animation: colorize-mark linear;
-      animation-timeline: --carousel;
+      animation-timeline: --project;
       animation-range: calc((var(--i) - 1) * 20%) calc(var(--i) * 20% + 1px);
       position: relative;
       display: flex;
