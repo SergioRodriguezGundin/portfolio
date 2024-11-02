@@ -14,19 +14,20 @@ const {
   image = '/images/preview-dark.webp',
 }: Props = Astro.props;
 
-//const determineCanonicalURL = () => {
-//  if (Astro.url.host.includes('localhost')) return 'http://localhost:4321';
-//  return canonical || Astro.url.pathname;
-//};
+const determineCanonicalURL = () => {
+  if (canonical?.includes('localhost')) return 'http://localhost:4321';
+  return canonical || Astro.url.href;
+};
 
-//const canonicalURL = new URL(determineCanonicalURL(), Astro.site);
+const canonicalURL = determineCanonicalURL();
 ---
 
 <title>{title}</title>
 
 <meta charset='UTF-8' />
 <meta name='description' content={description} />
-<link rel='canonical' href={canonical} />
+<link rel='canonical' href={canonicalURL} />
+<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
 <meta name='viewport' content='width=device-width' />
 <meta name='theme-color' content='hsl(var(--primary))' />
 
@@ -37,8 +38,6 @@ const {
 <meta name='robots' content='index, follow' />
 <meta name='googlebot' content='index, follow' />
 
-<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-
 <!--<meta name='twitter:card' content='summary_large_image' />
 <meta name='twitter:site' content='@sergiorodriguezgundindev' />
 <meta name='twitter:creator' content='@sergiorodriguezgundin' />
@@ -46,13 +45,13 @@ const {
 <meta name='twitter:description' content={description} />
 <meta name='twitter:image' content={new URL(image, Astro.url)} />-->
 
-<!--<meta property='og:image' content={new URL(image, Astro.url)} />
+<meta property='og:image' content={new URL(image, Astro.url)} />
 <meta property='og:title' content={title} />
 <meta property='og:description' content={description} />
-<meta property='og:url' content={Astro.url} />
-<meta property='og:site_name' content='Sergio Rodriguez Gundin dev' />
+<meta property='og:url' content={canonicalURL} />
+<meta property='og:site_name' content='Sergio Rodriguez Gundin portfolio' />
 <meta property='og:type' content='website' />
-<meta property='og:locale' content='en_US' />-->
+<meta property='og:locale' content='en_US' />
 
 <!--<link rel='apple-touch-icon' href='/img/icons/apple-touch-icon.png' />-->
 <!--<meta name='msapplication-config' content='/browserconfig.xml' />-->
