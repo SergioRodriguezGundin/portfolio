@@ -1,5 +1,5 @@
 ---
-//import SEO from '@components/SEO.astro';
+import SEO from '@components/SEO.astro';
 import '@styles/globals.css';
 
 interface Props {
@@ -13,7 +13,7 @@ const { title, description } = Astro.props;
 <!doctype html>
 <html lang='en'>
   <head>
-    <!--<SEO {title} {description} canonical={Astro.url.pathname} />-->
+    <SEO {title} {description} canonical={Astro.url.pathname} />
   </head>
   <body>
     <slot />
