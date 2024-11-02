@@ -26,14 +26,14 @@ const canonicalURL = new URL(determineCanonicalURL(), Astro.site);
 
 <meta charset='UTF-8' />
 <meta name='description' content={description} />
-<link rel='canonical' href={canonicalURL} />
+<link rel='canonical' href={canonicalURL.href} />
 <meta name='viewport' content='width=device-width' />
 <meta name='theme-color' content='hsl(var(--primary))' />
 
-<meta
+<!--<meta
   name='keywords'
   content='Sergio, Rodriguez, Gundin, engineering, developer, web developer, frontend, frontend developer'
-/>
+/>-->
 
 <!--<meta name='twitter:card' content='summary_large_image' />
 <meta name='twitter:site' content='@sergiorodriguezgundindev' />
@@ -53,7 +53,6 @@ const canonicalURL = new URL(determineCanonicalURL(), Astro.site);
 <meta name='robots' content='index, follow' />
 <meta name='googlebot' content='index, follow' />-->
 
-<!--<link rel='icon' type='image/svg+xml' href='/favicon.svg' />-->
 <!--<link rel='apple-touch-icon' href='/img/icons/apple-touch-icon.png' />-->
 
 <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
