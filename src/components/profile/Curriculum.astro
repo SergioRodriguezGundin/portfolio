@@ -3,15 +3,13 @@ import { MagicCard } from '@components/magicui/magic-card';
 ---
 
 <MagicCard
-  className="cursor-pointer flex-col items-center justify-center shadow-xl whitespace-nowrap h-full w-full"
+  className='cursor-pointer flex-col items-center justify-center shadow-xl whitespace-nowrap h-full w-full'
   client:load
 >
   <button class='download-button flex flex-col gap-2 rounded-xl p-4 w-full'>
     <div class='flex flex-col justify-start items-start gap-1'>
-      <h4 class='text-base-700 text-sm'>2024 CV</h4>
-      <p class='text-base-500 text-base'>
-        RESUME
-      </p>
+      <h5 class='text-base-700 text-sm'>2024 CV</h5>
+      <p class='text-base-500 text-base'>RESUME</p>
     </div>
     <div class='flex justify-center items-center w-full'>
       <qr-code
@@ -33,7 +31,7 @@ import { MagicCard } from '@components/magicui/magic-card';
   document.getElementById('qrCV')?.addEventListener('codeRendered', () => {
     (document.getElementById('qrCV') as any).animateQRCode('FadeInCenterOut');
   });
-  
+
   const downloadButton = document.querySelector('.download-button');
   downloadButton?.addEventListener('click', () => {
     const link = document.createElement('a');

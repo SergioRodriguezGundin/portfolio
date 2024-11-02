@@ -2,19 +2,35 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 
 const journey: CollectionEntry<'journey'>[] = await getCollection('journey');
-const sortedJourney = journey.sort((a, b) => b.data.sortOrder - a.data.sortOrder);
-
+const sortedJourney = journey.sort(
+  (a, b) => b.data.sortOrder - a.data.sortOrder
+);
 ---
-<div class="flex flex-col justify-center items-center gap-3 h-full">
+
+<div class='flex flex-col justify-center items-center gap-3 h-full'>
   {
     sortedJourney.map((item, index) => (
-      <div class={`flex flex-row justify-between items-center gap-2 w-full ${index > 0 ? 'scale-90' : 'scale-100'}`}>
-        <div class="flex-1 flex flex-row justify-start items-start h-full">
-          <h5 class={`font-prompt text-md ${index > 0 ? 'line-through text-base-800' : 'text-base-300'}`}>{item.data.jobPosition}</h5>
+      <div
+        class={`flex flex-row justify-between items-center gap-2 w-full ${index > 0 ? 'scale-90' : 'scale-100'}`}
+      >
+        <div class='flex-1 flex flex-row justify-start items-start h-full'>
+          <h4
+            class={`font-prompt text-md ${index > 0 ? 'line-through text-base-800' : 'text-base-300'}`}
+          >
+            {item.data.jobPosition}
+          </h4>
         </div>
-        <div class="flex flex-col justify-end items-end">
-          <a href={item.data.url} target="_blank" class={`font-prompt text-base transition-colors duration-500 ${index > 0 ? 'text-base-700' : 'text-base-500'} hover:text-primary`}>{item.data.company}</a>
-          <span class="text-sm text-base-800 dark:text-base-700">{item.data.period}</span>
+        <div class='flex flex-col justify-end items-end'>
+          <a
+            href={item.data.url}
+            target='_blank'
+            class={`font-prompt text-base transition-colors duration-500 ${index > 0 ? 'text-base-700' : 'text-base-500'} hover:text-primary`}
+          >
+            {item.data.company}
+          </a>
+          <span class='text-sm text-base-800 dark:text-base-700'>
+            {item.data.period}
+          </span>
         </div>
       </div>
     ))
