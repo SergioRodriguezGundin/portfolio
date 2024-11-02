@@ -37,7 +37,11 @@ const iconMap = {
       const IconComponent = iconMap[project.data.id as keyof typeof iconMap];
       return (
         <li>
-          <a href={`#project_${index}`} class={`bg-transparent p-1`}>
+          <a
+            href={`#project_${index}`}
+            aria-label={`sergio rodriguez gundin project ${index + 1} link`}
+            class={`bg-transparent p-1`}
+          >
             {IconComponent && (
               <IconComponent size={{ width: 28, height: 28 }} />
             )}
