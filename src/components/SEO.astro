@@ -14,19 +14,19 @@ const {
   image = '/images/preview-dark.webp',
 }: Props = Astro.props;
 
-const determineCanonicalURL = () => {
-  if (Astro.url.host.includes('localhost')) return 'http://localhost:4321';
-  return canonical || Astro.url.pathname;
-};
+//const determineCanonicalURL = () => {
+//  if (Astro.url.host.includes('localhost')) return 'http://localhost:4321';
+//  return canonical || Astro.url.pathname;
+//};
 
-const canonicalURL = new URL(determineCanonicalURL(), Astro.site);
+//const canonicalURL = new URL(determineCanonicalURL(), Astro.site);
 ---
 
 <title>{title}</title>
 
 <meta charset='UTF-8' />
 <meta name='description' content={description} />
-<link rel='canonical' href={canonicalURL.href} />
+<!--<link rel='canonical' href={canonicalURL.href} />-->
 <meta name='viewport' content='width=device-width' />
 <meta name='theme-color' content='hsl(var(--primary))' />
 
@@ -55,7 +55,7 @@ const canonicalURL = new URL(determineCanonicalURL(), Astro.site);
 
 <!--<link rel='apple-touch-icon' href='/img/icons/apple-touch-icon.png' />-->
 
-<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+<!--<link rel='icon' type='image/svg+xml' href='/favicon.svg' />-->
 <!--<meta name='msapplication-config' content='/browserconfig.xml' />-->
 
 <!--<link rel='manifest' href='/manifest.webmanifest' />-->
