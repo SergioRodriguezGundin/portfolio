@@ -12,7 +12,6 @@ const {
   description,
   canonical,
   image = '/images/preview-dark.webp',
-  preload,
 }: Props = Astro.props;
 
 const determineCanonicalURL = () => {
@@ -21,19 +20,14 @@ const determineCanonicalURL = () => {
 };
 
 const canonicalURL = new URL(determineCanonicalURL(), Astro.site);
+
+console.log(canonicalURL);
 ---
 
 <title>{title}</title>
 
 <meta charset='UTF-8' />
 <meta name='description' content={description} />
-
-{
-  preload?.map(({ href, as, type, rel = 'preload', crossorigin }) => (
-    <link {rel} {href} {as} {type} {crossorigin} />
-  ))
-}
-
 <link rel='canonical' href={canonicalURL} />
 <meta name='viewport' content='width=device-width' />
 <meta name='theme-color' content='hsl(var(--primary))' />
