@@ -14,11 +14,11 @@ const sortedJourney = journey.sort(
         class={`flex flex-row justify-between items-center gap-2 w-full ${index > 0 ? 'scale-90' : 'scale-100'}`}
       >
         <div class='flex-1 flex flex-row justify-start items-start h-full'>
-          <h4
+          <h3
             class={`font-prompt text-md ${index > 0 ? 'line-through text-base-800' : 'text-base-300'}`}
           >
             {item.data.jobPosition}
-          </h4>
+          </h3>
         </div>
         <div class='flex flex-col justify-end items-end'>
           <a

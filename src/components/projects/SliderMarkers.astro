@@ -30,7 +30,7 @@ const iconMap = {
 ---
 
 <ul
-  class='w-[225px] md:max-w-max absolute left-1/2 -translate-x-1/2 top-3 flex flex-row justify-start gap-1.5 md:gap-3 bg-neutral-200 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl shadow-xl px-2 py-1 md:px-2 md:py-2 z-10'
+  class='w-[275px] md:max-w-max absolute left-1/2 -translate-x-1/2 top-3 flex flex-row justify-start gap-3 bg-neutral-200 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl shadow-xl px-2 py-1 md:px-2 md:py-2 z-10'
 >
   {
     sortedProjects.map((project, index) => {
@@ -39,11 +39,11 @@ const iconMap = {
         <li>
           <a
             href={`#project_${index}`}
-            aria-label={`sergio rodriguez gundin project ${index + 1} link`}
-            class={`bg-transparent p-1`}
+            aria-label={`sergio rodriguez gundin project ${index} link`}
+            class={`bg-transparent p-0.5`}
           >
             {IconComponent && (
-              <IconComponent size={{ width: 28, height: 28 }} />
+              <IconComponent size={{ width: 30, height: 30 }} />
             )}
           </a>
         </li>
