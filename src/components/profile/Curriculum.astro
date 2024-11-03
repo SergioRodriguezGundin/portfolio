@@ -14,7 +14,7 @@ import { MagicCard } from '@components/magicui/magic-card';
     <div class='flex justify-center items-center w-full'>
       <qr-code
         id='qrCV'
-        contents={'/cv/SergioRodriguez.pdf'}
+        contents='https://cdn.jsdelivr.net/gh/sergiorodriguezgundin/portfolio@main/public/cv/SergioRodriguez.pdf'
         module-color='hsl(var(--color-700))'
         position-ring-color='hsl(var(--color-800))'
         position-center-color='hsl(var(--primary))'
@@ -35,7 +35,8 @@ import { MagicCard } from '@components/magicui/magic-card';
   const downloadButton = document.querySelector('.download-button');
   downloadButton?.addEventListener('click', () => {
     const link = document.createElement('a');
-    link.href = '/cv/SergioRodriguez.pdf';
+    link.href =
+      'https://cdn.jsdelivr.net/gh/sergiorodriguezgundin/portfolio@main/public/cv/SergioRodriguez.pdf';
     link.download = 'sergio-rodriguez-cv.pdf';
     link.click();
   });
@@ -43,7 +44,7 @@ import { MagicCard } from '@components/magicui/magic-card';
 
 <style>
   #qrCV {
-    width: 200px;
-    height: 200px;
+    width: 185px;
+    height: 185px;
   }
 </style>
