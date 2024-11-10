@@ -1,32 +1,29 @@
-# Portfolio: My Journey
+# 🧑🏻‍💻 My Journey
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Welcome to my portfolio! Here, you'll find a showcase of my work as a software developer, blending creativity with technical expertise to deliver modern, high-quality web applications.
+I'm always excited to take on new challenges and continue learning, so feel free to explore my projects and reach out!
 
-![light example](https://github.com/user-attachments/assets/1eba697a-e133-4e0d-a083-dcffed05a201)
+##  🖤 **Dark or Light side?** 🤍 The Force is strong with you!
 
-## 🚀 Project Structure
+| Dark Mode | Light Mode |
+|-----------|------------|
+| ![dark](https://github.com/user-attachments/assets/923b8de7-ce8d-4493-a5d0-77d531643719) | ![light](https://github.com/user-attachments/assets/1eba697a-e133-4e0d-a083-dcffed05a201) |
 
-Inside of your Astro project, you'll see the following folders and files:
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## 🛠 Tech Stack
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+This portfolio was built with a modern and flexible tech stack:
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+- 🚀 **Astro**: For a fast and optimized static site generation.
 
-Any static assets, like images, can be placed in the `public/` directory.
+- 🎨 **Tailwind CSS**: For a highly customizable and responsive design.
+
+- ⚛️ **React**: Leveraging React components for interactivity and dynamic content.
+
+- ✨ **Magic UI**: Enhancing the UI with pre-built, beautifully crafted components.
+
+This combination ensures a smooth, responsive, and visually appealing experience across all devices.
+
 
 ## 🧞 Commands
 
@@ -34,12 +31,13 @@ All commands are run from the root of the project, from a terminal:
 
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+| `pnpm install`             | Installs dependencies                            |
+| `pnpm run dev`             | Starts local dev server at `localhost:4321`      |
+| `pnpm run build`           | Build your production site to `./dist/`          |
+| `pnpm run preview`         | Preview your build locally, before deploying     |
+| `pnpm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `pnpm run astro -- --help` | Get help using the Astro CLI                     |
+
 
 ## 👀 Want to learn more?
 
