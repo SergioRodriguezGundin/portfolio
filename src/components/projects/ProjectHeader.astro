@@ -13,6 +13,7 @@ import {
   LALIGA,
 } from '@models/projects.model';
 import { CollectionEntry } from 'astro:content';
+import ProjectTechIcon from './ProjectTechIcon.astro';
 
 export interface ProjectHeaderProps {
   project: CollectionEntry<'projects'>['data'];
@@ -58,15 +59,13 @@ const IconComponent = iconMap[project.id as keyof typeof iconMap];
       <span class='flex flex-row justify-start items-center gap-2'>
         {
           project.stack.map((tech) => (
-            <img
-              src={`/icons/${tech.icon}.svg`}
-              alt={`${tech.name} icon`}
-              width={22}
-              height={22}
+            <ProjectTechIcon
+              techIcon={tech.icon}
+              size={{ width: 26, height: 26 }}
             />
           ))
-        }</span
-      >
+        }
+      </span>
     </div>
   </div>
 </div>

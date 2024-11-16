@@ -1,0 +1,70 @@
+---
+import Marquee from '@components/magicui/marquee.astro';
+import ProjectTechCard from '@components/projects/ProjectTechCard.astro';
+import {
+  ANGULAR,
+  ASTRO,
+  JS,
+  NEXTJS,
+  NGRX,
+  REACT,
+  THREEJS,
+  TYPESCRIPT,
+} from '@components/projects/ProjectTechIcon.astro';
+
+const { containerWidth = 390 } = Astro.props;
+const width = containerWidth ? containerWidth : 390;
+
+const techIcons = [
+  {
+    icon: JS,
+  },
+  {
+    icon: TYPESCRIPT,
+  },
+  {
+    icon: ANGULAR,
+  },
+  {
+    icon: NGRX,
+  },
+  {
+    icon: REACT,
+  },
+  {
+    icon: NEXTJS,
+  },
+  {
+    icon: ASTRO,
+  },
+  {
+    icon: THREEJS,
+  },
+];
+
+const firstRow = techIcons.slice(0, techIcons.length / 2);
+console.log(firstRow);
+const secondRow = techIcons.slice(techIcons.length / 2);
+console.log(secondRow);
+---
+
+<div
+  class={`relative flex flex-col justify-center items-start overflow-hidden w-[${width}px] h-full`}
+>
+  <div class='flex flex-col gap-2'>
+    <Marquee class='[--duration:20s]'>
+      {firstRow.map((icon) => <ProjectTechCard {...icon} />)}
+    </Marquee>
+    <Marquee reverse class='[--duration:20s]'>
+      {secondRow.map((icon) => <ProjectTechCard {...icon} />)}
+    </Marquee>
+  </div>
+  <div
+    class='pointer-events-none absolute inset-y-0 left-0 w-1/6 bg-gradient-to-r from-background'
+  >
+  </div>
+  <div
+    class='pointer-events-none absolute inset-y-0 right-0 w-1/6 bg-gradient-to-l from-background'
+  >
+  </div>
+</div>

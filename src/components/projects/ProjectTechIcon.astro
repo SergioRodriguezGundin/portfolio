@@ -1,0 +1,71 @@
+---
+import Angular from '@components/icons/techs/Angular.astro';
+import AstroIcon from '@components/icons/techs/AstroIcon.astro';
+import Aws from '@components/icons/techs/Aws.astro';
+import Css from '@components/icons/techs/Css.astro';
+import Electron from '@components/icons/techs/Electron.astro';
+import Firebase from '@components/icons/techs/Firebase.astro';
+import Html from '@components/icons/techs/Html.astro';
+import Js from '@components/icons/techs/Js.astro';
+import Nestjs from '@components/icons/techs/Nestjs.astro';
+import Nextjs from '@components/icons/techs/Nextjs.astro';
+import Ngrx from '@components/icons/techs/Ngrx.astro';
+import Nx from '@components/icons/techs/Nx.astro';
+import ReactIcon from '@components/icons/techs/ReactIcon.astro';
+import Spring from '@components/icons/techs/Spring.astro';
+import Threejs from '@components/icons/techs/Threejs.astro';
+import Thymeleaf from '@components/icons/techs/Thymeleaf.astro';
+import Typescript from '@components/icons/techs/Typescript.astro';
+import Vue from '@components/icons/techs/Vue.astro';
+
+export const ANGULAR = 'angular';
+export const HTML = 'html';
+export const CSS = 'css';
+export const JS = 'js';
+export const SPRING = 'spring';
+export const THYMELEAF = 'thymeleaf';
+export const THREEJS = 'threejs';
+export const REACT = 'react';
+export const NEXTJS = 'nextjs';
+export const ASTRO = 'astro';
+export const VUE = 'vue';
+export const NX = 'nx';
+export const TYPESCRIPT = 'typescript';
+export const NGRX = 'ngrx';
+export const NESTJS = 'nestjs';
+export const FIREBASE = 'firebase';
+export const ELECTRON = 'electron';
+export const AWS = 'aws';
+
+export interface ProjectTechIconProps {
+  techIcon: string;
+  size: { width: number; height: number };
+}
+
+const techIcons = {
+  [ANGULAR]: Angular,
+  [HTML]: Html,
+  [CSS]: Css,
+  [JS]: Js,
+  [SPRING]: Spring,
+  [THYMELEAF]: Thymeleaf,
+  [THREEJS]: Threejs,
+  [REACT]: ReactIcon,
+  [NEXTJS]: Nextjs,
+  [ASTRO]: AstroIcon,
+  [VUE]: Vue,
+  [TYPESCRIPT]: Typescript,
+  [NGRX]: Ngrx,
+  [NESTJS]: Nestjs,
+  [FIREBASE]: Firebase,
+  [ELECTRON]: Electron,
+  [AWS]: Aws,
+  [NX]: Nx,
+};
+
+const { techIcon, size } = Astro.props as ProjectTechIconProps;
+
+const IconComponent = techIcons[techIcon as keyof typeof techIcons];
+---
+
+{IconComponent && <IconComponent size={size} />}

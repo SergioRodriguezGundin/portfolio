@@ -1,0 +1,21 @@
+---
+import ProjectTechIcon from './ProjectTechIcon.astro';
+
+interface Props {
+  icon: string;
+}
+
+const { icon } = Astro.props;
+---
+
+<div
+  class:list={[
+    'relative cursor-pointer overflow-hidden rounded-xl shadow-md border p-4',
+    'bg-neutral-200 border-neutral-300 hover:bg-neutral-950/[.05]',
+    'dark:bg-neutral-900 dark:border-neutral-800 dark:hover:bg-neutral-50/[.15]',
+  ]}
+>
+  <span class='flex flex-row items-center gap-2'>
+    <ProjectTechIcon techIcon={icon} size={{ width: 32, height: 32 }} />
+  </span>
+</div>
