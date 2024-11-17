@@ -35,10 +35,10 @@ const splitedTitle = milestone.title.split(' ');
 {
   index === 0 && (
     <div class='milestone-card relative flex flex-col justify-start items-start gap-2 w-full md:w-[375px] h-[230px] md:h-[285px] border border-neutral-200 dark:border-neutral-800 bg-neutral-200 dark:bg-neutral-900 shadow-xl rounded-xl overflow-hidden'>
-      <h3 class='text-base-500 text-xl font-prompt p-6'>
+      <span class='text-base-500 text-xl font-prompt p-6'>
         <span class='text-base-600' />
         {milestone.title}
-      </h3>
+      </>
       <div class='flex flex-col justify-start items-start ml-[1px] w-full overflow-hidden'>
         <ProjectHighlightsMarquee
           highlights={milestone.strongPoints ?? []}
@@ -60,12 +60,12 @@ const splitedTitle = milestone.title.split(' ');
   index !== 0 && (
     <div class='milestone-card relative flex flex-col justify-start items-start flex-wrap w-[150px] h-[75px] md:h-[125px] border border-neutral-200 dark:border-neutral-800 bg-neutral-200 dark:bg-neutral-900 p-4 shadow-xl rounded-xl overflow-hidden'>
       <div class='flex flex-col justify-start items-start'>
-        <h3 class='text-base-500 text-base font-prompt font-bold w-full'>
+        <span class='text-base-500 text-base font-prompt font-bold w-full'>
           {splitedTitle[0].toUpperCase()}
-        </h3>
-        <h3 class='text-base-600 text-xs font-prompt font-bold w-full'>
+        </>
+        <span class='text-base-600 text-xs font-prompt font-bold w-full'>
           {splitedTitle[1].toUpperCase()}
-        </h3>
+        </>
       </div>
       {icon && (
         <img
