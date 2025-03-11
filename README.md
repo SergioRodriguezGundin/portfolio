@@ -3,7 +3,7 @@
 Welcome to my portfolio! Here, you'll find a showcase of my work as a software developer, blending creativity with technical expertise to deliver modern, high-quality web applications.
 I'm always excited to take on new challenges and continue learning, so feel free to explore my projects and reach out!
 
-##  🖤 **Dark or Light side?** 🤍 The Force is strong with you!
+## **Dark or Light side?** The Force is strong with you!
 
 | Dark Mode | Light Mode |
 |-----------|------------|
