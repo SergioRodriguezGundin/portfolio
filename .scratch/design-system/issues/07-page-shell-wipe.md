@@ -13,7 +13,7 @@ See the spec: `.scratch/design-system/spec.md` (Implementation Decisions: magicu
 - [x] The layout's existing mobile scroll reveal either follows the design system's motion (wipe, `cubic-bezier(.77,0,.18,1)`) or is removed. There is no opacity or translate fade.
 - [x] With `prefers-reduced-motion: reduce` there's no entrance animation and no hover transition.
 - [x] The bento grid structure and its breakpoints don't change, and grid gaps leave at least 5px clear for card shadows.
-- [x] `astro check` passes (0 errors; `pnpm build` still hits the local Windows EPERM, see ticket 01), and the entrance has been reviewed with and without reduced motion.
+- [x] `astro check` passes (0 errors; `pnpm build` still hits the local Windows EPERM, see ticket 01), and the entrance has been reviewed in the browser. Reduced motion was only checked by confirming the CSS rules exist; it was not emulated.
 
 ## Comments
 
