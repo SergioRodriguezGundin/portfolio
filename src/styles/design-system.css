@@ -32,19 +32,19 @@ body { margin: 0; background: var(--surface); color: var(--text); font-family: v
 }
 .sp-btn:active { transform: translate(5px, 5px); box-shadow: var(--shadow-none); }
 .sp-btn:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; }
-.sp-btn--primary { background: var(--chartreuse); color: var(--night); }
+.sp-btn--primary { background: var(--tennis-ball); color: var(--night); }
 .sp-btn--secondary { background: var(--ultramarine); color: var(--paper); }
-.sp-btn--ink { background: var(--night); color: var(--chartreuse); }
+.sp-btn--ink { background: var(--night); color: var(--tennis-ball); }
 .sp-btn--quiet { background: var(--surface); color: var(--text); }
 .sp-btn[disabled] { cursor: not-allowed; background: var(--paper-tint); color: var(--night); transform: none; box-shadow: var(--shadow-none); }
 
 /* Sticker — rounded, tilted emphasis */
 .sp-sticker {
   display: inline-block; padding: 0 var(--space-2); border-radius: var(--radius-sticker);
-  transform: rotate(-3deg); background: var(--chartreuse); color: var(--ultramarine);
+  transform: rotate(-3deg); background: var(--tennis-ball); color: var(--ultramarine);
 }
-.sp-sticker--blue { background: var(--ultramarine); color: var(--chartreuse); }
-.sp-sticker--ink { background: var(--night); color: var(--chartreuse); }
+.sp-sticker--blue { background: var(--ultramarine); color: var(--tennis-ball); }
+.sp-sticker--ink { background: var(--night); color: var(--tennis-ball); }
 
 /* Tag */
 .sp-tag {
@@ -52,17 +52,17 @@ body { margin: 0; background: var(--surface); color: var(--text); font-family: v
   display: inline-block; padding: var(--space-1) var(--space-2); border-radius: var(--radius-none);
   color: var(--text); background: var(--surface); box-shadow: 3px 3px 0 0 var(--text);
 }
-.sp-tag--primary { background: var(--chartreuse); color: var(--night); }
+.sp-tag--primary { background: var(--tennis-ball); color: var(--night); }
 .sp-tag--blue { background: var(--ultramarine); color: var(--paper); }
 
 /* Card — 0 radius, no border, hard shadow */
 .sp-card { border-radius: var(--radius-none); background: var(--surface); color: var(--text); padding: var(--space-6); display: flex; flex-direction: column; gap: var(--space-4); }
 .sp-card h3 { margin: 0; font-family: var(--font-display); font-weight: 400; font-size: 21px; line-height: 1.02; letter-spacing: -0.031em; }
 .sp-card p { margin: 0; }
-.sp-card--primary { background: var(--chartreuse); color: var(--night); }
+.sp-card--primary { background: var(--tennis-ball); color: var(--night); }
 .sp-card--blue { background: var(--ultramarine); color: var(--paper); }
 .sp-card--ink { background: var(--night); color: var(--paper); }
-.sp-card--ink h3 { color: var(--chartreuse); }
+.sp-card--ink h3 { color: var(--tennis-ball); }
 
 /* Image frame — square corners, hard shadow */
 .sp-frame { display: block; border-radius: var(--radius-none); overflow: hidden; }
@@ -89,18 +89,18 @@ body { margin: 0; background: var(--surface); color: var(--text); font-family: v
 /* Logo — wordmark-led; the mark lives apart as an icon */
 .sp-wordmark { display: inline-block; padding: var(--space-4) var(--space-6); font-family: var(--font-display); font-weight: 400; font-size: 28px; line-height: 1.02; letter-spacing: -0.031em; }
 .sp-wordmark--paper { background: var(--surface); color: var(--text); }
-.sp-wordmark--ink { background: var(--night); color: var(--chartreuse); }
-.sp-wordmark--primary { background: var(--chartreuse); color: var(--ultramarine); }
+.sp-wordmark--ink { background: var(--night); color: var(--tennis-ball); }
+.sp-wordmark--primary { background: var(--tennis-ball); color: var(--ultramarine); }
 .sp-mark { width: 64px; height: 64px; display: block; }
 
 /* Colour field — full-bleed sections in a brand colour; text pairs fixed per field */
 .sp-field { padding: var(--space-12); }
-.sp-field--primary { background: var(--chartreuse); color: var(--night); }
+.sp-field--primary { background: var(--tennis-ball); color: var(--night); }
 .sp-field--primary .sp-accent { color: var(--ultramarine); }
 .sp-field--blue { background: var(--ultramarine); color: var(--paper); }
-.sp-field--blue .sp-accent { color: var(--chartreuse); }
+.sp-field--blue .sp-accent { color: var(--tennis-ball); }
 .sp-field--ink { background: var(--night); color: var(--paper); }
-.sp-field--ink .sp-accent { color: var(--chartreuse); }
+.sp-field--ink .sp-accent { color: var(--tennis-ball); }
 .sp-field--paper { background: var(--surface); color: var(--text); }
 .sp-field--paper .sp-accent { color: var(--link); }
 

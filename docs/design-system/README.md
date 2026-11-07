@@ -1,6 +1,6 @@
 # Sergio Portfolio
 
-A y2k arcade design system for Sergio's portfolio: chrome dreams and neon. A bold colour-field look: whole sections flooded in Chartreuse or Ultramarine, two complementary hues, with Paper and Night as the neutrals. Square panels, softly rounded buttons, no borders, hard offset shadows, and one tilted sticker when a word needs to pop.
+A y2k arcade design system for Sergio's portfolio: chrome dreams and neon. A bold colour-field look: whole sections flooded in Tennis ball or Ultramarine, two complementary hues, with Paper and Night as the neutrals. Square panels, softly rounded buttons, no borders, hard offset shadows, and one tilted sticker when a word needs to pop.
 
 ## Content fundamentals
 
@@ -23,19 +23,19 @@ Four colours and their tints, nothing else. Palette logic: complementary, two op
 | --- | --- | --- | --- |
 | `paper` | #EEF1E9 | ~44% | Main background |
 | `night` | #010300 | ~22% | Text, dark blocks, the hard shadow |
-| `chartreuse` | #98ED31 | ~22% | Buttons, key shapes, big colour blocks |
+| `tennis-ball` | #D7ED31 | ~22% | Buttons, key shapes, big colour blocks |
 | `ultramarine` | #0910EC | ~11% | Supporting blocks, cards, illustrations |
 
 **Approved text pairs** (either way round, pass WCAG AA at any size):
 
 - Night on Paper, 18.1:1
-- Chartreuse on Night, 14.3:1
+- Tennis ball on Night, 15.8:1
 - Ultramarine on Paper, 8.0:1
-- Ultramarine on Chartreuse, 6.3:1
+- Ultramarine on Tennis ball, 7.0:1
 
-**Colour fields.** Pages are built from full-bleed sections, not cards floating on a neutral page. Lead with a Chartreuse field (night text, ultramarine accents), follow with Paper, and use an Ultramarine field (paper text, chartreuse accents) once per page for the loudest moment; a Night field closes the page (paper text, chartreuse accents). Over a page Paper still carries about half the area. Use `sp-field--primary|blue|ink|paper`; inside a field, `.sp-accent` picks its approved accent colour.
+**Colour fields.** Pages are built from full-bleed sections, not cards floating on a neutral page. Lead with a Tennis ball field (night text, ultramarine accents), follow with Paper, and use an Ultramarine field (paper text, tennis-ball accents) once per page for the loudest moment; a Night field closes the page (paper text, tennis-ball accents). Over a page Paper still carries about half the area. Use `sp-field--primary|blue|ink|paper`; inside a field, `.sp-accent` picks its approved accent colour.
 
-Every other pairing (for example Ultramarine with Night, or Chartreuse with Paper) is decorative only: never put text on it. Tints (`paper-tint`, `chartreuse-tint`) are for quiet backgrounds and carry night text only. Focus is a 2px ultramarine outline.
+Every other pairing (for example Ultramarine with Night, or Tennis ball with Paper) is decorative only: never put text on it. Tints (`paper-tint`, `tennis-ball-tint`) are for quiet backgrounds and carry night text only. Focus is a 2px ultramarine outline.
 
 ### Typography
 
@@ -59,7 +59,7 @@ Two typefaces, both on Google Fonts:
 
 ### Graphic motif
 
-Random square pixel blocks in palette colours, denser toward the bottom, on an 8px pitch: chartreuse, ultramarine and night on paper, or ultramarine and night on chartreuse (`pixel-field-paper.svg`, `pixel-field-primary.svg`). Use it for backgrounds, poster fills, card backs and section dividers. Keep text off the busy area.
+Random square pixel blocks in palette colours, denser toward the bottom, on an 8px pitch: tennis-ball, ultramarine and night on paper, or ultramarine and night on tennis-ball (`pixel-field-paper.svg`, `pixel-field-primary.svg`). Use it for backgrounds, poster fills, card backs and section dividers. Keep text off the busy area.
 
 ### Photography
 
@@ -68,7 +68,7 @@ Random square pixel blocks in palette colours, denser toward the bottom, on an 8
 
 ### 3D
 
-A torus (ring doughnut), shaded only with palette colours from dark to light (night → ultramarine → chartreuse → paper), rendered pixelated and dithered to match the photos: `torus.png` in the Illustrations group, a 4-tone Atkinson dither on a transparent ground.
+A torus (ring doughnut), shaded only with palette colours from dark to light (night → ultramarine → tennis-ball → paper), rendered pixelated and dithered to match the photos: `torus.png` in the Illustrations group, a 4-tone Atkinson dither on a transparent ground.
 
 ### Motion
 
@@ -80,7 +80,7 @@ A torus (ring doughnut), shaded only with palette colours from dark to light (ni
 
 ## Logo
 
-Wordmark-led: the name "Sergio Portfolio" alone, in Audiowide with the headline settings. Three versions: on Paper (night), reversed on Night (chartreuse), and on Chartreuse (ultramarine). The mark, four quarter-circles in a 2×2 grid, each turned a different way, flat, in one or two palette colours, is used separately as an icon, never locked up beside the name; it is the app icon and favicon. SVG sources are below under *Logo files*.
+Wordmark-led: the name "Sergio Portfolio" alone, in Audiowide with the headline settings. Three versions: on Paper (night), reversed on Night (tennis-ball), and on Tennis ball (ultramarine). The mark, four quarter-circles in a 2×2 grid, each turned a different way, flat, in one or two palette colours, is used separately as an icon, never locked up beside the name; it is the app icon and favicon. SVG sources are below under *Logo files*.
 
 ## Iconography
 
@@ -105,16 +105,16 @@ No icon set yet. Where an icon is needed, draw it from simple geometric shapes w
 Wordmark-led: the name "Sergio Portfolio" alone, set in Audiowide; the mark (four quarter-circles in a 2×2 grid, each turned a different way) is used separately, as an icon.
 
 - Wordmark: `<span class="sp-wordmark sp-wordmark--paper|ink|primary">Sergio Portfolio</span>`. Headline settings: Audiowide 400, letter-spacing -0.031em, line-height 1.02.
-- Three versions only: on Paper (night wordmark), reversed on Night (chartreuse wordmark), on Chartreuse (ultramarine wordmark).
+- Three versions only: on Paper (night wordmark), reversed on Night (tennis-ball wordmark), on Tennis ball (ultramarine wordmark).
 - The mark never sits in a lockup beside the name. Use it alone: app icon, favicon, avatar, a sign-off. Files are in the Logos asset group; `sp-mark` sizes it, `sp-breathe` gives it the ambient loop.
 - Clear space around the wordmark is at least `space-4`. Never recolour outside the palette, add gradients, or stretch or re-turn the quarter-circles.
 ### Button
 
 Softly rounded actions (`radius-button`) with no border and a hard offset shadow, labelled in Karla 500, all lowercase.
 
-- `sp-btn sp-btn--primary`: chartreuse fill, night text (14.3:1). One per view.
+- `sp-btn sp-btn--primary`: tennis-ball fill, night text (15.8:1). One per view.
 - `sp-btn--secondary`: ultramarine fill, paper text (8.0:1).
-- `sp-btn--ink`: night fill, chartreuse text (14.3:1).
+- `sp-btn--ink`: night fill, tennis-ball text (15.8:1).
 - `sp-btn--quiet`: paper fill, night text (18.1:1); the shadow gives it its edge.
 - Rest on `shadow-hard`; hover moves up-left 2px to `shadow-hard-lift` with `cubic-bezier(.77,0,.18,1)` over 900ms; pressed drops into the shadow (`shadow-none`); disabled is flat `paper-tint`.
 - Focus shows a 2px ultramarine outline. Icon-only buttons need an `aria-label`.
@@ -122,21 +122,21 @@ Softly rounded actions (`radius-button`) with no border and a hard offset shadow
 
 The emphasis style: one word or short phrase on a rounded sticker, tilted −3°.
 
-- `sp-sticker` (chartreuse with ultramarine text, 6.3:1), `--blue` (ultramarine with chartreuse text), `--ink` (night with chartreuse text, 14.3:1).
+- `sp-sticker` (tennis-ball with ultramarine text, 7.0:1), `--blue` (ultramarine with tennis-ball text), `--ink` (night with tennis-ball text, 15.8:1).
 - Uses `radius-sticker`, no shadow. At most once per block of text.
 - Inherits size and family from its parent, so it works inside headlines and body copy alike.
 ### Tag
 
 Metadata chips in the label style (Karla 500, lowercase): tech stacks, years, roles.
 
-- Default: paper with night text; `--primary` chartreuse fill; `--blue` ultramarine fill with paper text.
+- Default: paper with night text; `--primary` tennis-ball fill; `--blue` ultramarine fill with paper text.
 - Square, no border, a small 3px hard night shadow; padding `space-1` × `space-2`.
 ### Card
 
 The project tile: a square panel, no border, a hard offset shadow (`shadow-hard`, 5px solid night), no radius.
 
 - Content: a label line (`sp-label`), an `h3` in Audiowide, one or two lines of body, optional tags.
-- Variants: default paper; `--primary` (chartreuse, night text); `--blue` (ultramarine, paper text); `--ink` (night, paper body, chartreuse title).
+- Variants: default paper; `--primary` (tennis-ball, night text); `--blue` (ultramarine, paper text); `--ink` (night, paper body, tennis-ball title).
 - Padding `space-6`; grid gap `space-6`, leaving 5px clear for the shadow. Hover moves up-left 2px to `shadow-hard-lift`. Enter with `sp-wipe-in` (left to right), setting `--i` per card for a 55ms stagger.
 - Images inside a card use the 1-bit dither in ultramarine and paper, in a square `sp-frame`.
 ### Hero
@@ -144,7 +144,7 @@ The project tile: a square panel, no border, a hard offset shadow (`shadow-hard`
 The poster hero: a full-bleed colour field with one big Audiowide line, a sticker, a short lead, one button, an illustration and the pixel field as the floor.
 
 - Markup: `section.sp-field.sp-field--primary.sp-hero` > `.sp-hero__copy` (label, `h1`, `p`, one `sp-btn`), `.sp-hero__art` (the torus or a dithered photo), `.sp-hero__floor` (the pixel field image).
-- Default field is chartreuse with night text (14.3:1); the sticker inside is `--blue` (6.3:1) and the button `--ink`. On `sp-field--blue` use paper text, a chartreuse sticker and a `--primary` button.
+- Default field is tennis-ball with night text (15.8:1); the sticker inside is `--blue` (7.0:1) and the button `--ink`. On `sp-field--blue` use paper text, a tennis-ball sticker and a `--primary` button.
 - Headline at `display-xl` (67px), dropping to 38px under 640px, where the art moves below the copy.
 - Copy wipes in with a 55ms stagger (`--i` 0–3); the art breathes. The floor sits below the copy, never behind text.
 - The consumer provides the copy and the image sources (Illustrations and Motifs asset groups).
@@ -154,13 +154,13 @@ Photos and the 3D torus, both pixelated and dithered so they sit with the flat p
 
 - **Photo:** `figure.sp-photo.sp-frame` with an `img` dithered to 1-bit Atkinson in ultramarine and paper. The sample is a generated still life; swap in real photos run through the same dither.
 - **Caption on a photo:** `.sp-photo__caption` puts night text over a paper scrim from the bottom, strong enough for 4.5:1 against the pixels.
-- **Torus:** `torus.png`, shaded night → ultramarine → chartreuse → paper with a 4-tone Atkinson dither on a transparent ground. Render with `image-rendering: pixelated`; `sp-breathe` gives it the ambient loop.
+- **Torus:** `torus.png`, shaded night → ultramarine → tennis-ball → paper with a 4-tone Atkinson dither on a transparent ground. Render with `image-rendering: pixelated`; `sp-breathe` gives it the ambient loop.
 - Frames are square (`radius-none`) with the hard shadow. Never colour-tint or blur the dither.
 ### PixelField
 
 The graphic motif: random square pixel blocks in palette colours, denser toward the bottom.
 
-- `pixel-field-paper.svg` (chartreuse, ultramarine and night on paper) and `pixel-field-primary.svg` (ultramarine and night on chartreuse), in the Motifs group.
+- `pixel-field-paper.svg` (tennis-ball, ultramarine and night on paper) and `pixel-field-primary.svg` (ultramarine and night on tennis-ball), in the Motifs group.
 - Square pitch `space-2` (8px). `sp-pixels` fills the width with `image-rendering: pixelated`; `sp-breathe` may run on it slowly.
 - Use as backgrounds, poster fills, card backs and section dividers. Keep text off the dense lower area; put copy above it or on a clean block beside it.
 
@@ -188,20 +188,20 @@ The binary assets live in the design system artifact (they are not inside this f
 The mark: four quarter-circles in a 2×2 grid, each turned a different way, so the curves spin like a pinwheel. Flat, geometric, in one or two palette colours per version. It is used apart from the name, as an icon.
 
 - `mark-on-paper.svg`: ultramarine and night quarters, transparent ground. For paper.
-- `mark-on-ink.svg`: chartreuse quarters on a night square. Reversed version.
-- `mark-on-primary.svg`: ultramarine and night quarters on a chartreuse square.
-- `app-icon.svg`: chartreuse quarters on an ultramarine square. App icon and favicon.
+- `mark-on-ink.svg`: tennis-ball quarters on a night square. Reversed version.
+- `mark-on-primary.svg`: ultramarine and night quarters on a tennis-ball square.
+- `app-icon.svg`: tennis-ball quarters on an ultramarine square. App icon and favicon.
 
 The wordmark is live text in Audiowide, not an image: see the Logo component.
 ### Motifs
 
-- `pixel-field-paper.svg`: 480×240, random 8px squares in chartreuse, ultramarine and night on paper, density rising toward the bottom.
-- `pixel-field-primary.svg`: the same field in ultramarine and night on chartreuse.
+- `pixel-field-paper.svg`: 480×240, random 8px squares in tennis-ball, ultramarine and night on paper, density rising toward the bottom.
+- `pixel-field-primary.svg`: the same field in ultramarine and night on tennis-ball.
 
 Scale in whole multiples so the squares stay crisp.
 ### Illustrations
 
-- `torus.png`: the brand 3D object, a torus shaded night → ultramarine → chartreuse → paper, 4-tone Atkinson dither, 640×480 (160×120 pixels at 4×), transparent ground so it sits on any colour field. Show it with `image-rendering: pixelated`.
+- `torus.png`: the brand 3D object, a torus shaded night → ultramarine → tennis-ball → paper, 4-tone Atkinson dither, 640×480 (160×120 pixels at 4×), transparent ground so it sits on any colour field. Show it with `image-rendering: pixelated`.
 - `photo-dither-sample.png`: the photo treatment, 1-bit Atkinson in ultramarine and paper, on a generated still life (480×320, 2× pixels). A placeholder until real photos are run through the same dither.
 
 ### Logo files
@@ -212,22 +212,22 @@ Scale in whole multiples so the squares stay crisp.
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="256" height="256"><defs><clipPath id="q0"><rect x="0" y="0" width="32" height="32"/></clipPath><clipPath id="q1"><rect x="32" y="0" width="32" height="32"/></clipPath><clipPath id="q2"><rect x="32" y="32" width="32" height="32"/></clipPath><clipPath id="q3"><rect x="0" y="32" width="32" height="32"/></clipPath></defs><circle cx="0" cy="32" r="32" fill="#0910EC" clip-path="url(#q0)"/><circle cx="32" cy="0" r="32" fill="#010300" clip-path="url(#q1)"/><circle cx="64" cy="32" r="32" fill="#0910EC" clip-path="url(#q2)"/><circle cx="32" cy="64" r="32" fill="#010300" clip-path="url(#q3)"/></svg>
 ```
 
-**`mark-on-ink.svg`** — Chartreuse quarters on a night square. Reversed version.
+**`mark-on-ink.svg`** — Tennis ball quarters on a night square. Reversed version.
 
 ```svg
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="256" height="256"><rect width="64" height="64" fill="#010300"/><defs><clipPath id="q0"><rect x="8" y="8" width="24" height="24"/></clipPath><clipPath id="q1"><rect x="32" y="8" width="24" height="24"/></clipPath><clipPath id="q2"><rect x="32" y="32" width="24" height="24"/></clipPath><clipPath id="q3"><rect x="8" y="32" width="24" height="24"/></clipPath></defs><circle cx="8" cy="32" r="24" fill="#98ED31" clip-path="url(#q0)"/><circle cx="32" cy="8" r="24" fill="#98ED31" clip-path="url(#q1)"/><circle cx="56" cy="32" r="24" fill="#98ED31" clip-path="url(#q2)"/><circle cx="32" cy="56" r="24" fill="#98ED31" clip-path="url(#q3)"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="256" height="256"><rect width="64" height="64" fill="#010300"/><defs><clipPath id="q0"><rect x="8" y="8" width="24" height="24"/></clipPath><clipPath id="q1"><rect x="32" y="8" width="24" height="24"/></clipPath><clipPath id="q2"><rect x="32" y="32" width="24" height="24"/></clipPath><clipPath id="q3"><rect x="8" y="32" width="24" height="24"/></clipPath></defs><circle cx="8" cy="32" r="24" fill="#D7ED31" clip-path="url(#q0)"/><circle cx="32" cy="8" r="24" fill="#D7ED31" clip-path="url(#q1)"/><circle cx="56" cy="32" r="24" fill="#D7ED31" clip-path="url(#q2)"/><circle cx="32" cy="56" r="24" fill="#D7ED31" clip-path="url(#q3)"/></svg>
 ```
 
-**`mark-on-primary.svg`** — Ultramarine and night quarters on a chartreuse square.
+**`mark-on-primary.svg`** — Ultramarine and night quarters on a tennis-ball square.
 
 ```svg
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="256" height="256"><rect width="64" height="64" fill="#98ED31"/><defs><clipPath id="q0"><rect x="8" y="8" width="24" height="24"/></clipPath><clipPath id="q1"><rect x="32" y="8" width="24" height="24"/></clipPath><clipPath id="q2"><rect x="32" y="32" width="24" height="24"/></clipPath><clipPath id="q3"><rect x="8" y="32" width="24" height="24"/></clipPath></defs><circle cx="8" cy="32" r="24" fill="#0910EC" clip-path="url(#q0)"/><circle cx="32" cy="8" r="24" fill="#010300" clip-path="url(#q1)"/><circle cx="56" cy="32" r="24" fill="#0910EC" clip-path="url(#q2)"/><circle cx="32" cy="56" r="24" fill="#010300" clip-path="url(#q3)"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="256" height="256"><rect width="64" height="64" fill="#D7ED31"/><defs><clipPath id="q0"><rect x="8" y="8" width="24" height="24"/></clipPath><clipPath id="q1"><rect x="32" y="8" width="24" height="24"/></clipPath><clipPath id="q2"><rect x="32" y="32" width="24" height="24"/></clipPath><clipPath id="q3"><rect x="8" y="32" width="24" height="24"/></clipPath></defs><circle cx="8" cy="32" r="24" fill="#0910EC" clip-path="url(#q0)"/><circle cx="32" cy="8" r="24" fill="#010300" clip-path="url(#q1)"/><circle cx="56" cy="32" r="24" fill="#0910EC" clip-path="url(#q2)"/><circle cx="32" cy="56" r="24" fill="#010300" clip-path="url(#q3)"/></svg>
 ```
 
-**`app-icon.svg`** — Chartreuse quarters on an ultramarine square. App icon and favicon.
+**`app-icon.svg`** — Tennis ball quarters on an ultramarine square. App icon and favicon.
 
 ```svg
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="256" height="256"><rect width="64" height="64" fill="#0910EC"/><defs><clipPath id="q0"><rect x="10" y="10" width="22" height="22"/></clipPath><clipPath id="q1"><rect x="32" y="10" width="22" height="22"/></clipPath><clipPath id="q2"><rect x="32" y="32" width="22" height="22"/></clipPath><clipPath id="q3"><rect x="10" y="32" width="22" height="22"/></clipPath></defs><circle cx="10" cy="32" r="22" fill="#98ED31" clip-path="url(#q0)"/><circle cx="32" cy="10" r="22" fill="#98ED31" clip-path="url(#q1)"/><circle cx="54" cy="32" r="22" fill="#98ED31" clip-path="url(#q2)"/><circle cx="32" cy="54" r="22" fill="#98ED31" clip-path="url(#q3)"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="256" height="256"><rect width="64" height="64" fill="#0910EC"/><defs><clipPath id="q0"><rect x="10" y="10" width="22" height="22"/></clipPath><clipPath id="q1"><rect x="32" y="10" width="22" height="22"/></clipPath><clipPath id="q2"><rect x="32" y="32" width="22" height="22"/></clipPath><clipPath id="q3"><rect x="10" y="32" width="22" height="22"/></clipPath></defs><circle cx="10" cy="32" r="22" fill="#D7ED31" clip-path="url(#q0)"/><circle cx="32" cy="10" r="22" fill="#D7ED31" clip-path="url(#q1)"/><circle cx="54" cy="32" r="22" fill="#D7ED31" clip-path="url(#q2)"/><circle cx="32" cy="54" r="22" fill="#D7ED31" clip-path="url(#q3)"/></svg>
 ```
 
 ## CSS variables
@@ -238,13 +238,13 @@ The tokens from `tokens.json` as CSS custom properties and type classes. Load th
 :root {
   --paper: #eef1e9;
   --night: #010300;
-  --chartreuse: #98ed31;
+  --tennis-ball: #d7ed31;
   --ultramarine: #0910ec;
   --paper-tint: #e1e5da;
-  --chartreuse-tint: #dcf5bd;
+  --tennis-ball-tint: #f1f9b9;
   --surface: var(--paper);
   --text: var(--night);
-  --accent: var(--chartreuse);
+  --accent: var(--tennis-ball);
   --link: var(--ultramarine);
   --space-1: 4px;
   --space-2: 8px;
@@ -308,19 +308,19 @@ body { margin: 0; background: var(--paper); color: var(--night); font-family: va
 }
 .sp-btn:active { transform: translate(5px, 5px); box-shadow: var(--shadow-none); }
 .sp-btn:focus-visible { outline: 2px solid var(--ultramarine); outline-offset: 4px; }
-.sp-btn--primary { background: var(--chartreuse); color: var(--night); }
+.sp-btn--primary { background: var(--tennis-ball); color: var(--night); }
 .sp-btn--secondary { background: var(--ultramarine); color: var(--paper); }
-.sp-btn--ink { background: var(--night); color: var(--chartreuse); }
+.sp-btn--ink { background: var(--night); color: var(--tennis-ball); }
 .sp-btn--quiet { background: var(--paper); color: var(--night); }
 .sp-btn[disabled] { cursor: not-allowed; background: var(--paper-tint); color: var(--night); transform: none; box-shadow: var(--shadow-none); }
 
 /* Sticker — rounded, tilted emphasis */
 .sp-sticker {
   display: inline-block; padding: 0 var(--space-2); border-radius: var(--radius-sticker);
-  transform: rotate(-3deg); background: var(--chartreuse); color: var(--ultramarine);
+  transform: rotate(-3deg); background: var(--tennis-ball); color: var(--ultramarine);
 }
-.sp-sticker--blue { background: var(--ultramarine); color: var(--chartreuse); }
-.sp-sticker--ink { background: var(--night); color: var(--chartreuse); }
+.sp-sticker--blue { background: var(--ultramarine); color: var(--tennis-ball); }
+.sp-sticker--ink { background: var(--night); color: var(--tennis-ball); }
 
 /* Tag */
 .sp-tag {
@@ -328,17 +328,17 @@ body { margin: 0; background: var(--paper); color: var(--night); font-family: va
   display: inline-block; padding: var(--space-1) var(--space-2); border-radius: var(--radius-none);
   color: var(--night); background: var(--paper); box-shadow: 3px 3px 0 0 var(--night);
 }
-.sp-tag--primary { background: var(--chartreuse); }
+.sp-tag--primary { background: var(--tennis-ball); }
 .sp-tag--blue { background: var(--ultramarine); color: var(--paper); }
 
 /* Card — 0 radius, no border, hard shadow */
 .sp-card { border-radius: var(--radius-none); background: var(--paper); color: var(--night); padding: var(--space-6); display: flex; flex-direction: column; gap: var(--space-4); }
 .sp-card h3 { margin: 0; font-family: var(--font-display); font-weight: 400; font-size: 21px; line-height: 1.02; letter-spacing: -0.031em; }
 .sp-card p { margin: 0; }
-.sp-card--primary { background: var(--chartreuse); color: var(--night); }
+.sp-card--primary { background: var(--tennis-ball); color: var(--night); }
 .sp-card--blue { background: var(--ultramarine); color: var(--paper); }
 .sp-card--ink { background: var(--night); color: var(--paper); }
-.sp-card--ink h3 { color: var(--chartreuse); }
+.sp-card--ink h3 { color: var(--tennis-ball); }
 
 /* Image frame — square corners, hard shadow */
 .sp-frame { display: block; border-radius: var(--radius-none); overflow: hidden; }
@@ -364,18 +364,18 @@ body { margin: 0; background: var(--paper); color: var(--night); font-family: va
 /* Logo — wordmark-led; the mark lives apart as an icon */
 .sp-wordmark { display: inline-block; padding: var(--space-4) var(--space-6); font-family: var(--font-display); font-weight: 400; font-size: 28px; line-height: 1.02; letter-spacing: -0.031em; }
 .sp-wordmark--paper { background: var(--paper); color: var(--night); }
-.sp-wordmark--ink { background: var(--night); color: var(--chartreuse); }
-.sp-wordmark--primary { background: var(--chartreuse); color: var(--ultramarine); }
+.sp-wordmark--ink { background: var(--night); color: var(--tennis-ball); }
+.sp-wordmark--primary { background: var(--tennis-ball); color: var(--ultramarine); }
 .sp-mark { width: 64px; height: 64px; display: block; }
 
 /* Colour field — full-bleed sections in a brand colour; text pairs fixed per field */
 .sp-field { padding: var(--space-12); }
-.sp-field--primary { background: var(--chartreuse); color: var(--night); }
+.sp-field--primary { background: var(--tennis-ball); color: var(--night); }
 .sp-field--primary .sp-accent { color: var(--ultramarine); }
 .sp-field--blue { background: var(--ultramarine); color: var(--paper); }
-.sp-field--blue .sp-accent { color: var(--chartreuse); }
+.sp-field--blue .sp-accent { color: var(--tennis-ball); }
 .sp-field--ink { background: var(--night); color: var(--paper); }
-.sp-field--ink .sp-accent { color: var(--chartreuse); }
+.sp-field--ink .sp-accent { color: var(--tennis-ball); }
 .sp-field--paper { background: var(--paper); color: var(--night); }
 .sp-field--paper .sp-accent { color: var(--ultramarine); }
 

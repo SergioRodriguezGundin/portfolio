@@ -55,7 +55,7 @@ export default {
       colors: {
         paper: { DEFAULT: 'var(--paper)', tint: 'var(--paper-tint)' },
         night: 'var(--night)',
-        chartreuse: { DEFAULT: 'var(--chartreuse)', tint: 'var(--chartreuse-tint)' },
+        'tennis-ball': { DEFAULT: 'var(--tennis-ball)', tint: 'var(--tennis-ball-tint)' },
         ultramarine: 'var(--ultramarine)',
         surface: 'var(--surface)',
         text: 'var(--text)',

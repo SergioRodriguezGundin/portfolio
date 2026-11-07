@@ -5,13 +5,13 @@
 :root {
   --paper: #eef1e9;
   --night: #010300;
-  --chartreuse: #98ed31;
+  --tennis-ball: #d7ed31;
   --ultramarine: #0910ec;
   --paper-tint: #e1e5da;
-  --chartreuse-tint: #dcf5bd;
+  --tennis-ball-tint: #f1f9b9;
   --surface: var(--paper);
   --text: var(--night);
-  --accent: var(--chartreuse);
+  --accent: var(--tennis-ball);
   --link: var(--ultramarine);
   --space-1: 4px;
   --space-2: 8px;
@@ -32,15 +32,15 @@
 
 /*
  * Derived dark theme. The design system ships only a light theme, so the
- * neutrals swap and every accent on the surface moves to chartreuse
- * (ultramarine on night is not an approved pair). Chartreuse and
+ * neutrals swap and every accent on the surface moves to tennis-ball
+ * (ultramarine on night is not an approved pair). Tennis-ball and
  * ultramarine variants keep their light-theme colours.
  */
 [data-theme='dark'] {
   --surface: var(--night);
   --text: var(--paper);
-  --accent: var(--chartreuse);
-  --link: var(--chartreuse);
+  --accent: var(--tennis-ball);
+  --link: var(--tennis-ball);
   --shadow-hard: 5px 5px 0 0 var(--paper);
   --shadow-hard-lift: 7px 7px 0 0 var(--paper);
 }

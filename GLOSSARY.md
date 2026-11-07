@@ -9,7 +9,7 @@ The source of truth for the portfolio's look and voice (palette, type, spacing, 
 _Avoid_: theme, style guide, UI kit
 
 **Palette colour**:
-One of the four design system colours (paper, night, chartreuse, ultramarine) or their two tints.
+One of the four design system colours (paper, night, tennis-ball, ultramarine) or their two tints.
 _Avoid_: base colour, primary/secondary (as colour names)
 
 **Third-party brand colour**:

@@ -8,7 +8,7 @@
 }
 
 *::selection {
-  background-color: var(--chartreuse) !important;
+  background-color: var(--tennis-ball) !important;
   color: var(--night) !important;
 }
 
