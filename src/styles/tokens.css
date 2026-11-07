@@ -31,12 +31,18 @@
 }
 
 /*
- * Temporary: keeps the current dark look until the derived dark theme
- * (.scratch/design-system/issues/02-dark-theme.md) remaps the aliases.
+ * Derived dark theme. The design system ships only a light theme, so the
+ * neutrals swap and every accent on the surface moves to chartreuse
+ * (ultramarine on night is not an approved pair). Chartreuse and
+ * ultramarine variants keep their light-theme colours.
  */
 [data-theme='dark'] {
-  --surface: hsl(var(--background));
+  --surface: var(--night);
   --text: var(--paper);
+  --accent: var(--chartreuse);
+  --link: var(--chartreuse);
+  --shadow-hard: 5px 5px 0 0 var(--paper);
+  --shadow-hard-lift: 7px 7px 0 0 var(--paper);
 }
 
 .display-xl { font-family: var(--font-display); font-size: 67px; line-height: 1.02; font-weight: 400; letter-spacing: -0.031em; }
