@@ -1,5 +1,4 @@
 ---
-import BlurFade from '@components/magicui/blur-fade';
 import Contact from '@components/profile/Contact.astro';
 import Curriculum from '@components/profile/Curriculum.astro';
 import Experience from '@components/profile/Experience.astro';
@@ -8,7 +7,6 @@ import Location from '@components/profile/Location.astro';
 import PersonalInformation from '@components/profile/PersonalInformation.astro';
 import Techs from '@components/profile/Techs.astro';
 import ProjectSliders from '@components/projects/ProjectSliders.astro';
-import ParticlesTheme from '@components/ui/ParticlesTheme';
 import Layout from '@layouts/Layout.astro';
 ---
 
@@ -16,13 +14,12 @@ import Layout from '@layouts/Layout.astro';
   title="Hi! I'm Sergio. I'm a software developer from Spain."
   description='This is the mockup of the home page of my portfolio.'
 >
-  <ParticlesTheme client:load />
-  <BlurFade className='h-full' inView client:load>
+  <div class='h-full'>
     <div class='layout mx-auto my-auto p-4 pt-16 md:pt-8 xl:p-6'>
-      <div class='say-hello'>
+      <div class='say-hello sp-wipe-in' style='--i: 0'>
         <PersonalInformation />
       </div>
-      <div class='about-me flex flex-col gap-6 mt-6'>
+      <div class='about-me sp-wipe-in flex flex-col gap-6 mt-6' style='--i: 1'>
         <Experience />
         <div class='flex flex-row justify-between gap-3 w-full'>
           <div class='w-full md:w-auto'>
@@ -34,31 +31,20 @@ import Layout from '@layouts/Layout.astro';
         </div>
         <Location />
       </div>
-      <div class='tech-love my-14 md:my-0'>
+      <div class='tech-love sp-wipe-in my-14 md:my-0' style='--i: 2'>
         <Techs />
       </div>
-      <div class='my-journey mb-14 md:mb-0'>
+      <div class='my-journey sp-wipe-in mb-14 md:mb-0' style='--i: 3'>
         <Journey />
       </div>
-      <div class='my-proyects flex flex-center'>
+      <div class='my-proyects sp-wipe-in flex flex-center' style='--i: 4'>
         <ProjectSliders />
       </div>
     </div>
-  </BlurFade>
+  </div>
 </Layout>
 
 <style is:global>
-  @keyframes reveal {
-    from {
-      opacity: 0;
-      transform: translateX(-300px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
   .layout {
     --grid-row-gap: 16px;
     --grid-column-width: 390px;
@@ -98,11 +84,6 @@ import Layout from '@layouts/Layout.astro';
       grid-column-gap: 0px;
       max-width: 100%;
       width: 100%;
-      .my-proyects {
-        animation: auto linear reveal both;
-        animation-timeline: view();
-        animation-range: entry 10% cover 50%;
-      }
     }
     .say-hello {
       grid-area: 1 / 1 / 2 / 2;

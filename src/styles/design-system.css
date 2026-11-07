@@ -72,7 +72,8 @@ body { margin: 0; background: var(--surface); color: var(--text); font-family: v
   from { clip-path: inset(0 100% 0 0); }
   to { clip-path: inset(0 0 0 0); }
 }
-.sp-wipe-in { animation: sp-wipe-in var(--sp-dur) var(--sp-ease) both; }
+/* backwards, not both: a lingering clip-path would cut the hard shadows once the wipe ends. */
+.sp-wipe-in { animation: sp-wipe-in var(--sp-dur) var(--sp-ease) backwards; }
 /* Stagger: set --i on each item (0, 1, 2…) */
 .sp-wipe-in[style*="--i"] { animation-delay: calc(var(--i) * var(--sp-stagger)); }
 @keyframes sp-breathe {
