@@ -7,7 +7,7 @@ import rocket from '@assets/images/rocket.webp';
 import trophy from '@assets/images/trophy.webp';
 import flag from '@assets/images/flag.webp';
 import thunder from '@assets/images/thunder.webp';
-import { ProjectHighlightsMarquee } from '@components/profile/ProjectHighlights';
+import ProjectHighlights from '@components/profile/ProjectHighlights.astro';
 import { CollectionEntry } from 'astro:content';
 
 export interface MilestoneProps {
@@ -29,28 +29,21 @@ const milestoneIconMap = {
 };
 
 const icon = milestoneIconMap[milestone.icon as keyof typeof milestoneIconMap];
-const splitedTitle = milestone.title.split(' ');
 ---
 
 {
   index === 0 && (
-    <div class='milestone-card relative flex flex-col justify-start items-start gap-2 w-full md:w-[375px] h-[230px] md:h-[285px] border border-neutral-200 dark:border-neutral-800 bg-neutral-200 dark:bg-neutral-900 shadow-xl rounded-xl overflow-hidden'>
-      <span class='text-base-500 text-xl font-prompt p-6'>
-        <span class='text-base-600' />
-        {milestone.title}
-      </>
-      <div class='flex flex-col justify-start items-start ml-[1px] w-full overflow-hidden'>
-        <ProjectHighlightsMarquee
-          highlights={milestone.strongPoints ?? []}
-          containerWidth={375}
-        />
+    <div class='sp-card sp-card--primary relative overflow-hidden w-full md:w-[375px] h-[230px] md:h-[285px]'>
+      <h3 class='relative z-10 font-display text-h2'>{milestone.title}</h3>
+      <div class='relative z-10'>
+        <ProjectHighlights highlights={milestone.strongPoints ?? []} />
       </div>
       <img
         src={trophy.src}
         width={250}
         height={250}
-        alt='icon for Sergio Rodriguez Gundin milestones'
-        class='absolute -bottom-10 -right-20 z-0 drop-shadow-lg opacity-10'
+        alt=''
+        class='absolute -bottom-10 -right-20 z-0 opacity-10'
       />
     </div>
   )
@@ -58,37 +51,17 @@ const splitedTitle = milestone.title.split(' ');
 
 {
   index !== 0 && (
-    <div class='milestone-card relative flex flex-col justify-start items-start flex-wrap w-[150px] h-[75px] md:h-[125px] border border-neutral-200 dark:border-neutral-800 bg-neutral-200 dark:bg-neutral-900 p-4 shadow-xl rounded-xl overflow-hidden'>
-      <div class='flex flex-col justify-start items-start'>
-        <span class='text-base-500 text-base font-prompt font-bold w-full'>
-          {splitedTitle[0].toUpperCase()}
-        </>
-        <span class='text-base-600 text-xs font-prompt font-bold w-full'>
-          {splitedTitle[1].toUpperCase()}
-        </>
-      </div>
+    <div class='sp-card relative overflow-hidden p-4 w-[150px] h-[75px] md:h-[125px]'>
+      <span class='relative z-10 font-bold text-body'>{milestone.title}</span>
       {icon && (
         <img
           src={icon.src}
           width={55}
           height={55}
-          alt='icon for Sergio Rodriguez Gundin goals'
-          class='absolute -bottom-2 right-0 z-0 drop-shadow-lg opacity-10'
+          alt=''
+          class='absolute -bottom-2 right-0 z-0 opacity-10'
         />
       )}
     </div>
   )
 }
-
-<style>
-  .milestone-card::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: 0.75rem;
-    border: 1px solid transparent;
-    /*background: linear-gradient(135deg, hsl(var(--color-700)) -35%, hsl(var(--background)) 75%, transparent 100%) border-box;*/
-    /*mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);*/
-    mask-composite: exclude;
-  }
-</style>

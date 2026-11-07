@@ -7,32 +7,35 @@ const sortedJourney = journey.sort(
 );
 ---
 
-<div class='flex flex-col justify-center items-center gap-3 h-full'>
+<ol class='sp-card justify-center gap-1 p-4 h-full'>
   {
-    sortedJourney.map((item, index) => (
-      <div
-        class={`flex flex-row justify-between items-center gap-2 w-full ${index > 0 ? 'scale-90' : 'scale-100'}`}
-      >
-        <div class='flex-1 flex flex-row justify-start items-start h-full'>
+    sortedJourney.map((item, index) => {
+      const isCurrent = index === 0;
+      return (
+        <li class='flex flex-row justify-between items-start gap-2 w-full'>
           <p
-            class={`font-prompt text-md ${index > 0 ? 'line-through text-base-800' : 'text-base-300'}`}
+            class:list={[
+              'flex-1',
+              isCurrent ? 'font-display text-h3' : 'text-body line-through',
+            ]}
           >
             {item.data.jobPosition}
           </p>
-        </div>
-        <div class='flex flex-col justify-end items-end'>
-          <a
-            href={item.data.url}
-            target='_blank'
-            class={`font-prompt text-base transition-colors duration-500 ${index > 0 ? 'text-base-700' : 'text-base-500'} hover:text-primary`}
-          >
-            {item.data.company}
-          </a>
-          <span class='text-sm text-base-800 dark:text-base-700'>
-            {item.data.period}
-          </span>
-        </div>
-      </div>
-    ))
+          <div class='flex flex-col items-end text-right'>
+            <a
+              href={item.data.url}
+              target='_blank'
+              class:list={[
+                'hover:text-link focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-link',
+                isCurrent ? 'font-bold text-body' : 'text-body',
+              ]}
+            >
+              {item.data.company}
+            </a>
+            <span class='sp-label'>{item.data.period}</span>
+          </div>
+        </li>
+      );
+    })
   }
-</div>
+</ol>
