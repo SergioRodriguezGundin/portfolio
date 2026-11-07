@@ -12,7 +12,7 @@ const { icon } = Astro.props;
   Always paper, in both themes: tech icons keep their own brand colours
   (some are black) and need a light ground to stay visible.
 -->
-<span class='sp-tag bg-paper flex items-center justify-center p-4' title={icon}>
+<span class='sp-tag bg-paper text-night flex items-center justify-center p-4' title={icon}>
   <ProjectTechIcon techIcon={icon} size={{ width: 32, height: 32 }} />
   <span class='sr-only'>{icon}</span>
 </span>

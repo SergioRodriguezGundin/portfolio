@@ -8,8 +8,8 @@
 }
 
 *::selection {
-  background-color: var(--primary-color) !important;
-  color: var(--black) !important;
+  background-color: var(--chartreuse) !important;
+  color: var(--night) !important;
 }
 
 body {
@@ -55,15 +55,6 @@ ul, li {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-.divider {
-  display: block;
-  width: 100%;
-  height: 1px;
-  background-color: hsl(var(--color-700));
-  margin: 16px 0;
-  mask-image: radial-gradient(hsl(var(--color-700)) 25%, transparent 80%);
 }
 
 @media (prefers-reduced-motion: reduce) {

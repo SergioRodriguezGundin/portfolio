@@ -58,7 +58,7 @@ const IconComponent = iconMap[project.id as keyof typeof iconMap];
       <ul class='flex flex-row justify-start items-center gap-2'>
         {
           project.stack.map((tech) => (
-            <li class='sp-tag bg-paper flex p-1' title={tech.name}>
+            <li class='sp-tag bg-paper text-night flex p-1' title={tech.name}>
               <ProjectTechIcon
                 techIcon={tech.icon}
                 size={{ width: 26, height: 26 }}

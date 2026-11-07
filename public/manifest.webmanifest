@@ -4,8 +4,8 @@
   "description": "Personal website and portfolio",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#000000",
+  "background_color": "#eef1e9",
+  "theme_color": "#010300",
   "icons": [
     {
       "src": "/favicon.svg",

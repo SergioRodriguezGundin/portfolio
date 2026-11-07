@@ -1,7 +1,5 @@
 @import './tokens.css';
 @import './reset.css';
-@import './fonts.css';
-@import './font-sizes.css';
 @import './design-system.css';
 
 @tailwind base;
@@ -9,26 +7,8 @@
 @tailwind utilities;
 
 @layer base {
+  /* Third-party brand colours: only for a company's own logo or icon (see GLOSSARY.md). */
   :root {
-    --color-100: 0, 0%, 0%;
-		--color-200: 0, 0%, 4%;
-		--color-300: 0, 0%, 9%;
-		--color-400: 0, 0%, 15%;
-		--color-500: 0, 0%, 22%;
-		--color-600: 0, 0%, 32%;
-		--color-700: 0, 0%, 54%;
-		--color-800: 0, 0%, 64%;
-		--color-900: 0, 0%, 83%;
-		--color-1000: 0, 0%, 90%;
-		--color-2000: 0, 0%, 96%;
-		--color-3000: 0, 0%, 98%;
-
-    --primary: 156, 72%, 67%;
-    --primary-foreground: 0 0% 98%;
-
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
-
     --celonis: 116, 99%, 65%;
     --celonis-foreground: 0 0% 0%;
 
@@ -43,37 +23,5 @@
 
     --webtools: 78.1, 100%, 37.06%;
     --webtools-dreamfit: 78.1deg 100% 37.06%;
-
-    --background: 0deg 0% 87.45%;
-    --foreground: 0 0% 3.9%;
-
-    --filter: invert(1);
-    --shiny: 240 5.9% 10%;
-    --radius: 0.5rem;
-  }
-
-  [data-theme="dark"] {
-    --color-100: 0, 0%, 100%;
-		--color-200: 0, 0%, 98%;
-		--color-300: 0, 0%, 96%;
-		--color-400: 0, 0%, 90%;
-		--color-500: 0, 0%, 83%;
-		--color-600: 0, 0%, 64%;
-		--color-700: 0, 0%, 45%;
-		--color-800: 0, 0%, 32%;
-    --color-900: 0, 0%, 25%;
-    --color-1000: 0, 0%, 15%;
-    --color-2000: 0, 0%, 10%;
-    --color-3000: 0, 0%, 5%;
-
-    --background: 0 0% 3.9%;
-    --filter: invert(0);
-    --shiny: 0 0% 98%;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
   }
 }

@@ -8,12 +8,8 @@
       "@components/*": ["src/components/*"],
       "@models/*": ["src/models/*"],
       "@styles/*": ["src/styles/*"],
-      "@assets/*": ["public/*"],
-      "@lib/*": ["src/lib/*"],
-      "@hooks/*": ["src/hooks/*"]
+      "@assets/*": ["public/*"]
     },
-    "jsx": "react-jsx",
-    "jsxImportSource": "react",
     "verbatimModuleSyntax": false
   }
 }

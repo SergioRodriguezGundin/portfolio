@@ -1,6 +1,7 @@
 export default {
   darkMode: ['selector', '[data-theme="dark"]', 'class'],
-  content: ['./src/**/*.{js,jsx,ts,tsx,astro}'],
+  content: ['./src/**/*.{js,ts,astro}'],
+  // Third-party brand colours: only for a company's own logo or icon (see GLOSSARY.md).
   safelist: [
     {
       pattern:
@@ -24,8 +25,8 @@ export default {
       },
     },
     extend: {
+      // Design system tokens (docs/design-system/tokens.json via src/styles/tokens.css).
       fontFamily: {
-        prompt: ['Prompt', 'sans-serif'],
         display: 'var(--font-display)',
         sans: 'var(--font-sans)',
       },
@@ -42,7 +43,6 @@ export default {
         none: 'var(--shadow-none)',
       },
       fontSize: {
-        // Design system type styles (fixed scale).
         'display-xl': ['67px', { lineHeight: '1.02', letterSpacing: '-0.031em', fontWeight: '400' }],
         'display-l': ['51px', { lineHeight: '1.02', letterSpacing: '-0.031em', fontWeight: '400' }],
         h1: ['38px', { lineHeight: '1.02', letterSpacing: '-0.031em', fontWeight: '400' }],
@@ -51,39 +51,17 @@ export default {
         'body-l': ['21px', { lineHeight: '1.48', letterSpacing: '-0.002em' }],
         body: ['16px', { lineHeight: '1.48', letterSpacing: '-0.002em' }],
         label: ['13px', { lineHeight: '1.3', letterSpacing: '0.007em', fontWeight: '500' }],
-        // Legacy fluid scale, removed in ticket 08.
-        sm: 'var(--font-size-sm, clamp(0.7rem, 0vi + 0.7rem, 0.7rem))',
-        base: 'var(--font-size-base, clamp(0.88rem, 0.06vi + 0.86rem, 0.94rem))',
-        md: 'var(--font-size-md, clamp(1.09rem, 0.16vi + 1.05rem, 1.25rem))',
-        lg: 'var(--font-size-lg, clamp(1.37rem, 0.29vi + 1.29rem, 1.66rem))',
-        xl: 'var(--font-size-xl, clamp(1.71rem, 0.5vi + 1.58rem, 2.21rem))',
-        '2xl':
-          'var(--font-size-2xl, clamp(2.14rem, 0.81vi + 1.93rem, 2.93rem))',
-        '3xl': 'var(--font-size-3xl, clamp(2.67rem, 1.25vi + 2.36rem, 3.9rem))',
-      },
-      letterSpacing: {
-        widest: '0.25em',
       },
       colors: {
-        border: 'hsl(var(--border))',
-        input: 'hsl(var(--input))',
-        ring: 'hsl(var(--ring))',
-        background: 'hsl(var(--background))',
-        foreground: 'hsl(var(--foreground))',
-        base: {
-          100: 'hsl(var(--color-100))',
-          200: 'hsl(var(--color-200))',
-          300: 'hsl(var(--color-300))',
-          400: 'hsl(var(--color-400))',
-          500: 'hsl(var(--color-500))',
-          600: 'hsl(var(--color-600))',
-          700: 'hsl(var(--color-700))',
-          800: 'hsl(var(--color-800))',
-          900: 'hsl(var(--color-900))',
-          1000: 'hsl(var(--color-1000))',
-          2000: 'hsl(var(--color-2000))',
-          3000: 'hsl(var(--color-3000))',
-        },
+        paper: { DEFAULT: 'var(--paper)', tint: 'var(--paper-tint)' },
+        night: 'var(--night)',
+        chartreuse: { DEFAULT: 'var(--chartreuse)', tint: 'var(--chartreuse-tint)' },
+        ultramarine: 'var(--ultramarine)',
+        surface: 'var(--surface)',
+        text: 'var(--text)',
+        accent: 'var(--accent)',
+        link: 'var(--link)',
+        // Third-party brand colours.
         celonis: {
           DEFAULT: 'hsl(var(--celonis))',
           foreground: 'hsl(var(--celonis-foreground))',
@@ -104,102 +82,13 @@ export default {
           DEFAULT: 'hsl(var(--webtools))',
           dreamfit: 'hsl(var(--webtools-dreamfit))',
         },
-        primary: {
-          DEFAULT: 'hsl(var(--primary))',
-          foreground: 'hsl(var(--primary-foreground))',
-        },
-        secondary: {
-          DEFAULT: 'hsl(var(--secondary))',
-          foreground: 'hsl(var(--secondary-foreground))',
-        },
-        destructive: {
-          DEFAULT: 'hsl(var(--destructive))',
-          foreground: 'hsl(var(--destructive-foreground))',
-        },
-        muted: {
-          DEFAULT: 'hsl(var(--muted))',
-          foreground: 'hsl(var(--muted-foreground))',
-        },
-        // Design system palette colours and aliases.
-        paper: { DEFAULT: 'var(--paper)', tint: 'var(--paper-tint)' },
-        night: 'var(--night)',
-        chartreuse: { DEFAULT: 'var(--chartreuse)', tint: 'var(--chartreuse-tint)' },
-        ultramarine: 'var(--ultramarine)',
-        surface: 'var(--surface)',
-        text: 'var(--text)',
-        accent: 'var(--accent)',
-        link: 'var(--link)',
-        popover: {
-          DEFAULT: 'hsl(var(--popover))',
-          foreground: 'hsl(var(--popover-foreground))',
-        },
-        card: {
-          DEFAULT: 'hsl(var(--card))',
-          foreground: 'hsl(var(--card-foreground))',
-        },
       },
       borderRadius: {
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)',
         none: 'var(--radius-none)',
         button: 'var(--radius-button)',
         sticker: 'var(--radius-sticker)',
         round: 'var(--radius-round)',
       },
-      keyframes: {
-        'accordion-down': {
-          from: {
-            height: '0',
-          },
-          to: {
-            height: 'var(--radix-accordion-content-height)',
-          },
-        },
-        'accordion-up': {
-          from: {
-            height: 'var(--radix-accordion-content-height)',
-          },
-          to: {
-            height: '0',
-          },
-        },
-        gradient: {
-          to: {
-            backgroundPosition: 'var(--bg-size) 0',
-          },
-        },
-        marquee: {
-          from: {
-            transform: 'translateX(0)',
-          },
-          to: {
-            transform: 'translateX(calc(-100% - var(--gap)))',
-          },
-        },
-        'marquee-vertical': {
-          from: {
-            transform: 'translateY(0)',
-          },
-          to: {
-            transform: 'translateY(calc(-100% - var(--gap)))',
-          },
-        },
-        'border-beam': {
-          '100%': {
-            'offset-distance': '100%',
-          },
-        },
-      },
-      animation: {
-        'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out',
-        gradient: 'gradient 8s linear infinite',
-        marquee: 'marquee var(--duration) linear infinite',
-        'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
-        'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear',
-      },
     },
   },
-  plugins: [require('tailwindcss-animate')],
 };
