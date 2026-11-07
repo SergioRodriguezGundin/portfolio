@@ -26,8 +26,32 @@ export default {
     extend: {
       fontFamily: {
         prompt: ['Prompt', 'sans-serif'],
+        display: 'var(--font-display)',
+        sans: 'var(--font-sans)',
+      },
+      spacing: {
+        1: 'var(--space-1)',
+        2: 'var(--space-2)',
+        4: 'var(--space-4)',
+        6: 'var(--space-6)',
+        12: 'var(--space-12)',
+      },
+      boxShadow: {
+        hard: 'var(--shadow-hard)',
+        'hard-lift': 'var(--shadow-hard-lift)',
+        none: 'var(--shadow-none)',
       },
       fontSize: {
+        // Design system type styles (fixed scale).
+        'display-xl': ['67px', { lineHeight: '1.02', letterSpacing: '-0.031em', fontWeight: '400' }],
+        'display-l': ['51px', { lineHeight: '1.02', letterSpacing: '-0.031em', fontWeight: '400' }],
+        h1: ['38px', { lineHeight: '1.02', letterSpacing: '-0.031em', fontWeight: '400' }],
+        h2: ['28px', { lineHeight: '1.02', letterSpacing: '-0.031em', fontWeight: '400' }],
+        h3: ['21px', { lineHeight: '1.02', letterSpacing: '-0.031em', fontWeight: '400' }],
+        'body-l': ['21px', { lineHeight: '1.48', letterSpacing: '-0.002em' }],
+        body: ['16px', { lineHeight: '1.48', letterSpacing: '-0.002em' }],
+        label: ['13px', { lineHeight: '1.3', letterSpacing: '0.007em', fontWeight: '500' }],
+        // Legacy fluid scale, removed in ticket 08.
         sm: 'var(--font-size-sm, clamp(0.7rem, 0vi + 0.7rem, 0.7rem))',
         base: 'var(--font-size-base, clamp(0.88rem, 0.06vi + 0.86rem, 0.94rem))',
         md: 'var(--font-size-md, clamp(1.09rem, 0.16vi + 1.05rem, 1.25rem))',
@@ -96,10 +120,15 @@ export default {
           DEFAULT: 'hsl(var(--muted))',
           foreground: 'hsl(var(--muted-foreground))',
         },
-        accent: {
-          DEFAULT: 'hsl(var(--accent))',
-          foreground: 'hsl(var(--accent-foreground))',
-        },
+        // Design system palette colours and aliases.
+        paper: { DEFAULT: 'var(--paper)', tint: 'var(--paper-tint)' },
+        night: 'var(--night)',
+        chartreuse: { DEFAULT: 'var(--chartreuse)', tint: 'var(--chartreuse-tint)' },
+        ultramarine: 'var(--ultramarine)',
+        surface: 'var(--surface)',
+        text: 'var(--text)',
+        accent: 'var(--accent)',
+        link: 'var(--link)',
         popover: {
           DEFAULT: 'hsl(var(--popover))',
           foreground: 'hsl(var(--popover-foreground))',
@@ -113,6 +142,10 @@ export default {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
+        none: 'var(--radius-none)',
+        button: 'var(--radius-button)',
+        sticker: 'var(--radius-sticker)',
+        round: 'var(--radius-round)',
       },
       keyframes: {
         'accordion-down': {

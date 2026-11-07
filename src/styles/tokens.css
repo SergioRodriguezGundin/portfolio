@@ -1,0 +1,54 @@
+/*
+ * Design system tokens (docs/design-system/tokens.json).
+ * Loaded before every other stylesheet.
+ */
+:root {
+  --paper: #eef1e9;
+  --night: #010300;
+  --chartreuse: #98ed31;
+  --ultramarine: #0910ec;
+  --paper-tint: #e1e5da;
+  --chartreuse-tint: #dcf5bd;
+  --surface: var(--paper);
+  --text: var(--night);
+  --accent: var(--chartreuse);
+  --link: var(--ultramarine);
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-12: 48px;
+  --radius-none: 0px;
+  --radius-button: 8px;
+  --radius-sticker: 12px;
+  --radius-round: 50%;
+  --shadow-hard: 5px 5px 0 0 #010300;
+  --shadow-hard-lift: 7px 7px 0 0 #010300;
+  --shadow-none: none;
+  /* Self-hosted through fontsource, whose variable Karla registers as 'Karla Variable'. */
+  --font-display: Audiowide, system-ui, sans-serif;
+  --font-sans: 'Karla Variable', Karla, system-ui, sans-serif;
+}
+
+/*
+ * Temporary: keeps the current dark look until the derived dark theme
+ * (.scratch/design-system/issues/02-dark-theme.md) remaps the aliases.
+ */
+[data-theme='dark'] {
+  --surface: hsl(var(--background));
+  --text: var(--paper);
+}
+
+.display-xl { font-family: var(--font-display); font-size: 67px; line-height: 1.02; font-weight: 400; letter-spacing: -0.031em; }
+.display-l { font-family: var(--font-display); font-size: 51px; line-height: 1.02; font-weight: 400; letter-spacing: -0.031em; }
+.h1 { font-family: var(--font-display); font-size: 38px; line-height: 1.02; font-weight: 400; letter-spacing: -0.031em; }
+.h2 { font-family: var(--font-display); font-size: 28px; line-height: 1.02; font-weight: 400; letter-spacing: -0.031em; }
+.h3 { font-family: var(--font-display); font-size: 21px; line-height: 1.02; font-weight: 400; letter-spacing: -0.031em; }
+.body-l { font-family: var(--font-sans); font-size: 21px; line-height: 1.48; font-weight: 400; letter-spacing: -0.002em; }
+.body { font-family: var(--font-sans); font-size: 16px; line-height: 1.48; font-weight: 400; letter-spacing: -0.002em; }
+.body-bold { font-family: var(--font-sans); font-size: 16px; line-height: 1.48; font-weight: 700; letter-spacing: -0.002em; }
+.label { font-family: var(--font-sans); font-size: 13px; line-height: 1.3; font-weight: 500; letter-spacing: 0.007em; text-transform: lowercase; }
+
+@media (max-width: 640px) {
+  .display-xl, .display-l { font-size: 38px; }
+}

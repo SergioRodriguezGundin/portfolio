@@ -1,6 +1,8 @@
+@import './tokens.css';
 @import './reset.css';
 @import './fonts.css';
 @import './font-sizes.css';
+@import './design-system.css';
 
 @tailwind base;
 @tailwind components;

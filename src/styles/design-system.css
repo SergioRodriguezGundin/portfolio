@@ -1,0 +1,125 @@
+/*
+ * Design system component classes (docs/design-system/README.md, "Component CSS").
+ * Fonts are self-hosted, so the Google Fonts import is left out.
+ * The body rule uses the surface/text aliases so themes can remap them.
+ */
+:root {
+  --sp-ease: cubic-bezier(.77,0,.18,1);
+  --sp-dur: 900ms;
+  --sp-stagger: 55ms;
+}
+
+body { margin: 0; background: var(--surface); color: var(--text); font-family: var(--font-sans); font-size: 16px; line-height: 1.48; letter-spacing: -0.002em; }
+
+.sp-label { font-family: var(--font-sans); font-weight: 500; font-size: 13px; letter-spacing: 0.007em; text-transform: lowercase; line-height: 1.3; }
+.sp-display { font-family: var(--font-display); font-weight: 400; letter-spacing: -0.031em; line-height: 1.02; }
+
+/* Shared: no borders, hard offset shadow, 2px lift up-left on hover */
+.sp-btn, .sp-card, .sp-tag, .sp-frame {
+  border: 0; box-shadow: var(--shadow-hard);
+  transition: transform var(--sp-dur) var(--sp-ease), box-shadow var(--sp-dur) var(--sp-ease);
+}
+.sp-btn:hover, .sp-card:hover { transform: translate(-2px, -2px); box-shadow: var(--shadow-hard-lift); }
+
+/* Button — softly rounded */
+.sp-btn {
+  font-family: var(--font-sans); font-weight: 500; font-size: 13px; letter-spacing: 0.007em; text-transform: lowercase; line-height: 1.3;
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  padding: var(--space-4) var(--space-6); border-radius: var(--radius-button);
+  cursor: pointer; text-decoration: none;
+}
+.sp-btn:active { transform: translate(5px, 5px); box-shadow: var(--shadow-none); }
+.sp-btn:focus-visible { outline: 2px solid var(--ultramarine); outline-offset: 4px; }
+.sp-btn--primary { background: var(--chartreuse); color: var(--night); }
+.sp-btn--secondary { background: var(--ultramarine); color: var(--paper); }
+.sp-btn--ink { background: var(--night); color: var(--chartreuse); }
+.sp-btn--quiet { background: var(--paper); color: var(--night); }
+.sp-btn[disabled] { cursor: not-allowed; background: var(--paper-tint); color: var(--night); transform: none; box-shadow: var(--shadow-none); }
+
+/* Sticker — rounded, tilted emphasis */
+.sp-sticker {
+  display: inline-block; padding: 0 var(--space-2); border-radius: var(--radius-sticker);
+  transform: rotate(-3deg); background: var(--chartreuse); color: var(--ultramarine);
+}
+.sp-sticker--blue { background: var(--ultramarine); color: var(--chartreuse); }
+.sp-sticker--ink { background: var(--night); color: var(--chartreuse); }
+
+/* Tag */
+.sp-tag {
+  font-family: var(--font-sans); font-weight: 500; font-size: 13px; letter-spacing: 0.007em; text-transform: lowercase; line-height: 1.3;
+  display: inline-block; padding: var(--space-1) var(--space-2); border-radius: var(--radius-none);
+  color: var(--night); background: var(--paper); box-shadow: 3px 3px 0 0 var(--night);
+}
+.sp-tag--primary { background: var(--chartreuse); }
+.sp-tag--blue { background: var(--ultramarine); color: var(--paper); }
+
+/* Card — 0 radius, no border, hard shadow */
+.sp-card { border-radius: var(--radius-none); background: var(--paper); color: var(--night); padding: var(--space-6); display: flex; flex-direction: column; gap: var(--space-4); }
+.sp-card h3 { margin: 0; font-family: var(--font-display); font-weight: 400; font-size: 21px; line-height: 1.02; letter-spacing: -0.031em; }
+.sp-card p { margin: 0; }
+.sp-card--primary { background: var(--chartreuse); color: var(--night); }
+.sp-card--blue { background: var(--ultramarine); color: var(--paper); }
+.sp-card--ink { background: var(--night); color: var(--paper); }
+.sp-card--ink h3 { color: var(--chartreuse); }
+
+/* Image frame — square corners, hard shadow */
+.sp-frame { display: block; border-radius: var(--radius-none); overflow: hidden; }
+
+/* Wipe — entrance wipes in left to right; ambient loop breathes slowly */
+@keyframes sp-wipe-in {
+  from { clip-path: inset(0 100% 0 0); }
+  to { clip-path: inset(0 0 0 0); }
+}
+.sp-wipe-in { animation: sp-wipe-in var(--sp-dur) var(--sp-ease) both; }
+/* Stagger: set --i on each item (0, 1, 2…) */
+.sp-wipe-in[style*="--i"] { animation-delay: calc(var(--i) * var(--sp-stagger)); }
+@keyframes sp-breathe {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.04) rotate(-2deg); }
+}
+.sp-breathe { animation: sp-breathe 6s var(--sp-ease) infinite; transform-origin: 50% 50%; }
+@media (prefers-reduced-motion: reduce) {
+  .sp-wipe-in, .sp-breathe { animation: none; }
+  .sp-btn, .sp-card, .sp-tag, .sp-frame { transition: none; }
+}
+
+/* Logo — wordmark-led; the mark lives apart as an icon */
+.sp-wordmark { display: inline-block; padding: var(--space-4) var(--space-6); font-family: var(--font-display); font-weight: 400; font-size: 28px; line-height: 1.02; letter-spacing: -0.031em; }
+.sp-wordmark--paper { background: var(--paper); color: var(--night); }
+.sp-wordmark--ink { background: var(--night); color: var(--chartreuse); }
+.sp-wordmark--primary { background: var(--chartreuse); color: var(--ultramarine); }
+.sp-mark { width: 64px; height: 64px; display: block; }
+
+/* Colour field — full-bleed sections in a brand colour; text pairs fixed per field */
+.sp-field { padding: var(--space-12); }
+.sp-field--primary { background: var(--chartreuse); color: var(--night); }
+.sp-field--primary .sp-accent { color: var(--ultramarine); }
+.sp-field--blue { background: var(--ultramarine); color: var(--paper); }
+.sp-field--blue .sp-accent { color: var(--chartreuse); }
+.sp-field--ink { background: var(--night); color: var(--paper); }
+.sp-field--ink .sp-accent { color: var(--chartreuse); }
+.sp-field--paper { background: var(--paper); color: var(--night); }
+.sp-field--paper .sp-accent { color: var(--ultramarine); }
+
+/* Hero — poster layout on a colour field */
+.sp-hero { position: relative; overflow: hidden; display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: var(--space-6); align-items: center; padding: var(--space-12) var(--space-12) 0; }
+.sp-hero__copy { display: flex; flex-direction: column; gap: var(--space-6); align-items: flex-start; padding-bottom: var(--space-12); position: relative; z-index: 1; }
+.sp-hero h1 { margin: 0; font-family: var(--font-display); font-weight: 400; font-size: 67px; line-height: 1.02; letter-spacing: -0.031em; }
+.sp-hero p { margin: 0; font-size: 21px; max-width: 32ch; }
+.sp-hero__art { align-self: end; }
+.sp-hero__art img { display: block; width: 100%; image-rendering: pixelated; }
+.sp-hero__floor { grid-column: 1 / -1; margin: 0 calc(-1 * var(--space-12)); }
+.sp-hero__floor img { display: block; width: 100%; height: 96px; object-fit: cover; object-position: bottom; image-rendering: pixelated; }
+@media (max-width: 640px) {
+  .sp-hero { grid-template-columns: 1fr; padding: var(--space-6) var(--space-4) 0; }
+  .sp-hero h1 { font-size: 38px; }
+  .sp-hero__floor { margin: 0 calc(-1 * var(--space-4)); }
+}
+
+/* Photo — dithered image in a square frame, optional caption over a scrim */
+.sp-photo { position: relative; }
+.sp-photo img { display: block; width: 100%; image-rendering: pixelated; }
+.sp-photo__caption { position: absolute; left: 0; right: 0; bottom: 0; padding: var(--space-12) var(--space-4) var(--space-4); color: var(--night); background: linear-gradient(to top, var(--paper) 45%, rgba(238, 241, 233, 0)); }
+
+/* Pixel field motif */
+.sp-pixels { display: block; width: 100%; image-rendering: pixelated; }
