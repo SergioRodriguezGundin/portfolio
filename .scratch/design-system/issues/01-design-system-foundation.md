@@ -14,7 +14,7 @@ See the spec: `.scratch/design-system/spec.md` (Implementation Decisions: source
 - [x] Audiowide and Karla are self-hosted through fontsource. No request goes to Google Fonts.
 - [x] In the light theme the page body uses the paper surface, night text and Karla at the body style.
 - [x] Old colour variables and the old Tailwind colours still exist, so no component breaks.
-- [x] `pnpm build` passes, and the page renders in the browser with the new background and body font.
+- [ ] `pnpm build` passes (blocked by pnpm build-script approval, see comments); the page renders in the browser with the new background and body font.
 
 ## Comments
 
