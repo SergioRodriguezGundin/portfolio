@@ -2,18 +2,13 @@
 import sergioPicture from '@assets/images/sergio.webp';
 ---
 
-<img
-  src={sergioPicture.src}
-  loading='lazy'
-  width={250}
-  height={250}
-  alt='Sergio Rodriguez Gundin profile'
-  class='rounded-mask w-52 3xl:w-full'
-/>
-
-<style>
-  .rounded-mask {
-    filter: drop-shadow(0px 0px 10px var(--color-1000));
-    mask-image: linear-gradient(var(--color-1000) 50%, transparent);
-  }
-</style>
+<figure class='sp-frame bg-paper-tint w-28 h-28'>
+  <img
+    src={sergioPicture.src}
+    loading='lazy'
+    width={250}
+    height={250}
+    alt='Sergio Rodriguez Gundin profile'
+    class='w-full h-full object-cover object-top'
+  />
+</figure>

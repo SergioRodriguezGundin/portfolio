@@ -1,58 +1,29 @@
 ---
 import locationPicture from '@assets/images/location.webp';
-import { MagicCard } from '@components/magicui/magic-card';
 ---
 
-<MagicCard
-  className='cursor-pointer flex-col items-center justify-center shadow-xl whitespace-nowrap w-full'
-  client:load
->
-  <img
-    src={locationPicture.src}
-    alt='Sergio Rodriguez Gundin based on Spain'
-    class='location-image absolute w-full h-full object-cover rounded-lg invert-0 dark:invert'
-  />
-  <div
-    class='relative overflow-clip flex flex-row justify-between items-center w-full h-24'
-  >
-    <div class='flex-1 flex-col justify-start items-start gap-0 pl-3'>
-      <span class='text-base-700 text-sm'>Based on</span>
-      <p class='text-base-500 text-base'>Madrid, Spain</p>
-    </div>
-    <span class='location-dot'></span>
+<div class='sp-card flex-row items-stretch p-0 gap-0 h-20 w-full'>
+  <div class='flex-1 flex flex-col justify-center items-start gap-1 px-4'>
+    <span class='sp-label'>Based on</span>
+    <p class='font-display text-h3'>Madrid, Spain</p>
   </div>
-</MagicCard>
+  <div class='relative w-1/2 overflow-hidden'>
+    <img
+      src={locationPicture.src}
+      alt='Sergio Rodriguez Gundin based on Spain'
+      class='w-full h-full object-cover dark:invert'
+    />
+    <span class='location-dot sp-breathe bg-link rounded-round'></span>
+  </div>
+</div>
 
 <style>
-  .location-image {
-    mask-image: linear-gradient(
-      to left,
-      hsl(var(--color-100)) 30%,
-      rgba(0, 0, 0, 0.2) 90%,
-      transparent
-    );
-  }
-
   .location-dot {
     position: absolute;
     top: 50%;
-    right: 40%;
-    transform: translate(-50%, -50%);
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    box-shadow: 0 0 0 0 hsl(var(--primary));
-    background-color: hsl(var(--primary));
-    border: 1px solid var(--color-800);
-    animation: pulse 2s infinite;
-  }
-
-  @keyframes pulse {
-    0% {
-      box-shadow: 0 0 0 0px hsl(var(--primary));
-    }
-    100% {
-      box-shadow: 0 0 0 20px rgba(110, 158, 139, 0.036);
-    }
+    left: 50%;
+    width: 14px;
+    height: 14px;
+    margin: -7px 0 0 -7px;
   }
 </style>

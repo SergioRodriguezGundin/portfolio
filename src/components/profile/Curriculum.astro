@@ -1,28 +1,28 @@
 ---
-import { MagicCard } from '@components/magicui/magic-card';
+const cvUrl =
+  'https://cdn.jsdelivr.net/gh/sergiorodriguezgundin/portfolio@main/public/cv/SergioRodriguez.pdf';
 ---
 
-<MagicCard
-  className='cursor-pointer flex-col items-center justify-center shadow-xl whitespace-nowrap h-full w-full'
-  client:load
+<button
+  class='download-button sp-card items-start text-left cursor-pointer h-full w-full'
+  aria-label='download 2026 resume'
 >
-  <button class='download-button flex flex-col gap-2 rounded-xl p-4 w-full'>
-    <div class='flex flex-col justify-start items-start gap-1'>
-      <span class='text-base-700 text-sm'>2026 CV</span>
-      <span class='text-base-500 text-base'>RESUME</span>
-    </div>
-    <div class='flex justify-center items-center w-full'>
-      <qr-code
-        id='qrCV'
-        contents='https://cdn.jsdelivr.net/gh/sergiorodriguezgundin/portfolio@main/public/cv/SergioRodriguez.pdf'
-        module-color='hsl(var(--color-700))'
-        position-ring-color='hsl(var(--color-800))'
-        position-center-color='hsl(var(--primary))'
-      >
-      </qr-code>
-    </div>
-  </button>
-</MagicCard>
+  <span class='flex flex-col items-start gap-1'>
+    <span class='sp-label'>2026 CV</span>
+    <span class='font-display text-h3'>Resume</span>
+  </span>
+  <!-- The code always sits on paper so it stays scannable in both themes. -->
+  <span class='flex justify-center items-center bg-paper p-2 w-full'>
+    <qr-code
+      id='qrCV'
+      contents={cvUrl}
+      module-color='#010300'
+      position-ring-color='#010300'
+      position-center-color='#0910ec'
+    >
+    </qr-code>
+  </span>
+</button>
 
 <script>
   import * as qr from '@bitjson/qr-code';
@@ -46,5 +46,9 @@ import { MagicCard } from '@components/magicui/magic-card';
   #qrCV {
     width: 185px;
     height: 185px;
+  }
+  .download-button:focus-visible {
+    outline: 2px solid var(--link);
+    outline-offset: 4px;
   }
 </style>
