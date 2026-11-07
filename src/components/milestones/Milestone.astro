@@ -13,7 +13,6 @@ import { CollectionEntry } from 'astro:content';
 export interface MilestoneProps {
   milestone: CollectionEntry<'projects'>['data']['milestones'][number];
   index: number;
-  color: string;
 }
 
 const { milestone, index } = Astro.props as MilestoneProps;

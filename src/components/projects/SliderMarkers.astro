@@ -30,7 +30,7 @@ const iconMap = {
 ---
 
 <ul
-  class='w-[275px] md:max-w-max absolute left-1/2 -translate-x-1/2 top-3 flex flex-row justify-start gap-3 bg-neutral-200 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl shadow-xl px-2 py-1 md:px-2 md:py-2 z-10'
+  class='w-[275px] md:max-w-max absolute left-1/2 -translate-x-1/2 top-3 flex flex-row justify-start gap-4 bg-surface text-text shadow-hard px-2 py-1 md:px-4 md:py-2 z-10'
 >
   {
     sortedProjects.map((project, index) => {
@@ -40,7 +40,7 @@ const iconMap = {
           <a
             href={`#project_${index}`}
             aria-label={`sergio rodriguez gundin project ${index} link`}
-            class={`bg-transparent p-0.5`}
+            class='p-0.5'
           >
             {IconComponent && (
               <IconComponent size={{ width: 30, height: 30 }} />
@@ -54,12 +54,13 @@ const iconMap = {
     <div
       data-orientation='vertical'
       role='none'
-      class='shrink-0 bg-base-900 w-px mx-2 h-full'
+      class='shrink-0 bg-text w-px mx-2 h-full'
     >
     </div>
     <li class='flex flex-row items-center justify-center'>
       <button
         class='flex flex-row items-center justify-center'
+        aria-label='back to top'
         onclick='window.scrollTo({ top: 0, behavior: "smooth" }); return false;'
       >
         <ArrowToTop size={{ width: 24, height: 24 }} />
@@ -76,23 +77,20 @@ const iconMap = {
       animation-range: calc((var(--i) - 1) * 20%) calc(var(--i) * 20% + 1px);
       position: relative;
       display: flex;
-      transition: transform 0.15s linear;
+      border-bottom: 2px solid transparent;
+      transition: transform var(--sp-dur) var(--sp-ease);
 
-      &:hover::after {
-        content: '';
-        width: 25px;
-        height: 25px;
-        background: inherit;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        filter: blur(40px) saturate(400%);
-        z-index: -1;
-      }
       &:hover {
-        transform: scale(1.1);
+        transform: translate(-2px, -2px);
       }
+      &:focus-visible {
+        outline: 2px solid var(--link);
+        outline-offset: 4px;
+      }
+    }
+    button:focus-visible {
+      outline: 2px solid var(--link);
+      outline-offset: 4px;
     }
     > li {
       &:nth-child(1) {
@@ -116,7 +114,13 @@ const iconMap = {
   @keyframes colorize-mark {
     0%,
     100% {
-      border-bottom: 2px solid hsl(var(--primary));
+      border-bottom: 2px solid var(--link);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    ul > li > a {
+      transition: none;
     }
   }
 </style>

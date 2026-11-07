@@ -7,7 +7,7 @@ interface ArrowExternalProps {
   color: string;
 }
 
-const {size = {width: 36, height: 36}, color = 'hsl(var(--primary))'} = Astro.props as ArrowExternalProps;
+const {size = {width: 36, height: 36}, color = 'currentColor'} = Astro.props as ArrowExternalProps;
 ---
 
 <svg xmlns="http://www.w3.org/2000/svg" width={size.width} height={size.height} viewBox="0 0 24 24">

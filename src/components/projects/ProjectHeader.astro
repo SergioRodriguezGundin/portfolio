@@ -31,41 +31,43 @@ const iconMap = {
 const IconComponent = iconMap[project.id as keyof typeof iconMap];
 ---
 
+<!-- Solid surface panel: the header text never sits directly on the project photo. -->
 <div
-  class='flex flex-col md:flex-row items-start md:items-end gap-6 md:gap-14 px-2 md:px-0'
+  class='flex flex-col md:flex-row items-start md:items-end gap-6 md:gap-14 bg-surface text-text p-4 w-full'
 >
-  <div
-    class='flex-1 flex flex-col justify-between items-between gap-0 md:gap-2 w-full'
-  >
+  <div class='flex-1 flex flex-col gap-2 w-full'>
     <div class='flex flex-row justify-between items-center'>
-      {IconComponent && <IconComponent size={{ width: 100, height: 60 }} />}
+      <h2 class='flex items-center'>
+        {IconComponent && <IconComponent size={{ width: 100, height: 60 }} />}
+        <span class='sr-only'>{project.title}</span>
+      </h2>
       <a
         href={project.url}
         target='_blank'
-        class='flex flex-row items-center gap-1 hover:-translate-y-1 transition-transform duration-300'
+        class='sp-label flex flex-row items-center gap-1 hover:text-link focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-link'
       >
-        <span
-          class='text-base-600 text-sm hover:text-base-300 transition-colors duration-300'
-          >Visit website</span
-        >
+        Visit website
         <ArrowExternal size={{ width: 16, height: 16 }} />
       </a>
     </div>
-    <p class='description text-base-600 text-sm'>{project.description}</p>
+    <p class='description text-body'>{project.description}</p>
   </div>
   <div class='flex flex-1 flex-col h-full'>
     <div class='flex flex-col justify-end items-start gap-2 grow pb-1'>
-      <span class='text-base-600 text-sm'>Techs worked</span>
-      <span class='flex flex-row justify-start items-center gap-2'>
+      <span class='sp-label'>Techs worked</span>
+      <ul class='flex flex-row justify-start items-center gap-2'>
         {
           project.stack.map((tech) => (
-            <ProjectTechIcon
-              techIcon={tech.icon}
-              size={{ width: 26, height: 26 }}
-            />
+            <li class='sp-tag bg-paper flex p-1' title={tech.name}>
+              <ProjectTechIcon
+                techIcon={tech.icon}
+                size={{ width: 26, height: 26 }}
+              />
+              <span class='sr-only'>{tech.name}</span>
+            </li>
           ))
         }
-      </span>
+      </ul>
     </div>
   </div>
 </div>

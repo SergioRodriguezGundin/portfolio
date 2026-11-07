@@ -14,10 +14,10 @@ const numCards = sortedProjects.length;
 
 <div data-component='project-sliders'>
   <SliderMarkers sortedProjects={sortedProjects} />
-  <ul class='entries rounded-lg' tabindex='0'>
+  <ul class='entries' tabindex='0' aria-label='projects'>
     {
       sortedProjects.map((project, index) => (
-        <li data-component='project-card' class='rounded-lg'>
+        <li data-component='project-card'>
           <a
             data-component='project-card-link'
             aria-label={`sergio rodriguez gundin project ${index} link`}
@@ -50,6 +50,8 @@ const numCards = sortedProjects.length;
     overflow: hidden;
     height: 100%;
     width: 100%;
+    background: var(--surface);
+    box-shadow: var(--shadow-hard);
 
     .entries {
       display: flex;
@@ -62,6 +64,11 @@ const numCards = sortedProjects.length;
       overscroll-behavior: contain;
       width: 100%;
       height: 100%;
+
+      &:focus-visible {
+        outline: 2px solid var(--link);
+        outline-offset: -2px;
+      }
 
       li[data-component='project-card'] {
         scroll-snap-align: center;
