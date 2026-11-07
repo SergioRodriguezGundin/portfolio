@@ -9,7 +9,7 @@ See the spec: `.scratch/design-system/spec.md` (Implementation Decisions: layout
 **Status:** done
 
 - [x] The slider is one square, borderless frame with the hard shadow (see comments on why the slides themselves are not `sp-card`s).
-- [x] The project header uses Audiowide for the title and the label style for metadata.
+- [x] The project header uses the label style for metadata. The title is the company logo plus screen-reader text, not Audiowide text, because the logo already names the project.
 - [x] Stack entries render as `sp-tag`s or tech tiles consistent with ticket 04's look. Tech icons keep their original colours.
 - [x] Slider markers use palette colours with a visible focus outline.
 - [x] The project primary colour from content is used only inside the project's logo, never as a text or card background.
