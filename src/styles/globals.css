@@ -5,23 +5,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@layer base {
-  /* Third-party brand colours: only for a company's own logo or icon (see GLOSSARY.md). */
-  :root {
-    --celonis: 116, 99%, 65%;
-    --celonis-foreground: 0 0% 0%;
-
-    --dixper: 166, 92%, 52%;
-    --dixper-foreground: 166, 92%, 52%;
-
-    --secture: 0deg 0% 100%;
-    --secture-laliga: 2, 100%, 63%;
-
-    --sopra: 210, 100%, 40%;
-    --sopra-bankinter: 26.96deg 100% 55.49%;
-
-    --webtools: 78.1, 100%, 37.06%;
-    --webtools-dreamfit: 78.1deg 100% 37.06%;
-  }
-}

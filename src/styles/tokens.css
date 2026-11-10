@@ -30,21 +30,6 @@
   --font-sans: 'Karla Variable', Karla, system-ui, sans-serif;
 }
 
-/*
- * Derived dark theme. The design system ships only a light theme, so the
- * neutrals swap and every accent on the surface moves to tennis-ball
- * (ultramarine on night is not an approved pair). Tennis-ball and
- * ultramarine variants keep their light-theme colours.
- */
-[data-theme='dark'] {
-  --surface: var(--night);
-  --text: var(--paper);
-  --accent: var(--tennis-ball);
-  --link: var(--tennis-ball);
-  --shadow-hard: 5px 5px 0 0 var(--paper);
-  --shadow-hard-lift: 7px 7px 0 0 var(--paper);
-}
-
 .display-xl { font-family: var(--font-display); font-size: 67px; line-height: 1.02; font-weight: 400; letter-spacing: -0.031em; }
 .display-l { font-family: var(--font-display); font-size: 51px; line-height: 1.02; font-weight: 400; letter-spacing: -0.031em; }
 .h1 { font-family: var(--font-display); font-size: 38px; line-height: 1.02; font-weight: 400; letter-spacing: -0.031em; }
