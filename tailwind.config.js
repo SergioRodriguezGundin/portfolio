@@ -1,14 +1,5 @@
 export default {
-  darkMode: ['selector', '[data-theme="dark"]', 'class'],
   content: ['./src/**/*.{js,ts,astro}'],
-  // Third-party brand colours: only for a company's own logo or icon (see GLOSSARY.md).
-  safelist: [
-    {
-      pattern:
-        /(text|bg)-(celonis|celonis-foreground|secture-laliga|dixper|sopra-bankinter|webtools-dreamfit)/,
-      variants: ['hover', 'dark'],
-    },
-  ],
   theme: {
     container: {
       center: 'true',
@@ -61,27 +52,6 @@ export default {
         text: 'var(--text)',
         accent: 'var(--accent)',
         link: 'var(--link)',
-        // Third-party brand colours.
-        celonis: {
-          DEFAULT: 'hsl(var(--celonis))',
-          foreground: 'hsl(var(--celonis-foreground))',
-        },
-        dixper: {
-          DEFAULT: 'hsl(var(--dixper))',
-          foreground: 'hsl(var(--dixper-foreground))',
-        },
-        secture: {
-          DEFAULT: 'hsl(var(--secture))',
-          laliga: 'hsl(var(--secture-laliga))',
-        },
-        sopra: {
-          DEFAULT: 'hsl(var(--sopra))',
-          bankinter: 'hsl(var(--sopra-bankinter))',
-        },
-        webtools: {
-          DEFAULT: 'hsl(var(--webtools))',
-          dreamfit: 'hsl(var(--webtools-dreamfit))',
-        },
       },
       borderRadius: {
         none: 'var(--radius-none)',

@@ -16,6 +16,18 @@ _Avoid_: base colour, primary/secondary (as colour names)
 A colour that belongs to someone else's identity: a client or employer (Celonis, Dixper, LaLiga, Bankinter, Dreamfit…) or a technology (Angular, React, AWS…). It appears only inside that party's own logo or icon and is not a palette colour.
 _Avoid_: project brand colour, company colour, theme colour
 
-**Theme**:
-One of the two ways the palette is laid out: light (paper surface, night text) or dark (night surface, paper text).
-_Avoid_: mode, skin
+## Page structure
+
+**Section**:
+A full-screen part of the page that shows one part of the portfolio (who he is, what he has done) and comes into view as the visitor scrolls.
+_Avoid_: block, panel, slide, bento
+
+**Intro**:
+The first section: who he is.
+
+**About**:
+The section after Intro: more about him.
+
+**Journey**:
+The section with where he has worked and what he has built there, roles and projects together.
+_Avoid_: work, career, projects (as the section's name)

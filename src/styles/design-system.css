@@ -2,8 +2,8 @@
  * Design system component classes (docs/design-system/README.md, "Component CSS").
  * Fonts are self-hosted, so the Google Fonts import is left out.
  * Paper-coloured defaults (body, quiet button, tag, card, paper wordmark and
- * field) and the focus ring use the surface/text/link aliases so the dark
- * theme can remap them. Coloured variants keep fixed palette pairs.
+ * field) and the focus ring use the surface/text/link aliases.
+ * Coloured variants keep fixed palette pairs.
  */
 :root {
   --sp-ease: cubic-bezier(.77,0,.18,1);
